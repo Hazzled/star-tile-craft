@@ -1,70 +1,45 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Star, Award, Clock, Shield } from "lucide-react";
-
 const Index = () => {
-  const services = [
-    {
-      title: "Kitchen Backsplashes",
-      description: "Transform your kitchen with stunning custom backsplash designs that perfectly complement your style.",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      title: "Bathroom & Shower Tile",
-      description: "Create beautiful, waterproof bathroom spaces with expert tile installation.",
-      image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      title: "Tile & Stone Flooring",
-      description: "Durable and elegant flooring solutions using ceramic, porcelain, and natural stone tiles.",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      title: "Custom Tile Projects",
-      description: "Unique installations for fireplaces, patios, accent walls, and specialty areas.",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    }
-  ];
-
-  const portfolioPreview = [
-    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      text: "Star Tile completely transformed our kitchen! The craftsmanship is impeccable and they finished on time.",
-      rating: 5
-    },
-    {
-      name: "Mike Davis",
-      text: "Professional, reliable, and their attention to detail is amazing. Highly recommend for any tile work!",
-      rating: 5
-    },
-    {
-      name: "Jennifer Liu",
-      text: "Our bathroom remodel exceeded expectations. The team was courteous and the quality is outstanding.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const services = [{
+    title: "Kitchen Backsplashes",
+    description: "Transform your kitchen with stunning custom backsplash designs that perfectly complement your style.",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }, {
+    title: "Bathroom & Shower Tile",
+    description: "Create beautiful, waterproof bathroom spaces with expert tile installation.",
+    image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }, {
+    title: "Tile & Stone Flooring",
+    description: "Durable and elegant flooring solutions using ceramic, porcelain, and natural stone tiles.",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }, {
+    title: "Custom Tile Projects",
+    description: "Unique installations for fireplaces, patios, accent walls, and specialty areas.",
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }];
+  const portfolioPreview = ["https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"];
+  const testimonials = [{
+    name: "Sarah Johnson",
+    text: "Star Tile completely transformed our kitchen! The craftsmanship is impeccable and they finished on time.",
+    rating: 5
+  }, {
+    name: "Mike Davis",
+    text: "Professional, reliable, and their attention to detail is amazing. Highly recommend for any tile work!",
+    rating: 5
+  }, {
+    name: "Jennifer Liu",
+    text: "Our bathroom remodel exceeded expectations. The team was courteous and the quality is outstanding.",
+    rating: 5
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[600px] bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+      }} />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 leading-tight">
             Portland's Premier<br />Tile Installation
@@ -73,7 +48,7 @@ const Index = () => {
             Over a decade of expert craftsmanship • Licensed & Insured • CCB #200970
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/90 text-white text-lg px-8 py-3">
+            <Button size="lg" className="bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/90 px-8 py-3 text-slate-950 bg-gray-50 text-lg rounded-sm">
               Get a Free Quote
             </Button>
           </Link>
@@ -93,14 +68,9 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+            {services.map((service, index) => <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-w-4 aspect-h-3">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  <img src={service.image} alt={service.title} className="w-full h-48 object-cover" />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-montserrat font-semibold text-star-tile-charcoal mb-3">
@@ -115,8 +85,7 @@ const Index = () => {
                     </Button>
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -134,15 +103,9 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-            {portfolioPreview.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg">
-                <img 
-                  src={image} 
-                  alt={`Portfolio project ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
+            {portfolioPreview.map((image, index) => <div key={index} className="aspect-square overflow-hidden rounded-lg">
+                <img src={image} alt={`Portfolio project ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+              </div>)}
           </div>
           
           <div className="text-center">
@@ -214,13 +177,10 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-white">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />)}
                   </div>
                   <p className="text-gray-700 mb-4 italic">
                     "{testimonial.text}"
@@ -229,8 +189,7 @@ const Index = () => {
                     — {testimonial.name}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -258,8 +217,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
