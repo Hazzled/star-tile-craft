@@ -63,11 +63,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'star-tile': {
-					'slate-blue': '#2D5B6A',
-					'light-gray': '#F5F5F5',
-					'charcoal': '#333333'
-				}
+				'ivory': '#F9F8F7',
+				'almond': '#EDEAE4',
+				'mist': '#ADB8BB',
+				'navy': '#153147',
+				'noir': '#232A2F'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
