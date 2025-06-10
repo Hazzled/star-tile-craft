@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -111,7 +112,7 @@ const Contact = () => {
             >
               <Card className="bg-white shadow-2xl border-0">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-montserrat font-bold text-star-tile-charcoal">
+                  <CardTitle className="text-2xl font-montserrat font-bold text-gray-800">
                     Request Your Free Consultation
                   </CardTitle>
                   <p className="text-gray-600">
@@ -122,7 +123,7 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name">Full Name *</Label>
+                        <Label htmlFor="name" className="text-gray-700">Full Name *</Label>
                         <Input
                           id="name"
                           name="name"
@@ -134,7 +135,7 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="phone">Phone Number *</Label>
+                        <Label htmlFor="phone" className="text-gray-700">Phone Number *</Label>
                         <Input
                           id="phone"
                           name="phone"
@@ -148,7 +149,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <Label htmlFor="email">Email Address *</Label>
+                      <Label htmlFor="email" className="text-gray-700">Email Address *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -161,7 +162,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <Label htmlFor="message">Project Details</Label>
+                      <Label htmlFor="message" className="text-gray-700">Project Details</Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -176,7 +177,7 @@ const Contact = () => {
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/80 text-white font-semibold transform transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95"
+                      className="w-full bg-navy hover:bg-navy/80 text-white font-semibold border-2 border-navy hover:border-navy/80 transform transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95"
                     >
                       Get My Free Quote
                     </Button>
@@ -194,20 +195,20 @@ const Contact = () => {
             >
               <Card className="bg-white shadow-2xl border-0">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-montserrat font-bold text-star-tile-charcoal">
+                  <CardTitle className="text-2xl font-montserrat font-bold text-gray-800">
                     Contact Information
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start">
-                    <Phone className="h-6 w-6 text-star-tile-slate-blue mt-1 mr-4 flex-shrink-0" />
+                    <Phone className="h-6 w-6 text-navy mt-1 mr-4 flex-shrink-0" />
                     <div>
-                      <h3 className="font-montserrat font-semibold text-star-tile-charcoal mb-1">
+                      <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Phone
                       </h3>
                       <a 
                         href="tel:5034828395" 
-                        className="text-lg text-gray-700 hover:text-star-tile-slate-blue transition-colors"
+                        className="text-lg text-gray-700 hover:text-navy transition-colors"
                       >
                         (503) 482-8395
                       </a>
@@ -215,14 +216,14 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <Mail className="h-6 w-6 text-star-tile-slate-blue mt-1 mr-4 flex-shrink-0" />
+                    <Mail className="h-6 w-6 text-navy mt-1 mr-4 flex-shrink-0" />
                     <div>
-                      <h3 className="font-montserrat font-semibold text-star-tile-charcoal mb-1">
+                      <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Email
                       </h3>
                       <a 
                         href="mailto:Contact@Startilellc.com" 
-                        className="text-lg text-gray-700 hover:text-star-tile-slate-blue transition-colors"
+                        className="text-lg text-gray-700 hover:text-navy transition-colors"
                       >
                         Contact@Startilellc.com
                       </a>
@@ -230,9 +231,9 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-star-tile-slate-blue mt-1 mr-4 flex-shrink-0" />
+                    <MapPin className="h-6 w-6 text-navy mt-1 mr-4 flex-shrink-0" />
                     <div>
-                      <h3 className="font-montserrat font-semibold text-star-tile-charcoal mb-1">
+                      <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Service Area
                       </h3>
                       <p className="text-lg text-gray-700">
@@ -243,9 +244,9 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-star-tile-slate-blue mt-1 mr-4 flex-shrink-0" />
+                    <Clock className="h-6 w-6 text-navy mt-1 mr-4 flex-shrink-0" />
                     <div>
-                      <h3 className="font-montserrat font-semibold text-star-tile-charcoal mb-1">
+                      <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Business Hours
                       </h3>
                       <div className="text-gray-700">
@@ -258,7 +259,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-star-tile-slate-blue text-white shadow-2xl border-0">
+              <Card className="bg-navy text-white shadow-2xl border-0">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-montserrat font-bold mb-4">
                     Licensed & Insured
@@ -278,7 +279,7 @@ const Contact = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-star-tile-charcoal mb-4">
+            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-gray-800 mb-4">
               Serving the Portland Metro Area
             </h2>
             <p className="text-lg text-gray-600">
@@ -288,8 +289,8 @@ const Contact = () => {
           
           <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
             <div className="text-center">
-              <MapPin className="h-12 w-12 text-star-tile-slate-blue mx-auto mb-4" />
-              <h3 className="text-xl font-montserrat font-semibold text-star-tile-charcoal mb-2">
+              <MapPin className="h-12 w-12 text-navy mx-auto mb-4" />
+              <h3 className="text-xl font-montserrat font-semibold text-gray-800 mb-2">
                 Service Area Map
               </h3>
               <p className="text-gray-600">
@@ -301,7 +302,7 @@ const Contact = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-star-tile-slate-blue text-white">
+      <section className="py-16 bg-navy text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
             Don't Wait - Transform Your Space Today!
@@ -311,11 +312,11 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:5034828395">
-              <Button size="lg" variant="outline" className="bg-white text-star-tile-slate-blue hover:bg-gray-100 border-white">
+              <Button size="lg" variant="outline" className="bg-white text-navy hover:bg-gray-100 border-white">
                 Call Now: (503) 482-8395
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-star-tile-slate-blue">
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-navy">
               Email Us Today
             </Button>
           </div>
