@@ -1,8 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const services = [
@@ -141,16 +141,28 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-star-tile-light-gray">
+      <motion.section 
+        className="py-16 bg-star-tile-light-gray"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-star-tile-charcoal mb-4">
               Our Installation Process
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We follow a proven process to ensure every project is completed to perfection, on time and within budget.
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -175,28 +187,67 @@ const Services = () => {
                 description: "Thorough walkthrough to ensure your complete satisfaction."
               }
             ].map((process, index) => (
-              <Card 
-                key={index} 
-                className="text-center bg-white hover:shadow-xl transition-all duration-500 hover-scale animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: index * 0.15,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.2 }
+                }}
               >
-                <CardContent className="p-6">
-                  <div className="bg-star-tile-slate-blue text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold animate-scale-in transition-transform duration-300 hover:scale-110"
-                       style={{ animationDelay: `${index * 0.2 + 0.3}s` }}>
-                    {process.step}
-                  </div>
-                  <h3 className="text-lg font-montserrat font-semibold text-star-tile-charcoal mb-3">
-                    {process.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {process.description}
-                  </p>
-                </CardContent>
-              </Card>
+                <Card className="text-center bg-white hover:shadow-xl transition-all duration-500 h-full">
+                  <CardContent className="p-6 flex flex-col h-full">
+                    <motion.div 
+                      className="bg-star-tile-slate-blue text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+                      initial={{ scale: 0, rotate: -180 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: index * 0.15 + 0.3,
+                        type: "spring",
+                        stiffness: 200
+                      }}
+                      whileHover={{ 
+                        rotate: 360,
+                        transition: { duration: 0.5 }
+                      }}
+                    >
+                      {process.step}
+                    </motion.div>
+                    <motion.h3 
+                      className="text-lg font-montserrat font-semibold text-star-tile-charcoal mb-3"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.15 + 0.5 }}
+                    >
+                      {process.title}
+                    </motion.h3>
+                    <motion.p 
+                      className="text-gray-600 flex-grow"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.15 + 0.6 }}
+                    >
+                      {process.description}
+                    </motion.p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
       <section className="py-16 bg-star-tile-slate-blue text-white overflow-hidden">
