@@ -24,9 +24,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <h1 className="text-2xl font-montserrat font-bold text-noir">
-              Star Tile LLC
-            </h1>
+            <img 
+              src="/lovable-uploads/8dab7745-2763-4f3f-9253-bf508df70d21.png" 
+              alt="Star Tile LLC" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

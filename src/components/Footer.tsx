@@ -9,7 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-montserrat font-bold mb-4">Star Tile LLC</h3>
+            <img 
+              src="/lovable-uploads/8dab7745-2763-4f3f-9253-bf508df70d21.png" 
+              alt="Star Tile LLC" 
+              className="h-16 w-auto mb-4 filter invert"
+            />
             <p className="text-mist mb-4">
               Portland's premier tile installation company with over a decade of experience. 
               Licensed, insured, and dedicated to exceptional craftsmanship.
