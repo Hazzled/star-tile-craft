@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -33,38 +34,29 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
+      {/* Unified Hero + Contact Form Section */}
+      <section className="relative py-20 min-h-screen overflow-hidden">
+        {/* Hero Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
           }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-montserrat font-bold mb-6">
-            Get Your Free Quote Today
-          </h1>
-          <p className="text-xl text-gray-200">
-            Ready to start your tile project? Contact Portland's most trusted tile installation company.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Form & Info */}
-      <section className="py-16 relative overflow-hidden">
-        {/* Animated Background */}
+        
+        {/* Animated Background Gradient */}
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-navy via-noir to-navy"
+          className="absolute inset-0 bg-gradient-to-br from-gray-900 via-navy to-noir"
           animate={{
             background: [
-              "linear-gradient(135deg, #153147 0%, #232A2F 50%, #153147 100%)",
-              "linear-gradient(135deg, #232A2F 0%, #153147 50%, #232A2F 100%)",
-              "linear-gradient(135deg, #153147 0%, #232A2F 50%, #153147 100%)",
+              "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)",
+              "linear-gradient(135deg, #153147 0%, #232A2F 30%, #1f2937 100%)",
+              "linear-gradient(135deg, #232A2F 0%, #1f2937 30%, #153147 100%)",
+              "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)",
             ]
           }}
           transition={{
-            duration: 8,
+            duration: 12,
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -72,7 +64,7 @@ const Contact = () => {
         
         {/* Floating particles effect */}
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(25)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-white/10 rounded-full"
@@ -81,14 +73,14 @@ const Contact = () => {
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-                y: [-20, -40, -20],
-                opacity: [0.3, 0.8, 0.3],
-                scale: [1, 1.2, 1],
+                y: [-30, -60, -30],
+                opacity: [0.2, 0.8, 0.2],
+                scale: [1, 1.5, 1],
               }}
               transition={{
-                duration: 4 + Math.random() * 4,
+                duration: 6 + Math.random() * 6,
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: Math.random() * 3,
                 ease: "easeInOut"
               }}
             />
@@ -96,15 +88,29 @@ const Contact = () => {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Title */}
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-montserrat font-bold mb-6 text-white">
+              Get Your Free Quote Today
+            </h1>
+            <p className="text-xl text-gray-200">
+              Ready to start your tile project? Contact Portland's most trusted tile installation company.
+            </p>
+          </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Card className="bg-white shadow-lg">
+              <Card className="bg-white shadow-2xl border-0">
                 <CardHeader>
                   <CardTitle className="text-2xl font-montserrat font-bold text-star-tile-charcoal">
                     Request Your Free Consultation
@@ -184,11 +190,10 @@ const Contact = () => {
             <motion.div 
               className="space-y-8"
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <Card className="bg-white shadow-lg">
+              <Card className="bg-white shadow-2xl border-0">
                 <CardHeader>
                   <CardTitle className="text-2xl font-montserrat font-bold text-star-tile-charcoal">
                     Contact Information
@@ -254,7 +259,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-star-tile-slate-blue text-white">
+              <Card className="bg-star-tile-slate-blue text-white shadow-2xl border-0">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-montserrat font-bold mb-4">
                     Licensed & Insured
