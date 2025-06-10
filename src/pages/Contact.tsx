@@ -1,13 +1,16 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { MapPin, Mail, Phone, Clock, User, MessageSquare, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,10 +18,17 @@ const Contact = () => {
     phone: "",
     message: ""
   });
+  
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData);
+    
+    // Show animated success confirmation
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 3000);
+    
     toast.success("Thank you! We'll get back to you within 24 hours.");
     setFormData({
       name: "",
@@ -27,57 +37,77 @@ const Contact = () => {
       message: ""
     });
   };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       {/* Unified Hero + Contact Form Section */}
       <section className="relative py-20 min-h-screen overflow-hidden">
         {/* Hero Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-      }} />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+          }} 
+        />
         
         {/* Animated Background Gradient */}
-        <motion.div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-navy to-noir" animate={{
-        background: ["linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)", "linear-gradient(135deg, #153147 0%, #232A2F 30%, #1f2937 100%)", "linear-gradient(135deg, #232A2F 0%, #1f2937 30%, #153147 100%)", "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)"]
-      }} transition={{
-        duration: 12,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }} />
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-br from-gray-900 via-navy to-noir"
+          animate={{
+            background: [
+              "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)",
+              "linear-gradient(135deg, #153147 0%, #232A2F 30%, #1f2937 100%)",
+              "linear-gradient(135deg, #232A2F 0%, #1f2937 30%, #153147 100%)",
+              "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)"
+            ]
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
         
         {/* Floating particles effect */}
         <div className="absolute inset-0">
-          {[...Array(25)].map((_, i) => <motion.div key={i} className="absolute w-2 h-2 bg-white/10 rounded-full" style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`
-        }} animate={{
-          y: [-30, -60, -30],
-          opacity: [0.2, 0.8, 0.2],
-          scale: [1, 1.5, 1]
-        }} transition={{
-          duration: 6 + Math.random() * 6,
-          repeat: Infinity,
-          delay: Math.random() * 3,
-          ease: "easeInOut"
-        }} />)}
+          {[...Array(25)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-white/10 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
+              }}
+              animate={{
+                y: [-30, -60, -30],
+                opacity: [0.2, 0.8, 0.2],
+                scale: [1, 1.5, 1]
+              }}
+              transition={{
+                duration: 6 + Math.random() * 6,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Title */}
-          <motion.div className="text-center mb-16" initial={{
-          opacity: 0,
-          y: -50
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8
-        }}>
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1 className="text-4xl md:text-5xl font-montserrat font-bold mb-6 text-white">
               Get Your Free Quote Today
             </h1>
@@ -88,17 +118,12 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <motion.div initial={{
-            opacity: 0,
-            x: -50
-          }} animate={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.6,
-            delay: 0.3
-          }}>
-              <Card className="bg-white shadow-2xl border-0">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <Card className="bg-white shadow-2xl border-0 rounded-2xl overflow-hidden">
                 <CardHeader>
                   <CardTitle className="text-2xl font-montserrat font-bold text-gray-800">
                     Request Your Free Consultation
@@ -108,98 +133,170 @@ const Contact = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="name" className="text-gray-700">Full Name *</Label>
-                        <Input id="name" name="name" type="text" required value={formData.name} onChange={handleChange} className="mt-1" />
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      <div className="relative">
+                        <Label htmlFor="name" className="text-gray-700 text-sm font-medium">Full Name *</Label>
+                        <div className="relative mt-1">
+                          <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                          <Input 
+                            id="name" 
+                            name="name" 
+                            type="text" 
+                            required 
+                            value={formData.name} 
+                            onChange={handleChange} 
+                            className="pl-10 py-2.5 rounded-lg border-gray-200 focus:border-navy focus:ring-navy/20" 
+                          />
+                        </div>
                       </div>
-                      <div>
-                        <Label htmlFor="phone" className="text-gray-700">Phone Number *</Label>
-                        <Input id="phone" name="phone" type="tel" required value={formData.phone} onChange={handleChange} className="mt-1" />
+                      <div className="relative">
+                        <Label htmlFor="phone" className="text-gray-700 text-sm font-medium">Phone Number *</Label>
+                        <div className="relative mt-1">
+                          <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                          <Input 
+                            id="phone" 
+                            name="phone" 
+                            type="tel" 
+                            required 
+                            value={formData.phone} 
+                            onChange={handleChange} 
+                            className="pl-10 py-2.5 rounded-lg border-gray-200 focus:border-navy focus:ring-navy/20" 
+                          />
+                        </div>
                       </div>
                     </div>
                     
-                    <div>
-                      <Label htmlFor="email" className="text-gray-700">Email Address *</Label>
-                      <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} className="mt-1" />
+                    <div className="relative">
+                      <Label htmlFor="email" className="text-gray-700 text-sm font-medium">Email Address *</Label>
+                      <div className="relative mt-1">
+                        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                        <Input 
+                          id="email" 
+                          name="email" 
+                          type="email" 
+                          required 
+                          value={formData.email} 
+                          onChange={handleChange} 
+                          className="pl-10 py-2.5 rounded-lg border-gray-200 focus:border-navy focus:ring-navy/20" 
+                        />
+                      </div>
                     </div>
                     
-                    <div>
-                      <Label htmlFor="message" className="text-gray-700">Project Details</Label>
-                      <Textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} placeholder="Tell us about your tile project - type of installation, space size, timeline, etc." className="mt-1" />
+                    <div className="relative">
+                      <Label htmlFor="message" className="text-gray-700 text-sm font-medium">Project Details</Label>
+                      <div className="relative mt-1">
+                        <MessageSquare className="absolute left-3 top-4 h-4 w-4 text-gray-400" />
+                        <Textarea 
+                          id="message" 
+                          name="message" 
+                          rows={5} 
+                          value={formData.message} 
+                          onChange={handleChange} 
+                          placeholder="Tell us about your tile project - type of installation, space size, timeline, etc." 
+                          className="pl-10 pt-4 rounded-lg border-gray-200 focus:border-navy focus:ring-navy/20 resize-none" 
+                        />
+                      </div>
                     </div>
                     
-                    <Button type="submit" size="lg" className="w-full bg-navy hover:bg-navy/80 text-white font-semibold border-2 border-navy hover:border-navy/80 transform transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95">
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full bg-navy hover:bg-navy/90 text-white font-bold py-4 rounded-lg transition-all duration-200 hover:shadow-lg active:scale-[0.98] flex items-center justify-center gap-2"
+                    >
+                      <CheckCircle className="h-5 w-5" />
                       Get My Free Quote
                     </Button>
                   </form>
+
+                  {/* Animated Success Confirmation */}
+                  {showSuccess && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      className="absolute inset-0 bg-white/95 backdrop-blur-sm flex items-center justify-center rounded-2xl"
+                    >
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: 0.2, type: "spring", bounce: 0.5 }}
+                        className="text-center"
+                      >
+                        <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+                        <h3 className="text-xl font-bold text-gray-800 mb-2">Thank You!</h3>
+                        <p className="text-gray-600">We'll contact you within 24 hours.</p>
+                      </motion.div>
+                    </motion.div>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
 
             {/* Contact Information */}
-            <motion.div className="space-y-8" initial={{
-            opacity: 0,
-            x: 50
-          }} animate={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.6,
-            delay: 0.5
-          }}>
-              <Card className="bg-white shadow-2xl border-0">
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <Card className="bg-white shadow-2xl border-0 rounded-2xl">
                 <CardHeader>
                   <CardTitle className="text-2xl font-montserrat font-bold text-gray-800">
                     Contact Information
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="flex items-start">
-                    <Phone className="h-6 w-6 text-navy mt-1 mr-4 flex-shrink-0" />
-                    <div>
+                <CardContent className="space-y-0">
+                  <div className="flex items-center py-4">
+                    <Phone className="h-5 w-5 text-navy mr-4 flex-shrink-0" />
+                    <div className="flex-1">
                       <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Phone
                       </h3>
-                      <a href="tel:5034828395" className="text-lg text-gray-700 hover:text-navy transition-colors">
+                      <a href="tel:5034828395" className="text-gray-700 hover:text-navy transition-colors">
                         (503) 482-8395
                       </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
-                    <Mail className="h-6 w-6 text-navy mt-1 mr-4 flex-shrink-0" />
-                    <div>
+                  <Separator className="my-0" />
+                  
+                  <div className="flex items-center py-4">
+                    <Mail className="h-5 w-5 text-navy mr-4 flex-shrink-0" />
+                    <div className="flex-1">
                       <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Email
                       </h3>
-                      <a href="mailto:Contact@Startilellc.com" className="text-lg text-gray-700 hover:text-navy transition-colors">
+                      <a href="mailto:Contact@Startilellc.com" className="text-gray-700 hover:text-navy transition-colors">
                         Contact@Startilellc.com
                       </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-navy mt-1 mr-4 flex-shrink-0" />
-                    <div>
+                  <Separator className="my-0" />
+                  
+                  <div className="flex items-center py-4">
+                    <MapPin className="h-5 w-5 text-navy mr-4 flex-shrink-0" />
+                    <div className="flex-1">
                       <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Service Area
                       </h3>
-                      <p className="text-lg text-gray-700">
+                      <p className="text-gray-700">
                         Portland Metro Area<br />
                         Oregon, USA
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-navy mt-1 mr-4 flex-shrink-0" />
-                    <div>
+                  <Separator className="my-0" />
+                  
+                  <div className="flex items-center py-4">
+                    <Clock className="h-5 w-5 text-navy mr-4 flex-shrink-0" />
+                    <div className="flex-1">
                       <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Business Hours
                       </h3>
-                      <div className="text-gray-700">
+                      <div className="text-gray-700 text-sm space-y-1">
                         <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
                         <p>Saturday: 8:00 AM - 4:00 PM</p>
                         <p>Sunday: Closed</p>
@@ -209,7 +306,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-navy text-white shadow-2xl border-0">
+              <Card className="bg-navy text-white shadow-2xl border-0 rounded-2xl">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-montserrat font-bold mb-4">
                     Licensed & Insured
@@ -256,12 +353,14 @@ const Contact = () => {
                 Call Now: (503) 482-8395
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="border-white hover:bg-white text-slate-700">
+            <Button size="lg" variant="outline" className="border-white hover:bg-white hover:text-navy">
               Email Us Today
             </Button>
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;
