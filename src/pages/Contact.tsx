@@ -8,7 +8,6 @@ import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,85 +15,69 @@ const Contact = () => {
     phone: "",
     message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData);
     toast.success("Thank you! We'll get back to you within 24 hours.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Unified Hero + Contact Form Section */}
       <section className="relative py-20 min-h-screen overflow-hidden">
         {/* Hero Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+      }} />
         
         {/* Animated Background Gradient */}
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-gray-900 via-navy to-noir"
-          animate={{
-            background: [
-              "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)",
-              "linear-gradient(135deg, #153147 0%, #232A2F 30%, #1f2937 100%)",
-              "linear-gradient(135deg, #232A2F 0%, #1f2937 30%, #153147 100%)",
-              "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)",
-            ]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+        <motion.div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-navy to-noir" animate={{
+        background: ["linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)", "linear-gradient(135deg, #153147 0%, #232A2F 30%, #1f2937 100%)", "linear-gradient(135deg, #232A2F 0%, #1f2937 30%, #153147 100%)", "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)"]
+      }} transition={{
+        duration: 12,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }} />
         
         {/* Floating particles effect */}
         <div className="absolute inset-0">
-          {[...Array(25)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-white/10 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [-30, -60, -30],
-                opacity: [0.2, 0.8, 0.2],
-                scale: [1, 1.5, 1],
-              }}
-              transition={{
-                duration: 6 + Math.random() * 6,
-                repeat: Infinity,
-                delay: Math.random() * 3,
-                ease: "easeInOut"
-              }}
-            />
-          ))}
+          {[...Array(25)].map((_, i) => <motion.div key={i} className="absolute w-2 h-2 bg-white/10 rounded-full" style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`
+        }} animate={{
+          y: [-30, -60, -30],
+          opacity: [0.2, 0.8, 0.2],
+          scale: [1, 1.5, 1]
+        }} transition={{
+          duration: 6 + Math.random() * 6,
+          repeat: Infinity,
+          delay: Math.random() * 3,
+          ease: "easeInOut"
+        }} />)}
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Title */}
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div className="text-center mb-16" initial={{
+          opacity: 0,
+          y: -50
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }}>
             <h1 className="text-4xl md:text-5xl font-montserrat font-bold mb-6 text-white">
               Get Your Free Quote Today
             </h1>
@@ -105,11 +88,16 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            x: -50
+          }} animate={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.3
+          }}>
               <Card className="bg-white shadow-2xl border-0">
                 <CardHeader>
                   <CardTitle className="text-2xl font-montserrat font-bold text-gray-800">
@@ -124,61 +112,25 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="name" className="text-gray-700">Full Name *</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="mt-1"
-                        />
+                        <Input id="name" name="name" type="text" required value={formData.name} onChange={handleChange} className="mt-1" />
                       </div>
                       <div>
                         <Label htmlFor="phone" className="text-gray-700">Phone Number *</Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          required
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="mt-1"
-                        />
+                        <Input id="phone" name="phone" type="tel" required value={formData.phone} onChange={handleChange} className="mt-1" />
                       </div>
                     </div>
                     
                     <div>
                       <Label htmlFor="email" className="text-gray-700">Email Address *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="mt-1"
-                      />
+                      <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} className="mt-1" />
                     </div>
                     
                     <div>
                       <Label htmlFor="message" className="text-gray-700">Project Details</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Tell us about your tile project - type of installation, space size, timeline, etc."
-                        className="mt-1"
-                      />
+                      <Textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} placeholder="Tell us about your tile project - type of installation, space size, timeline, etc." className="mt-1" />
                     </div>
                     
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full bg-navy hover:bg-navy/80 text-white font-semibold border-2 border-navy hover:border-navy/80 transform transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95"
-                    >
+                    <Button type="submit" size="lg" className="w-full bg-navy hover:bg-navy/80 text-white font-semibold border-2 border-navy hover:border-navy/80 transform transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95">
                       Get My Free Quote
                     </Button>
                   </form>
@@ -187,12 +139,16 @@ const Contact = () => {
             </motion.div>
 
             {/* Contact Information */}
-            <motion.div 
-              className="space-y-8"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
+            <motion.div className="space-y-8" initial={{
+            opacity: 0,
+            x: 50
+          }} animate={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.5
+          }}>
               <Card className="bg-white shadow-2xl border-0">
                 <CardHeader>
                   <CardTitle className="text-2xl font-montserrat font-bold text-gray-800">
@@ -206,10 +162,7 @@ const Contact = () => {
                       <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Phone
                       </h3>
-                      <a 
-                        href="tel:5034828395" 
-                        className="text-lg text-gray-700 hover:text-navy transition-colors"
-                      >
+                      <a href="tel:5034828395" className="text-lg text-gray-700 hover:text-navy transition-colors">
                         (503) 482-8395
                       </a>
                     </div>
@@ -221,10 +174,7 @@ const Contact = () => {
                       <h3 className="font-montserrat font-semibold text-gray-800 mb-1">
                         Email
                       </h3>
-                      <a 
-                        href="mailto:Contact@Startilellc.com" 
-                        className="text-lg text-gray-700 hover:text-navy transition-colors"
-                      >
+                      <a href="mailto:Contact@Startilellc.com" className="text-lg text-gray-700 hover:text-navy transition-colors">
                         Contact@Startilellc.com
                       </a>
                     </div>
@@ -306,14 +256,12 @@ const Contact = () => {
                 Call Now: (503) 482-8395
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-navy">
+            <Button size="lg" variant="outline" className="border-white hover:bg-white text-slate-700">
               Email Us Today
             </Button>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
