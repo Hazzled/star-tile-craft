@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import ServiceAreaMap from "@/components/ServiceAreaMap";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -275,29 +275,19 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Interactive Map Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-gray-800 mb-4">
-              Serving the Portland Metro Area
+              Our Service Areas
             </h2>
             <p className="text-lg text-gray-600">
-              We proudly serve homeowners and businesses throughout the greater Portland area.
+              We proudly serve homeowners and businesses throughout the greater Portland Metro area.
             </p>
           </div>
           
-          <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-navy mx-auto mb-4" />
-              <h3 className="text-xl font-montserrat font-semibold text-gray-800 mb-2">
-                Service Area Map
-              </h3>
-              <p className="text-gray-600">
-                Portland Metro Area • Gresham • Beaverton • Lake Oswego • Tigard • Milwaukie
-              </p>
-            </div>
-          </div>
+          <ServiceAreaMap />
         </div>
       </section>
 
