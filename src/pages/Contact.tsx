@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,87 +52,142 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-16 bg-gradient-to-br from-navy to-noir">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 relative overflow-hidden">
+        {/* Animated Background */}
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-br from-navy via-noir to-navy"
+          animate={{
+            background: [
+              "linear-gradient(135deg, #153147 0%, #232A2F 50%, #153147 100%)",
+              "linear-gradient(135deg, #232A2F 0%, #153147 50%, #232A2F 100%)",
+              "linear-gradient(135deg, #153147 0%, #232A2F 50%, #153147 100%)",
+            ]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Floating particles effect */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-white/10 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [-20, -40, -20],
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 4 + Math.random() * 4,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="bg-white shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-2xl font-montserrat font-bold text-star-tile-charcoal">
-                  Request Your Free Consultation
-                </CardTitle>
-                <p className="text-gray-600">
-                  Fill out the form below and we'll contact you within 24 hours to discuss your project.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-white shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-montserrat font-bold text-star-tile-charcoal">
+                    Request Your Free Consultation
+                  </CardTitle>
+                  <p className="text-gray-600">
+                    Fill out the form below and we'll contact you within 24 hours to discuss your project.
+                  </p>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="name">Full Name *</Label>
+                        <Input
+                          id="name"
+                          name="name"
+                          type="text"
+                          required
+                          value={formData.name}
+                          onChange={handleChange}
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="phone">Phone Number *</Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          required
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="mt-1"
+                        />
+                      </div>
+                    </div>
+                    
                     <div>
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="email">Email Address *</Label>
                       <Input
-                        id="name"
-                        name="name"
-                        type="text"
+                        id="email"
+                        name="email"
+                        type="email"
                         required
-                        value={formData.name}
+                        value={formData.email}
                         onChange={handleChange}
                         className="mt-1"
                       />
                     </div>
+                    
                     <div>
-                      <Label htmlFor="phone">Phone Number *</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        required
-                        value={formData.phone}
+                      <Label htmlFor="message">Project Details</Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        rows={5}
+                        value={formData.message}
                         onChange={handleChange}
+                        placeholder="Tell us about your tile project - type of installation, space size, timeline, etc."
                         className="mt-1"
                       />
                     </div>
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="email">Email Address *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="mt-1"
-                    />
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="message">Project Details</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us about your tile project - type of installation, space size, timeline, etc."
-                      className="mt-1"
-                    />
-                  </div>
-                  
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/90 text-white"
-                  >
-                    Get My Free Quote
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                    
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/90 text-white"
+                    >
+                      Get My Free Quote
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </motion.div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <Card className="bg-white shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl font-montserrat font-bold text-star-tile-charcoal">
@@ -209,7 +265,7 @@ const Contact = () => {
                   </p>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
