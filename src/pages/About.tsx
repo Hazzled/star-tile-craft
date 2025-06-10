@@ -1,24 +1,20 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle, Award, Users, Clock, ArrowUp, Quote } from "lucide-react";
-
 const About = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section with Enhanced Overlay */}
       <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-24">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+      }} />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 tracking-tight text-shadow-lg">
@@ -76,11 +72,7 @@ const About = () => {
             
             <div className="lg:pl-8">
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Quality tile installation"
-                  className="rounded-xl shadow-2xl"
-                />
+                <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quality tile installation" className="rounded-xl shadow-2xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
               </div>
             </div>
@@ -219,11 +211,7 @@ const About = () => {
             
             <div className="lg:pl-8">
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Quality tile installation"
-                  className="rounded-xl shadow-2xl"
-                />
+                <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quality tile installation" className="rounded-xl shadow-2xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
               </div>
             </div>
@@ -233,12 +221,9 @@ const About = () => {
 
       {/* Enhanced CTA Section */}
       <section className="relative py-24 text-white overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+      }} />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 to-black/70" />
         
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -256,7 +241,7 @@ const About = () => {
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="text-white border-2 border-white hover:bg-white hover:text-navy text-lg px-8 py-4 font-semibold transition-all duration-300">
+              <Button size="lg" variant="outline" className="border-2 border-white hover:bg-white text-lg px-8 py-4 font-semibold transition-all duration-300 text-slate-900">
                 View Our Work
               </Button>
             </Link>
@@ -264,16 +249,10 @@ const About = () => {
         </div>
         
         {/* Scroll to top button */}
-        <button
-          onClick={scrollToTop}
-          className="absolute bottom-8 right-8 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300 group"
-          aria-label="Scroll to top"
-        >
+        <button onClick={scrollToTop} className="absolute bottom-8 right-8 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300 group" aria-label="Scroll to top">
           <ArrowUp className="h-6 w-6 group-hover:-translate-y-1 transition-transform duration-300" />
         </button>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
