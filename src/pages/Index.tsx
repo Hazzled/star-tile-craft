@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Star, Award, Clock, Shield } from "lucide-react";
-import { BackgroundPaths } from "@/components/ui/background-paths";
-
 const Index = () => {
   const services = [{
     title: "Kitchen Backsplashes",
@@ -37,24 +35,23 @@ const Index = () => {
     rating: 5
   }];
   return <div className="min-h-screen">
-      {/* Hero Section with Animated Background */}
-      <section className="relative h-[600px] overflow-hidden">
-        <BackgroundPaths title="Portland's Premier Tile Installation" />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-gray-800/50 z-20" />
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 z-10" style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-        }} />
-        <div className="relative z-30 h-full flex items-center justify-center">
-          <div className="text-center text-white max-w-4xl mx-auto px-4">
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              Over a decade of expert craftsmanship • Licensed & Insured • CCB #200970
-            </p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-navy hover:bg-navy/90 text-ivory px-8 py-3 text-lg rounded-sm">
-                Get a Free Quote
-              </Button>
-            </Link>
-          </div>
+      {/* Hero Section */}
+      <section className="relative h-[600px] bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+      }} />
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 leading-tight">
+            Portland's Premier<br />Tile Installation
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-gray-200">
+            Over a decade of expert craftsmanship • Licensed & Insured • CCB #200970
+          </p>
+          <Link to="/contact">
+            <Button size="lg" className="bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/90 px-8 py-3 text-slate-950 bg-gray-50 text-lg rounded-sm">
+              Get a Free Quote
+            </Button>
+          </Link>
         </div>
       </section>
 
