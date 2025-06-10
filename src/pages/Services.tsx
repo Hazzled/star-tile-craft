@@ -1,10 +1,34 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Hammer, Droplets, Home, Sparkles, Phone, ClipboardCheck, Wrench, Eye } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Services = () => {
+  const serviceOverview = [
+    {
+      icon: <Hammer className="h-8 w-8" />,
+      title: "Kitchen Backsplashes",
+      description: "Custom designs that transform your cooking space"
+    },
+    {
+      icon: <Droplets className="h-8 w-8" />,
+      title: "Bathroom & Shower",
+      description: "Waterproof installations with stunning aesthetics"
+    },
+    {
+      icon: <Home className="h-8 w-8" />,
+      title: "Flooring Solutions",
+      description: "Durable ceramic, porcelain, and natural stone"
+    },
+    {
+      icon: <Sparkles className="h-8 w-8" />,
+      title: "Custom Projects",
+      description: "Unique installations for any space"
+    }
+  ];
+
   const services = [
     {
       title: "Kitchen Backsplashes",
@@ -55,229 +79,299 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-navy via-gray-900 to-navy text-white py-24 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
           style={{
             backgroundImage: "url('/lovable-uploads/3f39a99b-8332-4ddc-97fe-5195e245d335.png')"
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-montserrat font-bold mb-6 animate-fade-in">
+          <motion.h1 
+            className="text-5xl md:text-6xl font-montserrat font-bold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             Professional Tile Installation Services
-          </h1>
-          <p className="text-xl text-gray-200 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             Expert craftsmanship for kitchens, bathrooms, flooring, and custom projects throughout Portland
-          </p>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-star-tile-charcoal mb-4">
-              Our Specialized Services
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              From kitchen backsplashes to custom installations, we bring decades of experience to every project. 
-              Each service includes our commitment to quality, precision, and customer satisfaction.
-            </p>
-          </div>
-          
-          <div className="space-y-16">
-            {services.map((service, index) => (
-              <div 
-                key={index} 
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in hover-scale transition-all duration-500 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
-                style={{ animationDelay: `${index * 0.2}s` }}
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link to="/contact">
+              <Button 
+                size="lg" 
+                className="bg-white text-navy hover:bg-gray-100 text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <h3 className="text-2xl md:text-3xl font-montserrat font-bold text-star-tile-charcoal mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-lg text-gray-700 mb-6">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-montserrat font-semibold text-star-tile-charcoal mb-3">
-                      What's Included:
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li 
-                          key={featureIndex} 
-                          className="flex items-center animate-fade-in"
-                          style={{ animationDelay: `${index * 0.2 + featureIndex * 0.1}s` }}
-                        >
-                          <CheckCircle className="h-5 w-5 text-star-tile-slate-blue mr-3 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Link to="/contact">
-                    <Button className="bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/90 text-white hover-scale transition-all duration-300">
-                      Get Quote for This Service
-                    </Button>
-                  </Link>
-                </div>
-                
-                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover-scale group">
-                    <img 
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                  </Card>
-                </div>
-              </div>
-            ))}
-          </div>
+                Get Free Quote
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <motion.section 
-        className="py-16 bg-star-tile-light-gray"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+      {/* Services Overview */}
+      <section className="py-16 bg-ivory">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-star-tile-charcoal mb-4">
-              Our Installation Process
+            <h2 className="text-4xl font-montserrat font-bold text-navy mb-4">
+              Our Specialized Services
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We follow a proven process to ensure every project is completed to perfection, on time and within budget.
+            <div className="w-24 h-1 bg-navy mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              From kitchen backsplashes to custom installations, we bring decades of experience to every project.
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                step: 1,
-                title: "Consultation",
-                description: "Free in-home consultation to discuss your vision, needs, and budget."
-              },
-              {
-                step: 2,
-                title: "Design & Quote",
-                description: "Custom design proposal with detailed quote and material selection."
-              },
-              {
-                step: 3,
-                title: "Installation",
-                description: "Professional installation with meticulous attention to detail."
-              },
-              {
-                step: 4,
-                title: "Final Inspection",
-                description: "Thorough walkthrough to ensure your complete satisfaction."
-              }
-            ].map((process, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {serviceOverview.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: index * 0.15,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                whileHover={{ 
-                  scale: 1.05,
-                  transition: { duration: 0.2 }
-                }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
               >
-                <Card className="text-center bg-white hover:shadow-xl transition-all duration-500 h-full">
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <motion.div 
-                      className="bg-star-tile-slate-blue text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold"
-                      initial={{ scale: 0, rotate: -180 }}
-                      whileInView={{ scale: 1, rotate: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ 
-                        duration: 0.5, 
-                        delay: index * 0.15 + 0.3,
-                        type: "spring",
-                        stiffness: 200
-                      }}
-                      whileHover={{ 
-                        rotate: 360,
-                        transition: { duration: 0.5 }
-                      }}
-                    >
-                      {process.step}
-                    </motion.div>
-                    <motion.h3 
-                      className="text-lg font-montserrat font-semibold text-star-tile-charcoal mb-3"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.15 + 0.5 }}
-                    >
-                      {process.title}
-                    </motion.h3>
-                    <motion.p 
-                      className="text-gray-600 flex-grow"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.15 + 0.6 }}
-                    >
-                      {process.description}
-                    </motion.p>
+                <Card className="text-center p-6 h-full bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-md">
+                  <CardContent className="flex flex-col items-center space-y-4 p-0">
+                    <div className="bg-navy text-white p-4 rounded-full">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-montserrat font-semibold text-navy">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
+
+      {/* Individual Service Blocks */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-20">
+            {services.map((service, index) => (
+              <motion.div 
+                key={index} 
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''} bg-almond p-8 rounded-2xl`}>
+                  <h3 className="text-3xl font-montserrat font-bold text-navy mb-6">
+                    {service.title}
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-8">
+                    <h4 className="text-xl font-montserrat font-semibold text-navy mb-4 flex items-center">
+                      <CheckCircle className="h-6 w-6 text-navy mr-2" />
+                      What's Included:
+                    </h4>
+                    <ul className="space-y-3">
+                      {service.features.map((feature, featureIndex) => (
+                        <motion.li 
+                          key={featureIndex} 
+                          className="flex items-center"
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: featureIndex * 0.1 }}
+                        >
+                          <div className="w-2 h-2 bg-navy rounded-full mr-4"></div>
+                          <span className="text-gray-700 text-lg">{feature}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Link to="/contact">
+                    <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
+                      Get Quote for This Service
+                    </Button>
+                  </Link>
+                </div>
+                
+                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Card className="overflow-hidden shadow-2xl border-0 rounded-2xl group">
+                      <img 
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                    </Card>
+                  </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Installation Process */}
+      <section className="py-20 bg-gradient-to-r from-almond to-ivory">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-montserrat font-bold text-navy mb-4">
+              Our Installation Process
+            </h2>
+            <div className="w-24 h-1 bg-navy mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We follow a proven process to ensure every project is completed to perfection, on time and within budget.
+            </p>
+          </motion.div>
+          
+          {/* Process Timeline */}
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute top-16 left-0 right-0 h-1 bg-navy/20 hidden lg:block"></div>
+            <div className="absolute top-16 left-0 h-1 bg-navy hidden lg:block animate-pulse" style={{ width: '100%' }}></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  step: 1,
+                  icon: <Phone className="h-8 w-8" />,
+                  title: "Consultation",
+                  description: "Free in-home consultation to discuss your vision, needs, and budget."
+                },
+                {
+                  step: 2,
+                  icon: <ClipboardCheck className="h-8 w-8" />,
+                  title: "Design & Quote",
+                  description: "Custom design proposal with detailed quote and material selection."
+                },
+                {
+                  step: 3,
+                  icon: <Wrench className="h-8 w-8" />,
+                  title: "Installation",
+                  description: "Professional installation with meticulous attention to detail."
+                },
+                {
+                  step: 4,
+                  icon: <Eye className="h-8 w-8" />,
+                  title: "Final Inspection",
+                  description: "Thorough walkthrough to ensure your complete satisfaction."
+                }
+              ].map((process, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  className="relative"
+                >
+                  <Card className="text-center bg-white shadow-xl border-0 rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                    <CardContent className="p-8">
+                      {/* Step Number */}
+                      <div className="relative mb-6">
+                        <div className="bg-navy text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto text-2xl font-bold shadow-lg relative z-10">
+                          {process.step}
+                        </div>
+                        {/* Connector line for desktop */}
+                        {index < 3 && (
+                          <div className="hidden lg:block absolute top-8 left-full w-full h-1 bg-navy/20 -translate-y-1/2"></div>
+                        )}
+                      </div>
+                      
+                      {/* Icon */}
+                      <div className="bg-almond text-navy rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                        {process.icon}
+                      </div>
+                      
+                      <h3 className="text-xl font-montserrat font-semibold text-navy mb-4">
+                        {process.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {process.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-star-tile-slate-blue text-white overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
-            Ready to Start Your Tile Project?
-          </h2>
-          <p className="text-xl mb-8 text-gray-200">
-            Contact us today for a free consultation and discover why we're Portland's most trusted tile installation company.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="bg-white text-star-tile-slate-blue hover:bg-gray-100 border-white hover-scale transition-all duration-300"
-              >
-                Get Free Consultation
-              </Button>
-            </Link>
-            <Link to="/portfolio">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-white border-white hover:bg-white hover:text-star-tile-slate-blue hover-scale transition-all duration-300"
-              >
-                View Our Work
-              </Button>
-            </Link>
-          </div>
+      <section className="relative py-20 bg-navy text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url('/lovable-uploads/b947b3d6-9c5f-4715-a0d3-49aa3dc2206d.png')"
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6">
+              Ready to Start Your Tile Project?
+            </h2>
+            <p className="text-xl mb-10 text-gray-200 leading-relaxed">
+              Contact us today for a free consultation and discover why we're Portland's most trusted tile installation company.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-navy hover:bg-gray-100 px-8 py-4 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  Get Free Consultation
+                </Button>
+              </Link>
+              <Link to="/portfolio">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="text-white border-white hover:bg-white hover:text-navy px-8 py-4 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  View Our Work
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
