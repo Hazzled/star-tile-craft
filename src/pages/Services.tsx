@@ -204,9 +204,9 @@ const Services = () => {
                 }}
               >
                 <Card className="text-center bg-white hover:shadow-xl transition-all duration-500 h-full">
-                  <CardContent className="p-6 flex flex-col h-full">
+                  <CardContent className="p-8 flex flex-col h-full items-center justify-center bg-gradient-to-br from-ivory to-almond rounded-lg border-2 border-mist/20 hover:border-navy/30 transition-all duration-300">
                     <motion.div 
-                      className="bg-star-tile-slate-blue text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+                      className="bg-star-tile-slate-blue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg"
                       initial={{ scale: 0, rotate: -180 }}
                       whileInView={{ scale: 1, rotate: 0 }}
                       viewport={{ once: true }}
@@ -218,13 +218,14 @@ const Services = () => {
                       }}
                       whileHover={{ 
                         rotate: 360,
+                        scale: 1.1,
                         transition: { duration: 0.5 }
                       }}
                     >
                       {process.step}
                     </motion.div>
                     <motion.h3 
-                      className="text-lg font-montserrat font-semibold text-star-tile-charcoal mb-3"
+                      className="text-xl font-montserrat font-semibold text-star-tile-charcoal mb-4"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
@@ -233,7 +234,7 @@ const Services = () => {
                       {process.title}
                     </motion.h3>
                     <motion.p 
-                      className="text-gray-600 flex-grow"
+                      className="text-gray-600 flex-grow text-center leading-relaxed"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
