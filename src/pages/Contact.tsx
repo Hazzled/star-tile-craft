@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -177,7 +176,7 @@ const Contact = () => {
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/90 text-white"
+                      className="w-full bg-star-tile-slate-blue hover:bg-star-tile-slate-blue/80 text-white font-semibold transform transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95"
                     >
                       Get My Free Quote
                     </Button>
