@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Trophy, Shield, Clock } from "lucide-react";
@@ -17,20 +18,32 @@ const Portfolio = () => {
     {
       id: 1,
       category: "Kitchens",
-      title: "Modern Kitchen Backsplash",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "Elegant White Marble Kitchen",
+      image: "/lovable-uploads/21f0f05e-9773-4f7f-bf75-cdbde68a73ae.png",
+      images: [
+        "/lovable-uploads/21f0f05e-9773-4f7f-bf75-cdbde68a73ae.png",
+        "/lovable-uploads/46aebe0b-9644-4569-a9b9-a2d42cb7e190.png",
+        "/lovable-uploads/b56c3eb7-7296-4cd2-9e3e-68e1ed117331.png"
+      ]
     },
     {
       id: 2,
       category: "Bathrooms",
-      title: "Luxury Bathroom Remodel",
-      image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "Luxury Marble Vanity Installation",
+      image: "/lovable-uploads/814f0794-7444-48c4-80fd-1e53408ed461.png",
+      images: [
+        "/lovable-uploads/814f0794-7444-48c4-80fd-1e53408ed461.png",
+        "/lovable-uploads/24afa924-fd37-43dd-93d7-9f57ef34abcd.png"
+      ]
     },
     {
       id: 3,
-      category: "Flooring",
-      title: "Porcelain Tile Flooring",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      category: "Custom",
+      title: "Premium Marble Countertop",
+      image: "/lovable-uploads/635e42ad-ec12-4e8c-8201-c8e81e9f1a48.png",
+      images: [
+        "/lovable-uploads/635e42ad-ec12-4e8c-8201-c8e81e9f1a48.png"
+      ]
     }
   ];
 
@@ -219,3 +232,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
