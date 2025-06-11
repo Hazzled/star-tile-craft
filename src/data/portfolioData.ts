@@ -1,4 +1,5 @@
 
+
 export const portfolioItems = [
   {
     id: 1,
@@ -157,9 +158,16 @@ export const portfolioItems = [
       "/lovable-uploads/fb58e24a-e72e-4932-9642-13b9312f658a.png",
       "/lovable-uploads/7c8f4090-7d94-4b46-9292-e9c1722e7cc1.png",
       "/lovable-uploads/6e50814a-31cf-4165-8afb-aba84cc54e30.png",
-      "/lovable-uploads/1b833cb8-335b-4b65-bcd0-5eb69c6a9076.png"
+      "/lovable-uploads/1b833cb8-335b-4b65-bcd0-5eb69c6a9076.png",
+      "/lovable-uploads/e063658b-2d20-4ada-afbe-313d7b93e298.png",
+      "/lovable-uploads/50642600-ec7c-4804-9121-778baae3b175.png",
+      "/lovable-uploads/22b62847-a6e7-4b7b-89ab-f284a4d9cec6.png",
+      "/lovable-uploads/b86270dc-178f-4b5a-a4e9-0596d76e4703.png",
+      "/lovable-uploads/2f640bc2-d40d-4d74-929b-c2fd4ab5a870.png",
+      "/lovable-uploads/12f58c88-b534-4801-beea-67966b9ffe8b.png"
     ]
   }
 ];
 
 export const filters = ["All", "Kitchens", "Bathrooms", "Flooring", "Custom"];
+
