@@ -1,5 +1,4 @@
 
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Trophy, Shield, Clock } from "lucide-react";
@@ -43,6 +42,60 @@ const Portfolio = () => {
       image: "/lovable-uploads/635e42ad-ec12-4e8c-8201-c8e81e9f1a48.png",
       images: [
         "/lovable-uploads/635e42ad-ec12-4e8c-8201-c8e81e9f1a48.png"
+      ]
+    },
+    {
+      id: 4,
+      category: "Bathrooms",
+      title: "Elegant Marble Sink Installation",
+      image: "/lovable-uploads/a191a4a5-1aac-4dfa-86a6-7ec735c2f17d.png",
+      images: [
+        "/lovable-uploads/a191a4a5-1aac-4dfa-86a6-7ec735c2f17d.png"
+      ]
+    },
+    {
+      id: 5,
+      category: "Kitchens",
+      title: "Modern White Kitchen Design",
+      image: "/lovable-uploads/9e2812fe-7bca-4696-b43d-abf04db1ad98.png",
+      images: [
+        "/lovable-uploads/9e2812fe-7bca-4696-b43d-abf04db1ad98.png"
+      ]
+    },
+    {
+      id: 6,
+      category: "Bathrooms",
+      title: "Marble Bathtub Surround",
+      image: "/lovable-uploads/c8958c39-f8f4-4d44-8574-a4bf0b85926d.png",
+      images: [
+        "/lovable-uploads/c8958c39-f8f4-4d44-8574-a4bf0b85926d.png"
+      ]
+    },
+    {
+      id: 7,
+      category: "Custom",
+      title: "White Marble Kitchen Backsplash",
+      image: "/lovable-uploads/3395ed59-bf9f-41fb-967b-3b0376028f9f.png",
+      images: [
+        "/lovable-uploads/3395ed59-bf9f-41fb-967b-3b0376028f9f.png"
+      ]
+    },
+    {
+      id: 8,
+      category: "Bathrooms",
+      title: "Luxury Marble Vanity Counter",
+      image: "/lovable-uploads/d93b734b-7c77-450a-a941-fac2760fa4b2.png",
+      images: [
+        "/lovable-uploads/d93b734b-7c77-450a-a941-fac2760fa4b2.png"
+      ]
+    },
+    {
+      id: 9,
+      category: "Custom",
+      title: "Premium Marble Edge Detail",
+      image: "/lovable-uploads/27b08cb6-4384-4376-8838-dcd839ad7a65.png",
+      images: [
+        "/lovable-uploads/27b08cb6-4384-4376-8838-dcd839ad7a65.png"
       ]
     }
   ];
@@ -193,7 +246,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
@@ -232,4 +284,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
