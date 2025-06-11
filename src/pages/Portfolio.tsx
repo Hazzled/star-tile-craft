@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Trophy, Shield, Clock } from "lucide-react";
@@ -19,11 +17,14 @@ const Portfolio = () => {
       id: 1,
       category: "Kitchens",
       title: "Elegant White Marble Kitchen",
-      image: "/lovable-uploads/21f0f05e-9773-4f7f-bf75-cdbde68a73ae.png",
+      image: "/lovable-uploads/850d32d1-8b8f-4807-ad96-aa885ed8ef70.png",
       images: [
-        "/lovable-uploads/21f0f05e-9773-4f7f-bf75-cdbde68a73ae.png",
-        "/lovable-uploads/46aebe0b-9644-4569-a9b9-a2d42cb7e190.png",
-        "/lovable-uploads/b56c3eb7-7296-4cd2-9e3e-68e1ed117331.png"
+        "/lovable-uploads/850d32d1-8b8f-4807-ad96-aa885ed8ef70.png",
+        "/lovable-uploads/f1245319-0d86-4dca-829f-5afc686d1825.png",
+        "/lovable-uploads/a0e57790-02a4-4789-885f-024dee326869.png",
+        "/lovable-uploads/fdbbbcbc-5c69-431f-a3a7-6d194d8a435c.png",
+        "/lovable-uploads/95e5bb5f-9671-46ea-8ec7-4318c29509cb.png",
+        "/lovable-uploads/e0bf2bbf-505e-4dfa-a5c2-8df00c26cdfb.png"
       ]
     },
     {
@@ -232,4 +233,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
