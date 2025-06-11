@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Trophy, Shield, Clock } from "lucide-react";
@@ -64,6 +65,17 @@ const Portfolio = () => {
         "/lovable-uploads/439af03b-e831-4b3b-b217-5d855c168a3d.png",
         "/lovable-uploads/d8e1491c-8394-46b0-8365-7a116e057c9c.png",
         "/lovable-uploads/2b35e289-092e-4fd5-8fb1-39faeb566573.png"
+      ]
+    },
+    {
+      id: 4,
+      category: "Kitchens",
+      title: "Modern Kitchen with Dark Cabinetry",
+      image: "/lovable-uploads/bdf2e6f5-6cfb-4e6a-91c3-449075bc7573.png",
+      images: [
+        "/lovable-uploads/bdf2e6f5-6cfb-4e6a-91c3-449075bc7573.png",
+        "/lovable-uploads/53a13de4-c13f-43df-915b-8aab407b99a8.png",
+        "/lovable-uploads/fb184f97-fbcd-4a8d-8830-6550fec91f9e.png"
       ]
     }
   ];
