@@ -105,6 +105,24 @@ export const portfolioItems = [
       "/lovable-uploads/7e000e3c-1d2f-4d7c-ab81-e962ec38ce64.png",
       "/lovable-uploads/d1c67866-79ae-4d0a-9c00-bb517888a01a.png"
     ]
+  },
+  {
+    id: 8,
+    category: "Bathrooms",
+    title: "Classic Marble Bathroom Suite",
+    image: "/lovable-uploads/46e32ba4-91fc-455e-876c-0efd3005d463.png",
+    images: [
+      "/lovable-uploads/46e32ba4-91fc-455e-876c-0efd3005d463.png",
+      "/lovable-uploads/d2a89a52-869d-4c39-bce7-faded04bd8d4.png",
+      "/lovable-uploads/13cc276f-250a-429f-846f-8646713463ac.png",
+      "/lovable-uploads/2ef9fbc9-8d84-4cce-b540-905a60753f95.png",
+      "/lovable-uploads/f7c7febe-5b0a-4b9b-9756-b3082116d4e4.png",
+      "/lovable-uploads/6390f5e0-88e3-4e83-a14d-6137cf0ade48.png",
+      "/lovable-uploads/c701ae5d-1203-4189-a579-e310b62021cf.png",
+      "/lovable-uploads/e4c9fbd5-ab72-4d7f-b7ed-8fccf1322dbb.png",
+      "/lovable-uploads/38bf8101-59c3-4f18-8737-c34f5646ae75.png",
+      "/lovable-uploads/16761e63-6932-4234-b9d7-854e9a45b901.png"
+    ]
   }
 ];
 
