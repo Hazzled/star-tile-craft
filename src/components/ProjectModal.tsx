@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -21,16 +21,17 @@ interface ProjectModalProps {
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    if (!emblaApi || !isOpen) return;
+    if (!emblaApi || !isOpen || isHovered) return;
 
     const autoplay = setInterval(() => {
       emblaApi.scrollNext();
-    }, 3000); // Auto-scroll every 3 seconds
+    }, 6000); // Auto-scroll every 6 seconds (slower)
 
     return () => clearInterval(autoplay);
-  }, [emblaApi, isOpen]);
+  }, [emblaApi, isOpen, isHovered]);
 
   if (!project) return null;
 
@@ -62,7 +63,12 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
           {/* Full-screen Image Carousel */}
           <div className="flex-1 relative">
-            <div className="w-full h-full" ref={emblaRef}>
+            <div 
+              className="w-full h-full" 
+              ref={emblaRef}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <div className="flex h-full">
                 {projectImages.map((image, index) => (
                   <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
