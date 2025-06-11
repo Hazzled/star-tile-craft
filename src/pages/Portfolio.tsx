@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Trophy, Shield, Clock } from "lucide-react";
@@ -76,6 +75,24 @@ const Portfolio = () => {
         "/lovable-uploads/bdf2e6f5-6cfb-4e6a-91c3-449075bc7573.png",
         "/lovable-uploads/53a13de4-c13f-43df-915b-8aab407b99a8.png",
         "/lovable-uploads/fb184f97-fbcd-4a8d-8830-6550fec91f9e.png"
+      ]
+    },
+    {
+      id: 5,
+      category: "Custom",
+      title: "Luxury Mixed Material Installation",
+      image: "/lovable-uploads/960a44a4-3847-42e1-a392-1f83939aaadb.png",
+      images: [
+        "/lovable-uploads/960a44a4-3847-42e1-a392-1f83939aaadb.png",
+        "/lovable-uploads/55ecc208-209e-450e-a396-99cc9fbbe1b3.png",
+        "/lovable-uploads/55cb7dc1-38fd-40e8-9089-9482a5e29830.png",
+        "/lovable-uploads/e73cf339-bc28-440c-8cd9-f68cd7230d98.png",
+        "/lovable-uploads/9abb343b-3a44-4298-b2ce-adcd1faaa824.png",
+        "/lovable-uploads/78fc70e0-a6d6-47d4-b0ff-025009e99944.png",
+        "/lovable-uploads/0426050f-44b0-44f4-b552-a064573b90fd.png",
+        "/lovable-uploads/5fe23a35-4a4d-4503-982d-b2cbcbde496f.png",
+        "/lovable-uploads/b5e71b32-c696-478e-a84b-ade76ba67fd9.png",
+        "/lovable-uploads/f666a4a6-727f-45e7-a8c0-6e689a130fa2.png"
       ]
     }
   ];
