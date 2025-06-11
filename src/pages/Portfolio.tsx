@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { ArrowUpRight, Trophy, Shield, Clock } from "lucide-react";
+import ProjectCard from "@/components/ProjectCard";
+import ProjectModal from "@/components/ProjectModal";
+import FilterTabs from "@/components/FilterTabs";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const filters = ["All", "Kitchens", "Bathrooms", "Flooring", "Custom"];
   
   const portfolioItems = [{
@@ -86,7 +91,18 @@ const Portfolio = () => {
 
   const filteredItems = activeFilter === "All" ? portfolioItems : portfolioItems.filter(item => item.category === activeFilter);
   
-  return <div className="min-h-screen">
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
+  return (
+    <div className="min-h-screen">
       {/* Enhanced Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{
@@ -110,50 +126,44 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Enhanced Filter Buttons */}
-      <section className="py-12 bg-white relative -mt-6 z-20">
+      {/* Enhanced Filter Section */}
+      <section className="py-16 bg-white relative -mt-6 z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
-            {filters.map(filter => <Button key={filter} onClick={() => setActiveFilter(filter)} variant={activeFilter === filter ? "default" : "outline"} className={`
-                  px-8 py-3 text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1
-                  ${activeFilter === filter ? "bg-navy text-white shadow-navy/30" : "text-navy border-navy/30 hover:bg-navy hover:text-white hover:border-navy"}
-                `}>
-                {filter}
-              </Button>)}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-noir mb-4">
+              Browse Our Work
+            </h2>
+            <div className="w-16 h-1 bg-navy mx-auto mb-6"></div>
           </div>
+          
+          <FilterTabs 
+            filters={filters}
+            activeFilter={activeFilter}
+            onFilterChange={setActiveFilter}
+          />
         </div>
       </section>
 
       {/* Enhanced Portfolio Grid */}
-      <section className="py-16 bg-gradient-to-b from-white to-almond/30">
+      <section className="py-8 bg-gradient-to-b from-white to-almond/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map(item => <Card key={item.id} className="group overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg">
-                <div className="relative overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">
-                    <ArrowUpRight className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold text-navy bg-navy/10 px-4 py-2 rounded-full uppercase tracking-wider">
-                      {item.category}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-montserrat font-bold text-noir leading-tight group-hover:text-navy transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                </div>
-              </Card>)}
+            {filteredItems.map((item) => (
+              <ProjectCard
+                key={item.id}
+                project={item}
+                onClick={() => handleProjectClick(item)}
+              />
+            ))}
           </div>
 
-          {filteredItems.length === 0 && <div className="text-center py-20">
+          {filteredItems.length === 0 && (
+            <div className="text-center py-20">
               <p className="text-xl text-mist font-medium">
                 No projects found for the selected category.
               </p>
-            </div>}
+            </div>
+          )}
         </div>
       </section>
 
@@ -252,7 +262,15 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-    </div>;
+
+      {/* Project Modal */}
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        project={selectedProject}
+      />
+    </div>
+  );
 };
 
 export default Portfolio;
