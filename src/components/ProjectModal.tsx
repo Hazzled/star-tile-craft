@@ -1,9 +1,10 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowUpRight, X } from "lucide-react";
+import useEmblaCarousel from 'embla-carousel-react';
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -19,14 +20,26 @@ interface ProjectModalProps {
 }
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  useEffect(() => {
+    if (!emblaApi || !isOpen) return;
+
+    const autoplay = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 3000); // Auto-scroll every 3 seconds
+
+    return () => clearInterval(autoplay);
+  }, [emblaApi, isOpen]);
+
   if (!project) return null;
 
   const projectImages = project.images || [project.image];
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-[95vw] max-h-[95vh] h-[95vh] w-[95vw] p-0 overflow-hidden bg-black/95">
-        <div className="relative h-full flex flex-col">
+      <DialogContent className="max-w-[95vw] max-h-[95vh] h-[95vh] w-[95vw] p-0 overflow-hidden bg-transparent border-none">
+        <div className="relative h-full flex flex-col bg-black/20 backdrop-blur-sm">
           {/* Close Button */}
           <button
             onClick={onClose}
@@ -49,27 +62,21 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
           {/* Full-screen Image Carousel */}
           <div className="flex-1 relative">
-            <Carousel className="w-full h-full">
-              <CarouselContent className="h-full">
+            <div className="w-full h-full" ref={emblaRef}>
+              <div className="flex h-full">
                 {projectImages.map((image, index) => (
-                  <CarouselItem key={index} className="h-full">
+                  <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
                     <div className="relative h-full w-full flex items-center justify-center">
                       <img
                         src={image}
                         alt={`${project.title} - Image ${index + 1}`}
-                        className="max-w-full max-h-full object-contain"
+                        className="max-w-full max-h-full object-contain w-auto h-auto"
                       />
                     </div>
-                  </CarouselItem>
+                  </div>
                 ))}
-              </CarouselContent>
-              {projectImages.length > 1 && (
-                <>
-                  <CarouselPrevious className="left-6 bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/20 text-white h-12 w-12" />
-                  <CarouselNext className="right-6 bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/20 text-white h-12 w-12" />
-                </>
-              )}
-            </Carousel>
+              </div>
+            </div>
           </div>
 
           {/* Bottom CTA - Minimal */}
