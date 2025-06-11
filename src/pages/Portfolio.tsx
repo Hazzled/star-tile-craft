@@ -49,8 +49,9 @@ const Portfolio = () => {
       id: 3,
       category: "Custom",
       title: "Contemporary Stone & Tile Design",
-      image: "/lovable-uploads/85d9cfdc-a23c-4a7a-a34a-2836b3305607.png",
+      image: "/lovable-uploads/3b45ed6c-a449-4b89-a629-2e1e0a65eb20.png",
       images: [
+        "/lovable-uploads/3b45ed6c-a449-4b89-a629-2e1e0a65eb20.png",
         "/lovable-uploads/85d9cfdc-a23c-4a7a-a34a-2836b3305607.png",
         "/lovable-uploads/e8af422e-b324-424c-a080-008238f97e53.png",
         "/lovable-uploads/e6f89848-87aa-4588-81e4-59f3572a30c5.png",
