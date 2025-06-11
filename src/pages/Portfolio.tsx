@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowUpRight, Trophy, Shield, Clock } from "lucide-react";
+
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const filters = ["All", "Kitchens", "Bathrooms", "Flooring", "Custom"];
+  
   const portfolioItems = [{
     id: 1,
     category: "Kitchens",
@@ -65,8 +67,25 @@ const Portfolio = () => {
     category: "Custom",
     title: "Accent Wall Feature",
     image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }, {
+    id: 13,
+    category: "Kitchens",
+    title: "Elegant White Marble Kitchen",
+    image: "/lovable-uploads/d0f71007-3631-4244-aeec-d67da4a877b2.png"
+  }, {
+    id: 14,
+    category: "Bathrooms",
+    title: "Luxury Marble Vanity Installation",
+    image: "/lovable-uploads/134f2083-588f-4f1a-9dcb-066727768e7c.png"
+  }, {
+    id: 15,
+    category: "Custom",
+    title: "Premium Marble Countertop",
+    image: "/lovable-uploads/bfcaf910-1975-482e-8c88-59d2307b74fd.png"
   }];
+
   const filteredItems = activeFilter === "All" ? portfolioItems : portfolioItems.filter(item => item.category === activeFilter);
+  
   return <div className="min-h-screen">
       {/* Enhanced Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24 overflow-hidden">
@@ -235,4 +254,5 @@ const Portfolio = () => {
       </section>
     </div>;
 };
+
 export default Portfolio;
