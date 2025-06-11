@@ -1,3 +1,4 @@
+
 export const portfolioItems = [
   {
     id: 1,
@@ -139,6 +140,24 @@ export const portfolioItems = [
       "/lovable-uploads/8c2047ff-be07-4db3-a361-6d81423db86c.png",
       "/lovable-uploads/9a4c5268-b3ae-4c06-9be1-6f5976bf1606.png",
       "/lovable-uploads/36446099-52e4-4444-9502-87e0becd1173.png"
+    ]
+  },
+  {
+    id: 10,
+    category: "Custom",
+    title: "Elegant Marble Kitchen & Bath Suite",
+    image: "/lovable-uploads/00233517-2ee3-4c35-a70d-64b59947f822.png",
+    images: [
+      "/lovable-uploads/5d244176-dcae-449c-a466-f7232faddea2.png",
+      "/lovable-uploads/00233517-2ee3-4c35-a70d-64b59947f822.png",
+      "/lovable-uploads/807ffbd7-a6d3-45de-9beb-7fa4b5472ee8.png",
+      "/lovable-uploads/334154e4-c678-4c2c-8e36-4f02416e57e3.png",
+      "/lovable-uploads/56f758bb-f601-4986-8a20-1ba6cebd225c.png",
+      "/lovable-uploads/578ff287-51a2-4e12-a361-ab349e0c91d0.png",
+      "/lovable-uploads/fb58e24a-e72e-4932-9642-13b9312f658a.png",
+      "/lovable-uploads/7c8f4090-7d94-4b46-9292-e9c1722e7cc1.png",
+      "/lovable-uploads/6e50814a-31cf-4165-8afb-aba84cc54e30.png",
+      "/lovable-uploads/1b833cb8-335b-4b65-bcd0-5eb69c6a9076.png"
     ]
   }
 ];
