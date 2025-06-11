@@ -97,6 +97,17 @@ const Portfolio = () => {
         "/lovable-uploads/23e07dc2-2092-4fe4-955d-2827060a2131.png",
         "/lovable-uploads/5b70bab7-08e4-4a62-b6d5-205b2b54368e.png"
       ]
+    },
+    {
+      id: 6,
+      category: "Custom",
+      title: "Contemporary Wood & Stone Design",
+      image: "/lovable-uploads/4f94f69c-87f0-4be4-8b2a-81ba1a2737e0.png",
+      images: [
+        "/lovable-uploads/4f94f69c-87f0-4be4-8b2a-81ba1a2737e0.png",
+        "/lovable-uploads/6d58a51e-466c-46fd-949c-f5b18cb90c0f.png",
+        "/lovable-uploads/d1673b8b-7417-41dd-95a9-188cce0a483e.png"
+      ]
     }
   ];
 
