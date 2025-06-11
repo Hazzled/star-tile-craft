@@ -1,36 +1,29 @@
 
 
+
 export const portfolioItems = [
   {
-    id: 1,
-    category: "Kitchens",
-    title: "Elegant White Marble Kitchen",
-    image: "/lovable-uploads/850d32d1-8b8f-4807-ad96-aa885ed8ef70.png",
+    id: 10,
+    category: "Custom",
+    title: "Elegant Marble Kitchen & Bath Suite",
+    image: "/lovable-uploads/00233517-2ee3-4c35-a70d-64b59947f822.png",
     images: [
-      "/lovable-uploads/850d32d1-8b8f-4807-ad96-aa885ed8ef70.png",
-      "/lovable-uploads/f1245319-0d86-4dca-829f-5afc686d1825.png",
-      "/lovable-uploads/a0e57790-02a4-4789-885f-024dee326869.png",
-      "/lovable-uploads/fdbbbcbc-5c69-431f-a3a7-6d194d8a435c.png",
-      "/lovable-uploads/95e5bb5f-9671-46ea-8ec7-4318c29509cb.png",
-      "/lovable-uploads/e0bf2bbf-505e-4dfa-a5c2-8df00c26cdfb.png"
-    ]
-  },
-  {
-    id: 2,
-    category: "Bathrooms",
-    title: "Modern Luxury Bathroom Suite",
-    image: "/lovable-uploads/1e2c9bbd-70db-42e5-841e-24bf20d30651.png",
-    images: [
-      "/lovable-uploads/1e2c9bbd-70db-42e5-841e-24bf20d30651.png",
-      "/lovable-uploads/92651b4a-3bd9-4eb5-a731-f87558155247.png",
-      "/lovable-uploads/c6ea6782-a597-4cdf-b207-20b178f48415.png",
-      "/lovable-uploads/00669714-d09e-4f14-8495-b7ed9094f076.png",
-      "/lovable-uploads/49b46acc-3265-43c6-9a29-1e6f84a540a4.png",
-      "/lovable-uploads/2e4fc6ef-95f2-4a5e-af3e-09dd8a555baf.png",
-      "/lovable-uploads/07c8c6a6-a250-430b-90b9-8569f7b01b6a.png",
-      "/lovable-uploads/63d14555-95f5-4034-b3dc-ad9f41e6e427.png",
-      "/lovable-uploads/e15cc8b4-28b9-44d1-b76c-e5b3bd15b2c4.png",
-      "/lovable-uploads/a5249ccb-0070-4f71-ac1d-c8bf06b445f8.png"
+      "/lovable-uploads/5d244176-dcae-449c-a466-f7232faddea2.png",
+      "/lovable-uploads/00233517-2ee3-4c35-a70d-64b59947f822.png",
+      "/lovable-uploads/807ffbd7-a6d3-45de-9beb-7fa4b5472ee8.png",
+      "/lovable-uploads/334154e4-c678-4c2c-8e36-4f02416e57e3.png",
+      "/lovable-uploads/56f758bb-f601-4986-8a20-1ba6cebd225c.png",
+      "/lovable-uploads/578ff287-51a2-4e12-a361-ab349e0c91d0.png",
+      "/lovable-uploads/fb58e24a-e72e-4932-9642-13b9312f658a.png",
+      "/lovable-uploads/7c8f4090-7d94-4b46-9292-e9c1722e7cc1.png",
+      "/lovable-uploads/6e50814a-31cf-4165-8afb-aba84cc54e30.png",
+      "/lovable-uploads/1b833cb8-335b-4b65-bcd0-5eb69c6a9076.png",
+      "/lovable-uploads/e063658b-2d20-4ada-afbe-313d7b93e298.png",
+      "/lovable-uploads/50642600-ec7c-4804-9121-778baae3b175.png",
+      "/lovable-uploads/22b62847-a6e7-4b7b-89ab-f284a4d9cec6.png",
+      "/lovable-uploads/b86270dc-178f-4b5a-a4e9-0596d76e4703.png",
+      "/lovable-uploads/2f640bc2-d40d-4d74-929b-c2fd4ab5a870.png",
+      "/lovable-uploads/12f58c88-b534-4801-beea-67966b9ffe8b.png"
     ]
   },
   {
@@ -55,17 +48,6 @@ export const portfolioItems = [
     ]
   },
   {
-    id: 4,
-    category: "Kitchens",
-    title: "Modern Kitchen with Dark Cabinetry",
-    image: "/lovable-uploads/bdf2e6f5-6cfb-4e6a-91c3-449075bc7573.png",
-    images: [
-      "/lovable-uploads/bdf2e6f5-6cfb-4e6a-91c3-449075bc7573.png",
-      "/lovable-uploads/53a13de4-c13f-43df-915b-8aab407b99a8.png",
-      "/lovable-uploads/fb184f97-fbcd-4a8d-8830-6550fec91f9e.png"
-    ]
-  },
-  {
     id: 5,
     category: "Custom",
     title: "Luxury Mixed Material Installation",
@@ -84,27 +66,6 @@ export const portfolioItems = [
       "/lovable-uploads/ef82c8fd-631d-42d6-9248-8a5a8bfb2260.png",
       "/lovable-uploads/23e07dc2-2092-4fe4-955d-2827060a2131.png",
       "/lovable-uploads/5b70bab7-08e4-4a62-b6d5-205b2b54368e.png"
-    ]
-  },
-  {
-    id: 6,
-    category: "Custom",
-    title: "Contemporary Wood & Stone Design",
-    image: "/lovable-uploads/4f94f69c-87f0-4be4-8b2a-81ba1a2737e0.png",
-    images: [
-      "/lovable-uploads/4f94f69c-87f0-4be4-8b2a-81ba1a2737e0.png",
-      "/lovable-uploads/6d58a51e-466c-46fd-949c-f5b18cb90c0f.png",
-      "/lovable-uploads/d1673b8b-7417-41dd-95a9-188cce0a483e.png"
-    ]
-  },
-  {
-    id: 7,
-    category: "Kitchens",
-    title: "Modern White Kitchen with City Views",
-    image: "/lovable-uploads/7e000e3c-1d2f-4d7c-ab81-e962ec38ce64.png",
-    images: [
-      "/lovable-uploads/7e000e3c-1d2f-4d7c-ab81-e962ec38ce64.png",
-      "/lovable-uploads/d1c67866-79ae-4d0a-9c00-bb517888a01a.png"
     ]
   },
   {
@@ -129,6 +90,24 @@ export const portfolioItems = [
     ]
   },
   {
+    id: 2,
+    category: "Bathrooms",
+    title: "Modern Luxury Bathroom Suite",
+    image: "/lovable-uploads/1e2c9bbd-70db-42e5-841e-24bf20d30651.png",
+    images: [
+      "/lovable-uploads/1e2c9bbd-70db-42e5-841e-24bf20d30651.png",
+      "/lovable-uploads/92651b4a-3bd9-4eb5-a731-f87558155247.png",
+      "/lovable-uploads/c6ea6782-a597-4cdf-b207-20b178f48415.png",
+      "/lovable-uploads/00669714-d09e-4f14-8495-b7ed9094f076.png",
+      "/lovable-uploads/49b46acc-3265-43c6-9a29-1e6f84a540a4.png",
+      "/lovable-uploads/2e4fc6ef-95f2-4a5e-af3e-09dd8a555baf.png",
+      "/lovable-uploads/07c8c6a6-a250-430b-90b9-8569f7b01b6a.png",
+      "/lovable-uploads/63d14555-95f5-4034-b3dc-ad9f41e6e427.png",
+      "/lovable-uploads/e15cc8b4-28b9-44d1-b76c-e5b3bd15b2c4.png",
+      "/lovable-uploads/a5249ccb-0070-4f71-ac1d-c8bf06b445f8.png"
+    ]
+  },
+  {
     id: 9,
     category: "Custom",
     title: "Luxury Modern Mixed Design Suite",
@@ -144,30 +123,53 @@ export const portfolioItems = [
     ]
   },
   {
-    id: 10,
-    category: "Custom",
-    title: "Elegant Marble Kitchen & Bath Suite",
-    image: "/lovable-uploads/00233517-2ee3-4c35-a70d-64b59947f822.png",
+    id: 1,
+    category: "Kitchens",
+    title: "Elegant White Marble Kitchen",
+    image: "/lovable-uploads/850d32d1-8b8f-4807-ad96-aa885ed8ef70.png",
     images: [
-      "/lovable-uploads/5d244176-dcae-449c-a466-f7232faddea2.png",
-      "/lovable-uploads/00233517-2ee3-4c35-a70d-64b59947f822.png",
-      "/lovable-uploads/807ffbd7-a6d3-45de-9beb-7fa4b5472ee8.png",
-      "/lovable-uploads/334154e4-c678-4c2c-8e36-4f02416e57e3.png",
-      "/lovable-uploads/56f758bb-f601-4986-8a20-1ba6cebd225c.png",
-      "/lovable-uploads/578ff287-51a2-4e12-a361-ab349e0c91d0.png",
-      "/lovable-uploads/fb58e24a-e72e-4932-9642-13b9312f658a.png",
-      "/lovable-uploads/7c8f4090-7d94-4b46-9292-e9c1722e7cc1.png",
-      "/lovable-uploads/6e50814a-31cf-4165-8afb-aba84cc54e30.png",
-      "/lovable-uploads/1b833cb8-335b-4b65-bcd0-5eb69c6a9076.png",
-      "/lovable-uploads/e063658b-2d20-4ada-afbe-313d7b93e298.png",
-      "/lovable-uploads/50642600-ec7c-4804-9121-778baae3b175.png",
-      "/lovable-uploads/22b62847-a6e7-4b7b-89ab-f284a4d9cec6.png",
-      "/lovable-uploads/b86270dc-178f-4b5a-a4e9-0596d76e4703.png",
-      "/lovable-uploads/2f640bc2-d40d-4d74-929b-c2fd4ab5a870.png",
-      "/lovable-uploads/12f58c88-b534-4801-beea-67966b9ffe8b.png"
+      "/lovable-uploads/850d32d1-8b8f-4807-ad96-aa885ed8ef70.png",
+      "/lovable-uploads/f1245319-0d86-4dca-829f-5afc686d1825.png",
+      "/lovable-uploads/a0e57790-02a4-4789-885f-024dee326869.png",
+      "/lovable-uploads/fdbbbcbc-5c69-431f-a3a7-6d194d8a435c.png",
+      "/lovable-uploads/95e5bb5f-9671-46ea-8ec7-4318c29509cb.png",
+      "/lovable-uploads/e0bf2bbf-505e-4dfa-a5c2-8df00c26cdfb.png"
+    ]
+  },
+  {
+    id: 4,
+    category: "Kitchens",
+    title: "Modern Kitchen with Dark Cabinetry",
+    image: "/lovable-uploads/bdf2e6f5-6cfb-4e6a-91c3-449075bc7573.png",
+    images: [
+      "/lovable-uploads/bdf2e6f5-6cfb-4e6a-91c3-449075bc7573.png",
+      "/lovable-uploads/53a13de4-c13f-43df-915b-8aab407b99a8.png",
+      "/lovable-uploads/fb184f97-fbcd-4a8d-8830-6550fec91f9e.png"
+    ]
+  },
+  {
+    id: 6,
+    category: "Custom",
+    title: "Contemporary Wood & Stone Design",
+    image: "/lovable-uploads/4f94f69c-87f0-4be4-8b2a-81ba1a2737e0.png",
+    images: [
+      "/lovable-uploads/4f94f69c-87f0-4be4-8b2a-81ba1a2737e0.png",
+      "/lovable-uploads/6d58a51e-466c-46fd-949c-f5b18cb90c0f.png",
+      "/lovable-uploads/d1673b8b-7417-41dd-95a9-188cce0a483e.png"
+    ]
+  },
+  {
+    id: 7,
+    category: "Kitchens",
+    title: "Modern White Kitchen with City Views",
+    image: "/lovable-uploads/7e000e3c-1d2f-4d7c-ab81-e962ec38ce64.png",
+    images: [
+      "/lovable-uploads/7e000e3c-1d2f-4d7c-ab81-e962ec38ce64.png",
+      "/lovable-uploads/d1c67866-79ae-4d0a-9c00-bb517888a01a.png"
     ]
   }
 ];
 
 export const filters = ["All", "Kitchens", "Bathrooms", "Flooring", "Custom"];
+
 
