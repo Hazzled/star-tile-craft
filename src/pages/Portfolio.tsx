@@ -30,11 +30,19 @@ const Portfolio = () => {
     {
       id: 2,
       category: "Bathrooms",
-      title: "Luxury Marble Vanity Installation",
-      image: "/lovable-uploads/814f0794-7444-48c4-80fd-1e53408ed461.png",
+      title: "Modern Luxury Bathroom Suite",
+      image: "/lovable-uploads/1e2c9bbd-70db-42e5-841e-24bf20d30651.png",
       images: [
-        "/lovable-uploads/814f0794-7444-48c4-80fd-1e53408ed461.png",
-        "/lovable-uploads/24afa924-fd37-43dd-93d7-9f57ef34abcd.png"
+        "/lovable-uploads/1e2c9bbd-70db-42e5-841e-24bf20d30651.png",
+        "/lovable-uploads/92651b4a-3bd9-4eb5-a731-f87558155247.png",
+        "/lovable-uploads/c6ea6782-a597-4cdf-b207-20b178f48415.png",
+        "/lovable-uploads/00669714-d09e-4f14-8495-b7ed9094f076.png",
+        "/lovable-uploads/49b46acc-3265-43c6-9a29-1e6f84a540a4.png",
+        "/lovable-uploads/2e4fc6ef-95f2-4a5e-af3e-09dd8a555baf.png",
+        "/lovable-uploads/07c8c6a6-a250-430b-90b9-8569f7b01b6a.png",
+        "/lovable-uploads/63d14555-95f5-4034-b3dc-ad9f41e6e427.png",
+        "/lovable-uploads/e15cc8b4-28b9-44d1-b76c-e5b3bd15b2c4.png",
+        "/lovable-uploads/a5249ccb-0070-4f71-ac1d-c8bf06b445f8.png"
       ]
     },
     {
