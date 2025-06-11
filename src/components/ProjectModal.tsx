@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -25,19 +25,39 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden p-0">
-        <div className="relative">
-          {/* Image Carousel */}
-          <div className="relative h-96 bg-gray-100">
+      <DialogContent className="max-w-[95vw] max-h-[95vh] h-[95vh] w-[95vw] p-0 overflow-hidden bg-black/95">
+        <div className="relative h-full flex flex-col">
+          {/* Close Button */}
+          <button
+            onClick={onClose}
+            className="absolute top-6 right-6 z-50 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          {/* Project Title - Minimal */}
+          <div className="absolute top-6 left-6 z-50">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+              <span className="text-xs font-bold text-white/80 uppercase tracking-wider">
+                {project.category}
+              </span>
+              <h2 className="text-xl font-montserrat font-bold text-white">
+                {project.title}
+              </h2>
+            </div>
+          </div>
+
+          {/* Full-screen Image Carousel */}
+          <div className="flex-1 relative">
             <Carousel className="w-full h-full">
-              <CarouselContent>
+              <CarouselContent className="h-full">
                 {projectImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative h-96 w-full">
+                  <CarouselItem key={index} className="h-full">
+                    <div className="relative h-full w-full flex items-center justify-center">
                       <img
                         src={image}
                         alt={`${project.title} - Image ${index + 1}`}
-                        className="w-full h-full object-cover"
+                        className="max-w-full max-h-full object-contain"
                       />
                     </div>
                   </CarouselItem>
@@ -45,61 +65,36 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
               </CarouselContent>
               {projectImages.length > 1 && (
                 <>
-                  <CarouselPrevious className="left-4" />
-                  <CarouselNext className="right-4" />
+                  <CarouselPrevious className="left-6 bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/20 text-white h-12 w-12" />
+                  <CarouselNext className="right-6 bg-white/10 backdrop-blur-sm hover:bg-white/20 border-white/20 text-white h-12 w-12" />
                 </>
               )}
             </Carousel>
           </div>
 
-          {/* Project Details */}
-          <div className="p-8">
-            <DialogHeader className="mb-6">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="text-xs font-bold text-navy bg-navy/10 px-3 py-1 rounded-full uppercase tracking-wider">
-                  {project.category}
+          {/* Bottom CTA - Minimal */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+            <Button 
+              size="lg" 
+              className="bg-white text-navy hover:bg-gray-100 font-bold px-8 py-3 shadow-xl transition-all duration-300"
+            >
+              <a href="/contact" className="flex items-center gap-2">
+                Request Similar Project
+                <ArrowUpRight className="w-5 h-5" />
+              </a>
+            </Button>
+          </div>
+
+          {/* Image Counter */}
+          {projectImages.length > 1 && (
+            <div className="absolute bottom-6 right-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-1">
+                <span className="text-white text-sm font-medium">
+                  1 / {projectImages.length}
                 </span>
               </div>
-              <DialogTitle className="text-3xl font-montserrat font-bold text-noir leading-tight">
-                {project.title}
-              </DialogTitle>
-            </DialogHeader>
-
-            <div className="space-y-6">
-              <p className="text-lg text-mist leading-relaxed">
-                {project.description || `This ${project.category.toLowerCase()} project showcases our commitment to quality craftsmanship and attention to detail. Our expert installation team worked closely with the homeowner to bring their vision to life, using premium materials and proven techniques to ensure lasting beauty and durability.`}
-              </p>
-
-              <div className="bg-almond/30 rounded-lg p-6">
-                <h3 className="font-montserrat font-bold text-noir mb-3">Project Features</h3>
-                <ul className="space-y-2 text-mist">
-                  <li>• Premium tile selection and custom layout design</li>
-                  <li>• Professional waterproofing and substrate preparation</li>
-                  <li>• Precision installation with expert finishing</li>
-                  <li>• Quality assurance and final inspection</li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button 
-                  size="lg" 
-                  className="bg-navy hover:bg-navy/90 text-white font-bold px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <a href="/contact" className="flex items-center gap-2">
-                    Request Similar Project
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-bold px-8 py-3 transition-all duration-300"
-                >
-                  <a href="/portfolio">View More Projects</a>
-                </Button>
-              </div>
             </div>
-          </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>
