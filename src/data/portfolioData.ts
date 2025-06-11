@@ -125,6 +125,21 @@ export const portfolioItems = [
       "/lovable-uploads/ea675510-ee22-4846-82fb-9ee372b6ea0f.png",
       "/lovable-uploads/1f219385-0286-432f-b4a6-63bd97af8bef.png"
     ]
+  },
+  {
+    id: 9,
+    category: "Custom",
+    title: "Luxury Modern Mixed Design Suite",
+    image: "/lovable-uploads/8ac55f0e-b5c5-4770-812d-037addeb827a.png",
+    images: [
+      "/lovable-uploads/8ac55f0e-b5c5-4770-812d-037addeb827a.png",
+      "/lovable-uploads/268f39c2-5ad2-4e78-803e-7365ce02c3e0.png",
+      "/lovable-uploads/80d2858b-1b0a-46b0-bd93-cb1bd5612756.png",
+      "/lovable-uploads/2888493a-862c-4bf9-b6b4-afe216d65fe0.png",
+      "/lovable-uploads/8c2047ff-be07-4db3-a361-6d81423db86c.png",
+      "/lovable-uploads/9a4c5268-b3ae-4c06-9be1-6f5976bf1606.png",
+      "/lovable-uploads/36446099-52e4-4444-9502-87e0becd1173.png"
+    ]
   }
 ];
 
