@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Trophy, Shield, Clock } from "lucide-react";
@@ -12,82 +13,26 @@ const Portfolio = () => {
   
   const filters = ["All", "Kitchens", "Bathrooms", "Flooring", "Custom"];
   
-  const portfolioItems = [{
-    id: 1,
-    category: "Kitchens",
-    title: "Modern Kitchen Backsplash",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 2,
-    category: "Bathrooms",
-    title: "Luxury Bathroom Remodel",
-    image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 3,
-    category: "Flooring",
-    title: "Porcelain Tile Flooring",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 4,
-    category: "Custom",
-    title: "Fireplace Surround",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 5,
-    category: "Kitchens",
-    title: "Subway Tile Backsplash",
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 6,
-    category: "Bathrooms",
-    title: "Master Bath Renovation",
-    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 7,
-    category: "Flooring",
-    title: "Natural Stone Flooring",
-    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 8,
-    category: "Custom",
-    title: "Outdoor Patio Installation",
-    image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 9,
-    category: "Kitchens",
-    title: "Contemporary Kitchen Design",
-    image: "https://images.unsplash.com/photo-1565538420870-da08ff96a207?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 10,
-    category: "Bathrooms",
-    title: "Spa-Style Bathroom",
-    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 11,
-    category: "Flooring",
-    title: "Luxury Vinyl Plank",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 12,
-    category: "Custom",
-    title: "Accent Wall Feature",
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }, {
-    id: 13,
-    category: "Kitchens",
-    title: "Elegant White Marble Kitchen",
-    image: "/lovable-uploads/d0f71007-3631-4244-aeec-d67da4a877b2.png"
-  }, {
-    id: 14,
-    category: "Bathrooms",
-    title: "Luxury Marble Vanity Installation",
-    image: "/lovable-uploads/134f2083-588f-4f1a-9dcb-066727768e7c.png"
-  }, {
-    id: 15,
-    category: "Custom",
-    title: "Premium Marble Countertop",
-    image: "/lovable-uploads/bfcaf910-1975-482e-8c88-59d2307b74fd.png"
-  }];
+  const portfolioItems = [
+    {
+      id: 1,
+      category: "Kitchens",
+      title: "Modern Kitchen Backsplash",
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 2,
+      category: "Bathrooms",
+      title: "Luxury Bathroom Remodel",
+      image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 3,
+      category: "Flooring",
+      title: "Porcelain Tile Flooring",
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ];
 
   const filteredItems = activeFilter === "All" ? portfolioItems : portfolioItems.filter(item => item.category === activeFilter);
   
