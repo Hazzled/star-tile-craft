@@ -48,10 +48,19 @@ const Portfolio = () => {
     {
       id: 3,
       category: "Custom",
-      title: "Premium Marble Countertop",
-      image: "/lovable-uploads/635e42ad-ec12-4e8c-8201-c8e81e9f1a48.png",
+      title: "Contemporary Stone & Tile Design",
+      image: "/lovable-uploads/85d9cfdc-a23c-4a7a-a34a-2836b3305607.png",
       images: [
-        "/lovable-uploads/635e42ad-ec12-4e8c-8201-c8e81e9f1a48.png"
+        "/lovable-uploads/85d9cfdc-a23c-4a7a-a34a-2836b3305607.png",
+        "/lovable-uploads/e8af422e-b324-424c-a080-008238f97e53.png",
+        "/lovable-uploads/e6f89848-87aa-4588-81e4-59f3572a30c5.png",
+        "/lovable-uploads/88907a77-a669-40de-b427-7b4f0a578e62.png",
+        "/lovable-uploads/2b3e5380-07f9-4abe-91b2-9908ec8cded1.png",
+        "/lovable-uploads/96054b31-8687-4423-b20e-13276bba98cf.png",
+        "/lovable-uploads/b339b04d-b2a8-48d8-927a-90544a89775c.png",
+        "/lovable-uploads/08aa4e47-b29b-457f-a3a4-c7eb283940ba.png",
+        "/lovable-uploads/3014c16f-305a-4c4b-82ff-3fc60a7d0f09.png",
+        "/lovable-uploads/439af03b-e831-4b3b-b217-5d855c168a3d.png"
       ]
     }
   ];
