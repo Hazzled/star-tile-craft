@@ -1,4 +1,3 @@
-
 export const portfolioItems = [
   {
     id: 1,
@@ -121,7 +120,10 @@ export const portfolioItems = [
       "/lovable-uploads/c701ae5d-1203-4189-a579-e310b62021cf.png",
       "/lovable-uploads/e4c9fbd5-ab72-4d7f-b7ed-8fccf1322dbb.png",
       "/lovable-uploads/38bf8101-59c3-4f18-8737-c34f5646ae75.png",
-      "/lovable-uploads/16761e63-6932-4234-b9d7-854e9a45b901.png"
+      "/lovable-uploads/16761e63-6932-4234-b9d7-854e9a45b901.png",
+      "/lovable-uploads/938e7ffa-39d1-4f17-8dae-826db135bfda.png",
+      "/lovable-uploads/ea675510-ee22-4846-82fb-9ee372b6ea0f.png",
+      "/lovable-uploads/1f219385-0286-432f-b4a6-63bd97af8bef.png"
     ]
   }
 ];
