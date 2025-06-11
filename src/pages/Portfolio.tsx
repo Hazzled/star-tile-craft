@@ -92,7 +92,10 @@ const Portfolio = () => {
         "/lovable-uploads/0426050f-44b0-44f4-b552-a064573b90fd.png",
         "/lovable-uploads/5fe23a35-4a4d-4503-982d-b2cbcbde496f.png",
         "/lovable-uploads/b5e71b32-c696-478e-a84b-ade76ba67fd9.png",
-        "/lovable-uploads/f666a4a6-727f-45e7-a8c0-6e689a130fa2.png"
+        "/lovable-uploads/f666a4a6-727f-45e7-a8c0-6e689a130fa2.png",
+        "/lovable-uploads/ef82c8fd-631d-42d6-9248-8a5a8bfb2260.png",
+        "/lovable-uploads/23e07dc2-2092-4fe4-955d-2827060a2131.png",
+        "/lovable-uploads/5b70bab7-08e4-4a62-b6d5-205b2b54368e.png"
       ]
     }
   ];
