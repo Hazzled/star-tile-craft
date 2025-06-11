@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowUpRight, X, ArrowLeft, ArrowRight } from "lucide-react";
 import useEmblaCarousel from 'embla-carousel-react';
 
 interface ProjectModalProps {
@@ -37,6 +37,14 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
   const projectImages = project.images || [project.image];
 
+  const handlePrevious = () => {
+    if (emblaApi) emblaApi.scrollPrev();
+  };
+
+  const handleNext = () => {
+    if (emblaApi) emblaApi.scrollNext();
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-[95vw] max-h-[95vh] h-[95vh] w-[95vw] p-0 overflow-hidden bg-transparent border-none">
@@ -63,6 +71,26 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
           {/* Full-screen Image Carousel */}
           <div className="flex-1 relative">
+            {/* Previous Button */}
+            {projectImages.length > 1 && (
+              <button
+                onClick={handlePrevious}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-40 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 opacity-70 hover:opacity-100"
+              >
+                <ArrowLeft className="w-8 h-8" />
+              </button>
+            )}
+
+            {/* Next Button */}
+            {projectImages.length > 1 && (
+              <button
+                onClick={handleNext}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-40 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 opacity-70 hover:opacity-100"
+              >
+                <ArrowRight className="w-8 h-8" />
+              </button>
+            )}
+
             <div 
               className="w-full h-full" 
               ref={emblaRef}
