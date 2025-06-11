@@ -95,6 +95,16 @@ export const portfolioItems = [
       "/lovable-uploads/6d58a51e-466c-46fd-949c-f5b18cb90c0f.png",
       "/lovable-uploads/d1673b8b-7417-41dd-95a9-188cce0a483e.png"
     ]
+  },
+  {
+    id: 7,
+    category: "Kitchens",
+    title: "Modern White Kitchen with City Views",
+    image: "/lovable-uploads/7e000e3c-1d2f-4d7c-ab81-e962ec38ce64.png",
+    images: [
+      "/lovable-uploads/7e000e3c-1d2f-4d7c-ab81-e962ec38ce64.png",
+      "/lovable-uploads/d1c67866-79ae-4d0a-9c00-bb517888a01a.png"
+    ]
   }
 ];
 
