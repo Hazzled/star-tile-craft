@@ -2,7 +2,27 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Star, Award, Clock, Shield, Trophy, ArrowRight, Instagram, Facebook } from "lucide-react";
+import { useState } from "react";
+import ProjectModal from "@/components/ProjectModal";
+import { portfolioItems } from "@/data/portfolioData";
+
 const Index = () => {
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Get the first 6 projects for recent projects section
+  const recentProjects = portfolioItems.slice(0, 6);
+
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   const services = [{
     title: "Kitchen Backsplashes",
     description: "Transform your kitchen with stunning custom backsplash designs that perfectly complement your style.",
@@ -20,7 +40,6 @@ const Index = () => {
     description: "Unique installations for fireplaces, patios, accent walls, and specialty areas.",
     image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }];
-  const portfolioPreview = ["https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"];
   const testimonials = [{
     name: "Sarah Johnson",
     initials: "SJ",
@@ -111,9 +130,24 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-            {portfolioPreview.map((image, index) => <div key={index} className="aspect-square overflow-hidden rounded-2xl group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300">
-                <img src={image} alt={`Portfolio project ${index + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              </div>)}
+            {recentProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className="aspect-square overflow-hidden rounded-2xl group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 relative"
+                onClick={() => handleProjectClick(project)}
+              >
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                  <p className="text-white font-montserrat font-semibold text-lg mb-1">{project.title}</p>
+                  <p className="text-white/80 text-sm uppercase tracking-wider">{project.category}</p>
+                </div>
+              </div>
+            ))}
           </div>
           
           <div className="text-center">
@@ -243,6 +277,13 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Project Modal */}
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        project={selectedProject}
+      />
     </div>;
 };
 export default Index;
