@@ -37,12 +37,12 @@ const ServicesOverview = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg group h-full">
+            <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg group flex flex-col h-full">
               <div className="relative overflow-hidden">
                 <img src={service.image} alt={service.title} className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <CardContent className="p-6 flex flex-col h-full">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-montserrat font-semibold text-noir mb-3">
                   {service.title}
                 </h3>
