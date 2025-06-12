@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section className="relative h-[700px] bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{
-        backgroundImage: "url('/lovable-uploads/3064f45d-5bdd-4cc9-a1f5-e0e0d12d6681.png')"
+        backgroundImage: "url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
       }} />
       <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
         <header>
