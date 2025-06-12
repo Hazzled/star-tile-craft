@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle, Hammer, Droplets, Home, Sparkles, Phone, ClipboardCheck, Wrench, Eye } from "lucide-react";
 import { motion } from "framer-motion";
+
 const Services = () => {
   const serviceOverview = [{
     icon: <Hammer className="h-8 w-8" />,
@@ -21,27 +22,29 @@ const Services = () => {
     title: "Custom Projects",
     description: "Unique installations for any space"
   }];
-  const services = [{
-    title: "Kitchen Backsplashes",
-    description: "Transform your kitchen with stunning custom backsplash designs that perfectly complement your style and cooking space.",
-    image: "/lovable-uploads/b947b3d6-9c5f-4715-a0d3-49aa3dc2206d.png",
-    features: ["Custom design consultation", "Premium tile selection", "Professional installation", "Grout sealing & finishing"]
-  }, {
-    title: "Bathroom & Shower Tile",
-    description: "Create beautiful, waterproof bathroom spaces with expert tile installation that combines functionality with stunning aesthetics.",
-    image: "/lovable-uploads/9adb0b06-75d6-411c-a8f8-621a8352881b.png",
-    features: ["Waterproofing solutions", "Custom shower designs", "Floor-to-ceiling installations", "Slip-resistant options"]
-  }, {
-    title: "Tile & Stone Flooring",
-    description: "Durable and elegant flooring solutions using ceramic, porcelain, and natural stone tiles for lasting beauty.",
-    image: "/lovable-uploads/5a30d583-2cd7-47d4-86ed-14f99bc228d6.png",
-    features: ["Ceramic & porcelain tiles", "Natural stone installation", "Radiant heating compatibility", "Commercial-grade options"]
-  }, {
-    title: "Custom Tile Projects",
-    description: "Unique installations for fireplaces, patios, accent walls, and specialty areas that require expert craftsmanship.",
-    image: "/lovable-uploads/64fc2389-3550-4178-84c4-1935c25c0988.png",
-    features: ["Fireplace surrounds", "Outdoor patios", "Accent walls", "Commercial spaces"]
-  }];
+  const services = [
+    {
+      title: "Kitchen Backsplashes",
+      description: "Transform your kitchen with stunning custom backsplash designs that perfectly complement your style and cooking space.",
+      image: "/lovable-uploads/b947b3d6-9c5f-4715-a0d3-49aa3dc2206d.png",
+      features: ["Custom design consultation", "Premium tile selection", "Professional installation", "Grout sealing & finishing"]
+    }, {
+      title: "Bathroom & Shower Tile",
+      description: "Create beautiful, waterproof bathroom spaces with expert tile installation that combines functionality with stunning aesthetics.",
+      image: "/lovable-uploads/9adb0b06-75d6-411c-a8f8-621a8352881b.png",
+      features: ["Waterproofing solutions", "Custom shower designs", "Floor-to-ceiling installations", "Slip-resistant options"]
+    }, {
+      title: "Tile & Stone Flooring",
+      description: "Durable and elegant flooring solutions using ceramic, porcelain, and natural stone tiles for lasting beauty.",
+      image: "/lovable-uploads/5a30d583-2cd7-47d4-86ed-14f99bc228d6.png",
+      features: ["Ceramic & porcelain tiles", "Natural stone installation", "Radiant heating compatibility", "Commercial-grade options"]
+    }, {
+      title: "Custom Tile Projects",
+      description: "Unique installations for fireplaces, patios, accent walls, and specialty areas that require expert craftsmanship.",
+      image: "/lovable-uploads/64fc2389-3550-4178-84c4-1935c25c0988.png",
+      features: ["Fireplace surrounds", "Outdoor patios", "Accent walls", "Commercial spaces"]
+    }
+  ];
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-navy via-gray-900 to-navy text-white py-24 overflow-hidden">
@@ -244,8 +247,8 @@ const Services = () => {
           {/* Process Timeline */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute top-16 left-0 right-0 h-1 bg-navy/20 hidden lg:block"></div>
-            <div className="absolute top-16 left-0 h-1 bg-navy hidden lg:block animate-pulse" style={{
+            <div className="absolute top-20 left-0 right-0 h-1 bg-navy/20 hidden lg:block"></div>
+            <div className="absolute top-20 left-0 h-1 bg-navy hidden lg:block animate-pulse" style={{
             width: '100%'
           }}></div>
             
@@ -281,12 +284,12 @@ const Services = () => {
             }} transition={{
               duration: 0.6,
               delay: index * 0.15
-            }} className="relative">
-                  <Card className="text-center bg-white shadow-xl border-0 rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
-                    <CardContent className="p-8">
+            }} className="relative flex flex-col">
+                  <Card className="text-center bg-white shadow-xl border-0 rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-500 h-full">
+                    <CardContent className="p-8 flex flex-col items-center h-full">
                       {/* Step Number */}
-                      <div className="relative mb-6">
-                        <div className="bg-navy text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto text-2xl font-bold shadow-lg relative z-10">
+                      <div className="relative mb-6 flex justify-center">
+                        <div className="bg-navy text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold shadow-lg relative z-10">
                           {process.step}
                         </div>
                         {/* Connector line for desktop */}
@@ -294,14 +297,14 @@ const Services = () => {
                       </div>
                       
                       {/* Icon */}
-                      <div className="bg-almond text-navy rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                      <div className="bg-almond text-navy rounded-full w-12 h-12 flex items-center justify-center mb-4">
                         {process.icon}
                       </div>
                       
-                      <h3 className="text-xl font-montserrat font-semibold text-navy mb-4">
+                      <h3 className="text-xl font-montserrat font-semibold text-navy mb-4 text-center">
                         {process.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed text-center flex-1">
                         {process.description}
                       </p>
                     </CardContent>
@@ -352,4 +355,5 @@ const Services = () => {
       </section>
     </div>;
 };
+
 export default Services;
