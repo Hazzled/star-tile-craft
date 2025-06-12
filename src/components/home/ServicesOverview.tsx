@@ -8,19 +8,19 @@ const ServicesOverview = () => {
   const services = [{
     title: "Kitchen Backsplashes",
     description: "Transform your kitchen with stunning custom backsplash designs that perfectly complement your style.",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "/lovable-uploads/1b833cb8-335b-4b65-bcd0-5eb69c6a9076.png"
   }, {
     title: "Bathroom & Shower Tile",
     description: "Create beautiful, waterproof bathroom spaces with expert tile installation.",
-    image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "/lovable-uploads/88907a77-a669-40de-b427-7b4f0a578e62.png"
   }, {
     title: "Tile & Stone Flooring",
     description: "Durable and elegant flooring solutions using ceramic, porcelain, and natural stone tiles.",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "/lovable-uploads/7c8f4090-7d94-4b46-9292-e9c1722e7cc1.png"
   }, {
     title: "Custom Tile Projects",
     description: "Unique installations for fireplaces, patios, accent walls, and specialty areas.",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "/lovable-uploads/23e07dc2-2092-4fe4-955d-2827060a2131.png"
   }];
 
   return (
