@@ -58,14 +58,14 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Form data stored in database successfully:", dbResult);
 
-    // Send email using Resend
+    // Send emails using Resend
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (!resendApiKey) {
       console.error("RESEND_API_KEY not found");
       return new Response(
         JSON.stringify({ 
           success: true, 
-          message: "Form submitted successfully but email not sent (no API key)" 
+          message: "Form submitted successfully but emails not sent (no API key)" 
         }),
         {
           status: 200,
@@ -79,7 +79,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     const resend = new Resend(resendApiKey);
     
-    const emailResponse = await resend.emails.send({
+    // Send notification email to business
+    const businessEmailResponse = await resend.emails.send({
       from: "Star Tile LLC Contact Form <onboarding@resend.dev>",
       to: ["Contact@Startilellc.com"],
       subject: `New Contact Form Submission from ${formData.name}`,
@@ -96,14 +97,42 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Business notification email sent:", businessEmailResponse);
+
+    // Send confirmation email to customer
+    const confirmationEmailResponse = await resend.emails.send({
+      from: "Star Tile LLC <onboarding@resend.dev>",
+      to: [formData.email],
+      subject: "Thank you for contacting Star Tile LLC",
+      html: `
+        <h2>Thank you for your inquiry, ${formData.name}!</h2>
+        <p>We have received your message and will get back to you within 24 hours.</p>
+        
+        <h3>Your submission details:</h3>
+        <p><strong>Name:</strong> ${formData.name}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Phone:</strong> ${formData.phone}</p>
+        ${formData.message ? `<p><strong>Message:</strong><br>${formData.message.replace(/\n/g, '<br>')}</p>` : ''}
+        
+        <hr>
+        <p>Best regards,<br>
+        <strong>Star Tile LLC</strong><br>
+        Phone: (503) 482-8395<br>
+        Email: Contact@Startilellc.com</p>
+        
+        <p><em>Licensed & Insured - CCB #200970</em></p>
+      `,
+    });
+
+    console.log("Customer confirmation email sent:", confirmationEmailResponse);
 
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: "Contact form submitted and email sent successfully",
+        message: "Contact form submitted and confirmation emails sent successfully",
         submissionId: dbResult[0].id,
-        emailId: emailResponse.data?.id 
+        businessEmailId: businessEmailResponse.data?.id,
+        confirmationEmailId: confirmationEmailResponse.data?.id
       }),
       {
         status: 200,
