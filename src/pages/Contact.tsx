@@ -1,5 +1,4 @@
-
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -21,6 +20,9 @@ const Contact = () => {
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Create a ref for the contact form section
+  const contactFormRef = useRef<HTMLDivElement>(null);
 
   // Memoize the animated background and floating particles to prevent re-creation on form changes
   const animatedBackground = useMemo(() => (
@@ -67,6 +69,13 @@ const Contact = () => {
       ))}
     </div>
   ), []);
+
+  const scrollToContactForm = () => {
+    contactFormRef.current?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -117,7 +126,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Unified Hero + Contact Form Section */}
-      <section className="relative py-20 min-h-screen overflow-hidden">
+      <section ref={contactFormRef} className="relative py-20 min-h-screen overflow-hidden">
         {/* Hero Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
@@ -402,7 +411,12 @@ const Contact = () => {
                 Call Now: (503) 482-8395
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="border-white hover:bg-white text-slate-900">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white hover:bg-white text-slate-900"
+              onClick={scrollToContactForm}
+            >
               Email Us Today
             </Button>
           </div>
