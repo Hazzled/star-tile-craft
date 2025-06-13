@@ -2,8 +2,15 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const PortfolioCTA = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
@@ -19,11 +26,13 @@ const PortfolioCTA = () => {
           Let's discuss your tile installation project and bring your vision to life with the same quality you see here.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button size="lg" className="bg-white text-navy hover:bg-gray-100 font-bold text-lg px-10 py-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <a href="/contact" className="flex items-center gap-2">
-              Request Free Consultation
-              <ArrowUpRight className="w-5 h-5" />
-            </a>
+          <Button 
+            size="lg" 
+            onClick={handleContactClick}
+            className="bg-white text-navy hover:bg-gray-100 font-bold text-lg px-10 py-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2"
+          >
+            Request Free Consultation
+            <ArrowUpRight className="w-5 h-5" />
           </Button>
           <Button size="lg" variant="outline" className="border-2 border-white hover:bg-white font-bold text-lg px-10 py-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-slate-900">
             <a href="tel:5034828395">Call (503) 482-8395</a>

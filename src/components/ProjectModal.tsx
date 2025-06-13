@@ -4,6 +4,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowUpRight, X, ArrowLeft, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import useEmblaCarousel from 'embla-carousel-react';
 
 interface ProjectModalProps {
@@ -22,6 +23,7 @@ interface ProjectModalProps {
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!emblaApi || !isOpen || isHovered) return;
@@ -43,6 +45,11 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
   const handleNext = () => {
     if (emblaApi) emblaApi.scrollNext();
+  };
+
+  const handleRequestProject = () => {
+    onClose();
+    navigate('/contact');
   };
 
   return (
@@ -117,12 +124,11 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
           <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
             <Button 
               size="lg" 
-              className="bg-white text-navy hover:bg-gray-100 font-bold px-8 py-3 shadow-xl transition-all duration-300"
+              onClick={handleRequestProject}
+              className="bg-white text-navy hover:bg-gray-100 font-bold px-8 py-3 shadow-xl transition-all duration-300 flex items-center gap-2"
             >
-              <a href="/contact" className="flex items-center gap-2">
-                Request Similar Project
-                <ArrowUpRight className="w-5 h-5" />
-              </a>
+              Request Similar Project
+              <ArrowUpRight className="w-5 h-5" />
             </Button>
           </div>
 
