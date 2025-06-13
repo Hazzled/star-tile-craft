@@ -1,5 +1,6 @@
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.50.0";
 import { Resend } from "npm:resend@2.0.0";
 
 const corsHeaders = {
@@ -21,16 +22,29 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    console.log("Received contact form submission");
+    console.log("Received contact form submission request");
     
-    // Check if API key is available
-    const apiKey = Deno.env.get("RESEND_API_KEY");
-    if (!apiKey) {
-      console.error("RESEND_API_KEY not found in environment variables");
+    // Initialize Supabase client
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    
+    // Get form data
+    const formData: ContactFormData = await req.json();
+    console.log("Form data received:", { name: formData.name, email: formData.email, phone: formData.phone });
+
+    // Store in database first
+    const { data: dbResult, error: dbError } = await supabase
+      .from('contact_submissions')
+      .insert([formData])
+      .select();
+
+    if (dbError) {
+      console.error("Database error:", dbError);
       return new Response(
         JSON.stringify({ 
           success: false, 
-          error: "Email service not configured properly" 
+          error: "Failed to store submission" 
         }),
         {
           status: 500,
@@ -42,12 +56,29 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    const resend = new Resend(apiKey);
-    
-    const formData: ContactFormData = await req.json();
-    console.log("Form data:", { name: formData.name, email: formData.email, phone: formData.phone });
+    console.log("Form data stored in database successfully:", dbResult);
 
-    // Send email to the business
+    // Send email using Resend
+    const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    if (!resendApiKey) {
+      console.error("RESEND_API_KEY not found");
+      return new Response(
+        JSON.stringify({ 
+          success: true, 
+          message: "Form submitted successfully but email not sent (no API key)" 
+        }),
+        {
+          status: 200,
+          headers: { 
+            "Content-Type": "application/json", 
+            ...corsHeaders 
+          },
+        }
+      );
+    }
+
+    const resend = new Resend(resendApiKey);
+    
     const emailResponse = await resend.emails.send({
       from: "Star Tile LLC Contact Form <onboarding@resend.dev>",
       to: ["Contact@Startilellc.com"],
@@ -61,7 +92,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p>${formData.message ? formData.message.replace(/\n/g, '<br>') : 'No message provided'}</p>
         
         <hr>
-        <p><em>This message was sent from the Star Tile LLC website contact form and has been automatically stored in the database.</em></p>
+        <p><em>This message was sent from the Star Tile LLC website contact form.</em></p>
       `,
     });
 
@@ -71,6 +102,7 @@ const handler = async (req: Request): Promise<Response> => {
       JSON.stringify({ 
         success: true, 
         message: "Contact form submitted and email sent successfully",
+        submissionId: dbResult[0].id,
         emailId: emailResponse.data?.id 
       }),
       {

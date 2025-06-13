@@ -83,35 +83,21 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      console.log("Submitting form data:", formData);
+      console.log("Submitting contact form:", formData);
       
-      // First, store the data in Supabase
-      const { data: submissionData, error: dbError } = await supabase
-        .from('contact_submissions')
-        .insert([formData])
-        .select();
-
-      if (dbError) {
-        console.error("Error storing submission in database:", dbError);
-        toast.error("Failed to submit your message. Please try again.");
-        return;
-      }
-
-      console.log("Form data stored in database:", submissionData);
-
-      // Then, send the email via edge function
+      // Call the edge function to handle both database storage and email sending
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData
       });
 
       if (error) {
-        console.error("Error sending email:", error);
-        // Even if email fails, the submission was stored
-        toast.success("Your message was received! We'll get back to you within 24 hours.");
-      } else {
-        console.log("Email sent successfully:", data);
-        toast.success("Thank you! We'll get back to you within 24 hours.");
+        console.error("Error submitting contact form:", error);
+        toast.error("Failed to submit your message. Please try again or call us directly.");
+        return;
       }
+
+      console.log("Contact form submitted successfully:", data);
+      toast.success("Thank you! We'll get back to you within 24 hours.");
       
       // Show animated success confirmation
       setShowSuccess(true);
