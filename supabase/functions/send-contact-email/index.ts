@@ -81,7 +81,7 @@ const handler = async (req: Request): Promise<Response> => {
     
     // Send notification email to business
     const businessEmailResponse = await resend.emails.send({
-      from: "Star Tile LLC Contact Form <onboarding@resend.dev>",
+      from: "Star Tile LLC Contact Form <Contact@startilellc.com>",
       to: ["Contact@Startilellc.com"],
       subject: `New Contact Form Submission from ${formData.name}`,
       html: `
@@ -101,7 +101,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to customer
     const confirmationEmailResponse = await resend.emails.send({
-      from: "Star Tile LLC <onboarding@resend.dev>",
+      from: "Star Tile LLC <Contact@startilellc.com>",
       to: [formData.email],
       subject: "Thank you for contacting Star Tile LLC",
       html: `
