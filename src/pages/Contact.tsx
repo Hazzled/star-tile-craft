@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -20,6 +21,52 @@ const Contact = () => {
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Memoize the animated background and floating particles to prevent re-creation on form changes
+  const animatedBackground = useMemo(() => (
+    <motion.div
+      className="absolute inset-0 bg-gradient-to-br from-gray-900 via-navy to-noir"
+      animate={{
+        background: [
+          "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)",
+          "linear-gradient(135deg, #153147 0%, #232A2F 30%, #1f2937 100%)",
+          "linear-gradient(135deg, #232A2F 0%, #1f2937 30%, #153147 100%)",
+          "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)"
+        ]
+      }}
+      transition={{
+        duration: 12,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    />
+  ), []);
+
+  const floatingParticles = useMemo(() => (
+    <div className="absolute inset-0">
+      {[...Array(25)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 bg-white/10 rounded-full"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`
+          }}
+          animate={{
+            y: [-30, -60, -30],
+            opacity: [0.2, 0.8, 0.2],
+            scale: [1, 1.5, 1]
+          }}
+          transition={{
+            duration: 6 + Math.random() * 6,
+            repeat: Infinity,
+            delay: Math.random() * 3,
+            ease: "easeInOut"
+          }}
+        />
+      ))}
+    </div>
+  ), []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,47 +127,10 @@ const Contact = () => {
         />
         
         {/* Animated Background Gradient */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-gray-900 via-navy to-noir"
-          animate={{
-            background: [
-              "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)",
-              "linear-gradient(135deg, #153147 0%, #232A2F 30%, #1f2937 100%)",
-              "linear-gradient(135deg, #232A2F 0%, #1f2937 30%, #153147 100%)",
-              "linear-gradient(135deg, #1f2937 0%, #153147 30%, #232A2F 100%)"
-            ]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+        {animatedBackground}
         
         {/* Floating particles effect */}
-        <div className="absolute inset-0">
-          {[...Array(25)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-white/10 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`
-              }}
-              animate={{
-                y: [-30, -60, -30],
-                opacity: [0.2, 0.8, 0.2],
-                scale: [1, 1.5, 1]
-              }}
-              transition={{
-                duration: 6 + Math.random() * 6,
-                repeat: Infinity,
-                delay: Math.random() * 3,
-                ease: "easeInOut"
-              }}
-            />
-          ))}
-        </div>
+        {floatingParticles}
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Title */}
@@ -378,7 +388,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
       <section className="py-16 bg-navy text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
