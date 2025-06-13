@@ -1,3 +1,4 @@
+
 import { useState, useMemo, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -84,22 +85,37 @@ const Contact = () => {
     try {
       console.log("Submitting form data:", formData);
       
+      // First, store the data in Supabase
+      const { data: submissionData, error: dbError } = await supabase
+        .from('contact_submissions')
+        .insert([formData])
+        .select();
+
+      if (dbError) {
+        console.error("Error storing submission in database:", dbError);
+        toast.error("Failed to submit your message. Please try again.");
+        return;
+      }
+
+      console.log("Form data stored in database:", submissionData);
+
+      // Then, send the email via edge function
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: formData
       });
 
       if (error) {
         console.error("Error sending email:", error);
-        toast.error("Failed to send message. Please try again or call us directly.");
-        return;
+        // Even if email fails, the submission was stored
+        toast.success("Your message was received! We'll get back to you within 24 hours.");
+      } else {
+        console.log("Email sent successfully:", data);
+        toast.success("Thank you! We'll get back to you within 24 hours.");
       }
-
-      console.log("Email sent successfully:", data);
       
       // Show animated success confirmation
       setShowSuccess(true);
       setTimeout(() => setShowSuccess(false), 3000);
-      toast.success("Thank you! We'll get back to you within 24 hours.");
       
       // Reset form
       setFormData({

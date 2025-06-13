@@ -58,10 +58,10 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Email:</strong> ${formData.email}</p>
         <p><strong>Phone:</strong> ${formData.phone}</p>
         <p><strong>Message:</strong></p>
-        <p>${formData.message.replace(/\n/g, '<br>')}</p>
+        <p>${formData.message ? formData.message.replace(/\n/g, '<br>') : 'No message provided'}</p>
         
         <hr>
-        <p><em>This message was sent from the Star Tile LLC website contact form.</em></p>
+        <p><em>This message was sent from the Star Tile LLC website contact form and has been automatically stored in the database.</em></p>
       `,
     });
 
@@ -70,7 +70,7 @@ const handler = async (req: Request): Promise<Response> => {
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: "Email sent successfully",
+        message: "Contact form submitted and email sent successfully",
         emailId: emailResponse.data?.id 
       }),
       {
@@ -82,7 +82,7 @@ const handler = async (req: Request): Promise<Response> => {
       }
     );
   } catch (error: any) {
-    console.error("Error sending contact email:", error);
+    console.error("Error in contact form submission:", error);
     return new Response(
       JSON.stringify({ 
         success: false, 
