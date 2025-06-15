@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, Shield, Trophy } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const WhyChooseUs = () => {
   return (
