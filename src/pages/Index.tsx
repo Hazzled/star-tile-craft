@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ProjectModal from "@/components/ProjectModal";
 import { portfolioItems } from "@/data/portfolioData";
 import HeroSection from "@/components/home/HeroSection";
@@ -29,6 +30,20 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      
+      {/* Enhanced intro section with internal links */}
+      <section className="py-12 bg-white text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-lg text-gray-600 leading-relaxed">
+            As Portland's premier tile installation company, we bring over a decade of expertise to every project. 
+            From <Link to="/services" className="text-navy hover:underline font-medium">kitchen backsplashes and bathroom remodels</Link> to 
+            custom flooring solutions, our team delivers exceptional craftsmanship that stands the test of time. 
+            <Link to="/about" className="text-navy hover:underline font-medium">Learn more about our story</Link> and 
+            discover why hundreds of Portland homeowners trust us with their tile installation needs.
+          </p>
+        </div>
+      </section>
+
       <ServicesOverview />
       <PortfolioPreview 
         recentProjects={recentProjects}

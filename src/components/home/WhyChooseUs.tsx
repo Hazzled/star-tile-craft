@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Clock, Shield, Trophy } from "lucide-react";
 
 const WhyChooseUs = () => {
@@ -10,6 +11,12 @@ const WhyChooseUs = () => {
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-noir mb-6">
             Why Choose Star Tile LLC?
           </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <Link to="/about" className="text-navy hover:underline font-medium">Our experienced team</Link> has 
+            built a reputation for excellence throughout the Portland Metro Area. 
+            <Link to="/services" className="text-navy hover:underline font-medium">Discover our proven process</Link> and 
+            see why we're the trusted choice for tile installation.
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -48,6 +55,14 @@ const WhyChooseUs = () => {
               Every tile perfectly placed with attention to detail that exceeds expectations.
             </p>
           </div>
+        </div>
+        
+        <div className="text-center mt-12">
+          <Link to="/about">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-xl">
+              Read Our Full Story
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

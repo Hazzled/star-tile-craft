@@ -1,6 +1,8 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 
 const TestimonialsSection = () => {
@@ -28,9 +30,14 @@ const TestimonialsSection = () => {
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-noir mb-6">
             What Our Clients Say
           </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            Don't just take our word for it. See what Portland homeowners are saying about our 
+            <Link to="/services" className="text-navy hover:underline font-medium"> tile installation services</Link> and 
+            <Link to="/portfolio" className="text-navy hover:underline font-medium"> browse our completed projects</Link>.
+          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-white shadow-xl border-0 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 rounded-2xl overflow-hidden">
               <CardContent className="p-8">
@@ -55,6 +62,14 @@ const TestimonialsSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center">
+          <Link to="/portfolio">
+            <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-white px-8 py-3 rounded-xl">
+              View More of Our Work
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
