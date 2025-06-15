@@ -1,16 +1,10 @@
-
 User-agent: *
 Allow: /
-
-# Block access to admin or private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /404
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /sitemap.xml
 
 # Block access to development and build files
 Disallow: /src/
@@ -25,42 +19,10 @@ Disallow: /*.config.ts$
 Disallow: /package.json
 Disallow: /package-lock.json
 
-# Allow sitemap (override the general XML block above)
+# Allow sitemap (This is not strictly necessary if you don't have a broad disallow)
 Allow: /sitemap.xml
-
-# Sitemap location
-Sitemap: https://startilellc.com/sitemap.xml
-
-# Allow all major search engines
-User-agent: Googlebot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-
-User-agent: Bingbot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-
-User-agent: Slurp
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-
-User-agent: DuckDuckBot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
 
 # Crawl delay for politeness (1 second)
 Crawl-delay: 1
+
+Sitemap: https://startilellc.com/sitemap.xml
