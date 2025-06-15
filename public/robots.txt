@@ -2,26 +2,59 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://startilellc.com/sitemap.xml
-
-# Block access to admin or private areas (if any exist in the future)
+# Block access to admin or private areas
 Disallow: /admin/
 Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
 Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /sitemap.xml
+
+# Block access to development and build files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /build/
+Disallow: /dist/
+
+# Block access to configuration files
+Disallow: /*.config.js$
+Disallow: /*.config.ts$
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Allow sitemap (override the general XML block above)
+Allow: /sitemap.xml
+
+# Sitemap location
+Sitemap: https://startilellc.com/sitemap.xml
 
 # Allow all major search engines
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
 
 User-agent: Slurp
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
 
 User-agent: Twitterbot
 Allow: /
@@ -29,5 +62,5 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# Crawl delay for politeness
+# Crawl delay for politeness (1 second)
 Crawl-delay: 1
