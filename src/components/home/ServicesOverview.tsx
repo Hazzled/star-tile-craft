@@ -57,9 +57,9 @@ const ServicesOverview = () => {
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                     {service.description}
                   </p>
-                  <Link to="/services" className="mt-auto" aria-label={`Learn more about ${service.title}`}>
+                  <Link to="/services" className="mt-auto" aria-label={`Explore ${service.title} services in Portland`}>
                     <Button variant="outline" className="text-navy border-navy hover:bg-navy hover:text-white transition-all duration-300 rounded-lg">
-                      Learn More
+                      Explore {service.title} services
                     </Button>
                   </Link>
                 </CardContent>
