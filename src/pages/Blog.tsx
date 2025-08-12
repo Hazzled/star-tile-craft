@@ -1,10 +1,24 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 
 const Blog = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="2025 Guide: Budgeting a Tile Project in Portland | Star Tile LLC"
+        description="Understand tile installation costs in Portland: materials, labor, complexity, and pro tips to plan your 2025 tile project."
+        canonical="https://startilellc.com/blog"
+        type="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Your 2025 Guide to Budgeting a Tile Project in Portland, OR",
+          "author": { "@type": "Organization", "name": "Star Tile LLC" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://startilellc.com/blog" }
+        }}
+      />
       {/* SEO Meta Tags would be handled by a proper SEO component or React Helmet */}
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         {/* Breadcrumb */}

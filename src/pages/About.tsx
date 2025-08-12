@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle, Award, Users, Clock, ArrowUp, Quote } from "lucide-react";
+import SEO from "@/components/SEO";
 const About = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -11,6 +12,11 @@ const About = () => {
     });
   };
   return <div className="min-h-screen">
+      <SEO 
+        title="About Star Tile LLC | Portland Tile Experts"
+        description="Learn about our licensed and insured tile contractors with 10+ years serving the Portland metro area."
+        canonical="https://startilellc.com/about"
+      />
       {/* Hero Section with Enhanced Overlay */}
       <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-24">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{

@@ -9,6 +9,7 @@ import PortfolioPreview from "@/components/home/PortfolioPreview";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FinalCTA from "@/components/home/FinalCTA";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -29,8 +30,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Expert Tile Installation in Portland | Star Tile LLC"
+        description="Professional tile work for kitchens, bathrooms, and floors in Portland. Licensed & insured with 10+ years of experience. Get a free quote."
+        canonical="https://startilellc.com/"
+      />
       <HeroSection />
-      
       {/* Enhanced intro section with internal links */}
       <section className="py-12 bg-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

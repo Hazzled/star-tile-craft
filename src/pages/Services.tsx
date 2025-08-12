@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle, Hammer, Droplets, Home, Sparkles, Phone, ClipboardCheck, Wrench, Eye } from "lucide-react";
 import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
 
 const Services = () => {
   const serviceOverview = [{
@@ -47,6 +48,11 @@ const Services = () => {
     }
   ];
   return <div className="min-h-screen">
+      <SEO 
+        title="Tile Installation Services in Portland | Star Tile LLC"
+        description="Kitchen backsplashes, bathroom tile, flooring, and custom tile installations. Licensed & insured Portland contractors."
+        canonical="https://startilellc.com/services"
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-navy via-gray-900 to-navy text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{

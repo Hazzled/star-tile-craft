@@ -7,6 +7,7 @@ import PortfolioGrid from "@/components/portfolio/PortfolioGrid";
 import PortfolioStats from "@/components/portfolio/PortfolioStats";
 import PortfolioCTA from "@/components/portfolio/PortfolioCTA";
 import { portfolioItems, filters } from "@/data/portfolioData";
+import SEO from "@/components/SEO";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -27,8 +28,12 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Tile Installation Portfolio | Star Tile LLC Portland"
+        description="Browse our completed kitchen backsplashes, bathroom remodels, flooring, and custom tile projects across Portland."
+        canonical="https://startilellc.com/portfolio"
+      />
       <PortfolioHero />
-
       {/* Enhanced Filter Section */}
       <section className="py-16 bg-white relative -mt-6 z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

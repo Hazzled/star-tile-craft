@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -127,6 +128,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Contact Star Tile LLC | Free Tile Installation Quote Portland"
+        description="Request your free tile installation estimate. Call or message Star Tile LLC—licensed & insured contractors serving the Portland metro area."
+        canonical="https://startilellc.com/contact"
+      />
       {/* Unified Hero + Contact Form Section */}
       <section ref={contactFormRef} className="relative py-20 min-h-screen overflow-hidden">
         {/* Hero Background Image */}
