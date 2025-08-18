@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Phone, Star, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
+import ProjectModal from "@/components/ProjectModal";
 import { portfolioItems } from "@/data/portfolioData";
 import { useToast } from "@/hooks/use-toast";
 
@@ -19,6 +20,8 @@ const LandingPage = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { toast } = useToast();
 
   // Get featured projects for the landing page
@@ -61,6 +64,16 @@ const LandingPage = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
   };
 
   const structuredData = {
@@ -128,7 +141,11 @@ const LandingPage = () => {
             
             <div className="grid grid-cols-2 gap-4 mb-8">
               {featuredProjects.map((project, index) => (
-                <Card key={project.id} className="overflow-hidden group cursor-pointer">
+                <Card 
+                  key={project.id} 
+                  className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                  onClick={() => handleProjectClick(project)}
+                >
                   <div className="relative aspect-square">
                     <img 
                       src={project.image} 
@@ -141,29 +158,34 @@ const LandingPage = () => {
                         {project.category}
                       </Badge>
                     </div>
+                    <div className="absolute bottom-2 left-2 right-2">
+                      <p className="text-white text-xs font-medium bg-black/70 px-2 py-1 rounded truncate">
+                        {project.title}
+                      </p>
+                    </div>
                   </div>
                 </Card>
               ))}
             </div>
 
             <div className="bg-muted/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-lg mb-3">Why Choose Star Tile LLC?</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  15+ years of experience in Portland
+              <h3 className="font-semibold text-lg mb-3 text-foreground">Why Choose Star Tile LLC?</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-foreground">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>15+ years of experience in Portland</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  Licensed, bonded & insured
+                <li className="flex items-center gap-2 text-foreground">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Licensed, bonded & insured</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  Free estimates & consultations
+                <li className="flex items-center gap-2 text-foreground">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Free estimates & consultations</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  Warranty on all work
+                <li className="flex items-center gap-2 text-foreground">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span>Warranty on all work</span>
                 </li>
               </ul>
             </div>
@@ -177,7 +199,7 @@ const LandingPage = () => {
                   <h2 className="text-2xl font-montserrat font-bold text-foreground mb-2">
                     Get Your Free Quote
                   </h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-foreground/70">
                     Tell us about your project and we'll provide a detailed estimate within 24 hours.
                   </p>
                 </div>
@@ -256,11 +278,18 @@ const LandingPage = () => {
                     {isSubmitting ? "Submitting..." : "Get My Free Quote"}
                   </Button>
 
-                  <p className="text-xs text-muted-foreground text-center">
+                  <p className="text-xs text-foreground/60 text-center">
                     By submitting this form, you agree to be contacted about your project. 
                     No spam, unsubscribe anytime.
                   </p>
                 </form>
+
+                {/* Project Modal */}
+                <ProjectModal
+                  isOpen={isModalOpen}
+                  onClose={handleCloseModal}
+                  project={selectedProject}
+                />
               </CardContent>
             </Card>
           </div>
