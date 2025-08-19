@@ -31,20 +31,40 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Expert Tile Installation in Portland | Star Tile LLC"
-        description="Professional tile work for kitchens, bathrooms, and floors in Portland. Licensed & insured with 10+ years of experience. Get a free quote."
+        title="Expert Tile Installation in Gresham Oregon | Star Tile LLC"
+        description="Professional tile installation for kitchens, bathrooms, and floors in Gresham, OR. Licensed & insured with 10+ years of experience. Serving Gresham and surrounding areas."
         canonical="https://startilellc.com/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Star Tile LLC",
+          "description": "Professional tile installation services in Gresham, Oregon",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gresham",
+            "addressRegion": "OR",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "45.5017",
+            "longitude": "-122.4315"
+          },
+          "areaServed": ["Gresham", "Portland", "Oregon City", "Fairview", "Wood Village"],
+          "serviceType": ["Tile Installation", "Kitchen Backsplash", "Bathroom Remodel", "Floor Tiling"],
+          "hasCredential": "CCB #200970"
+        }}
       />
       <HeroSection />
       {/* Enhanced intro section with internal links */}
       <section className="py-12 bg-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-gray-600 leading-relaxed">
-            As Portland's premier tile installation company, we bring over a decade of expertise to every project. 
+            As Gresham's premier tile installation company, we bring over a decade of expertise to every project in the greater Portland metro area. 
             From <Link to="/services" className="text-navy hover:underline font-medium">kitchen backsplashes and bathroom remodels</Link> to 
             custom flooring solutions, our team delivers exceptional craftsmanship that stands the test of time. 
             <Link to="/about" className="text-navy hover:underline font-medium">Learn more about our story</Link> and 
-            discover why hundreds of Portland homeowners trust us with their tile installation needs.
+            discover why hundreds of Gresham and East Portland homeowners trust us with their tile installation needs.
           </p>
         </div>
       </section>

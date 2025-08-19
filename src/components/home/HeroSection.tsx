@@ -14,13 +14,13 @@ const HeroSection = () => {
       <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
         <header>
           <h1 className="text-6xl md:text-7xl font-montserrat font-bold mb-6 leading-tight tracking-tight">
-            Portland's Premier<br />
+            Gresham's Premier<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
               Tile Installation
             </span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 text-gray-300 font-light">
-            Over a decade of expert craftsmanship • Licensed & Insured • CCB #200970
+            Serving Gresham & East Portland • Over a decade of expert craftsmanship • Licensed & Insured • CCB #200970
           </p>
         </header>
         
