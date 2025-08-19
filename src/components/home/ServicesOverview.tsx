@@ -57,11 +57,13 @@ const ServicesOverview = () => {
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                     {service.description}
                   </p>
-                  <Link to="/services" className="mt-auto" aria-label={`Explore ${service.title} services in Portland`}>
-                    <Button variant="outline" className="text-navy border-navy hover:bg-navy hover:text-white transition-all duration-300 rounded-lg">
-                      Explore {service.title} services
-                    </Button>
-                  </Link>
+                  <div className="flex justify-center mt-auto">
+                    <Link to="/services" aria-label={`Explore ${service.title} services in Portland`}>
+                      <Button variant="outline" className="text-navy border-navy hover:bg-navy hover:text-white transition-all duration-300 rounded-lg">
+                        Explore {service.title} services
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             </article>
