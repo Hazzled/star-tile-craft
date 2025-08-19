@@ -58,9 +58,9 @@ const ServicesOverview = () => {
                     {service.description}
                   </p>
                   <div className="flex justify-center mt-auto">
-                    <Link to="/services" aria-label={`Explore ${service.title} services in Portland`}>
+                    <Link to="/services" aria-label={`Learn more about ${service.title} services`}>
                       <Button variant="outline" className="text-navy border-navy hover:bg-navy hover:text-white transition-all duration-300 rounded-lg">
-                        Explore {service.title} services
+                        Learn More
                       </Button>
                     </Link>
                   </div>
