@@ -17,6 +17,7 @@ const routesToPrerender = [
   '/contact',    // Contact page
   '/blog',       // Blog page
   '/blog/fix-cracked-grout', // Grout repair blog post
+  '/blog/waterproofing-before-tile', // Waterproofing blog post
   '/quote',      // Landing page for ads
   // Add new routes here when adding new pages
 ]
