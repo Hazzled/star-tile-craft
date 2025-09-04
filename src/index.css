@@ -23,7 +23,7 @@
     --secondary-foreground: 210 13% 17%; /* Noir #232A2F */
 
     --muted: 30 14% 91%; /* Almond #EDEAE4 */
-    --muted-foreground: 188 14% 71%; /* Mist #ADB8BB */
+    --muted-foreground: 210 13% 45%; /* Darker gray for better contrast */
 
     --accent: 205 48% 19%; /* Navy #153147 */
     --accent-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
@@ -59,7 +59,7 @@
     --secondary: 205 48% 19%; /* Navy #153147 */
     --secondary-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
     --muted: 205 48% 19%; /* Navy #153147 */
-    --muted-foreground: 188 14% 71%; /* Mist #ADB8BB */
+    --muted-foreground: 28 22% 80%; /* Light gray for dark mode */
     --accent: 205 48% 19%; /* Navy #153147 */
     --accent-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
     --destructive: 0 62% 30%;
