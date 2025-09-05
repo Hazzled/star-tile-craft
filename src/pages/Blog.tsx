@@ -1,311 +1,257 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
+import blogHeroImage from "@/assets/blog-hero-image.jpg";
 
 const Blog = () => {
+  const blogPosts = [
+    {
+      title: "Your 2025 Guide to Budgeting a Tile Project in Portland, OR",
+      excerpt: "Understanding tile installation costs in Portland: materials, labor, complexity, and pro tips to plan your 2025 tile project successfully.",
+      slug: "budgeting-tile-project-portland",
+      date: "January 19, 2025",
+      category: "Planning & Budgeting",
+      readTime: "8 min read",
+      featured: true
+    },
+    {
+      title: "Waterproofing Before Tile: The Critical Step Portland Homeowners Can't Skip",
+      excerpt: "Learn why waterproofing before tile installation is essential in Portland's damp climate. Expert guide to shower waterproofing methods and contractor selection.",
+      slug: "waterproofing-before-tile",
+      date: "January 19, 2025",
+      category: "Technical Guide",
+      readTime: "10 min read",
+      featured: true
+    },
+    {
+      title: "How to Fix Cracked Grout: Portland Homeowner's Complete Guide 2025",
+      excerpt: "Learn how to fix cracked grout in Portland's damp climate. Step-by-step DIY guide plus when to call professionals for grout repair in the Pacific Northwest.",
+      slug: "fix-cracked-grout",
+      date: "January 19, 2025",
+      category: "DIY & Maintenance",
+      readTime: "7 min read",
+      featured: false
+    }
+  ];
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Star Tile LLC Blog",
+    "description": "Expert tile installation guides, tips, and insights for Portland area homeowners",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Star Tile LLC",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://startilellc.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://startilellc.com/blog"
+    },
+    "blogPost": blogPosts.map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "url": `https://startilellc.com/blog/${post.slug}`,
+      "datePublished": "2025-01-19",
+      "author": {
+        "@type": "Organization",
+        "name": "Star Tile LLC"
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="2025 Guide: Budgeting a Tile Project in Portland | Star Tile LLC"
-        description="Understand tile installation costs in Portland: materials, labor, complexity, and pro tips to plan your 2025 tile project."
+        title="Tile Installation Blog | Expert Tips & Guides for Portland Homeowners"
+        description="Expert tile installation guides, maintenance tips, and design inspiration for Portland area homeowners. Learn from licensed professionals with 10+ years experience."
         canonical="https://startilellc.com/blog"
-        type="article"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": "Your 2025 Guide to Budgeting a Tile Project in Portland, OR",
-          "author": { "@type": "Organization", "name": "Star Tile LLC" },
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://startilellc.com/blog" }
-        }}
+        type="website"
+        structuredData={structuredData}
       />
-      {/* SEO Meta Tags would be handled by a proper SEO component or React Helmet */}
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-muted-foreground mb-8">
-          <Link to="/" className="hover:text-primary">Home</Link> / Blog / Your 2025 Guide to Budgeting a Tile Project
-        </nav>
-
-        {/* Article Header */}
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-montserrat font-bold text-foreground mb-6">
-            Your 2025 Guide to Budgeting a Tile Project in Portland, OR
-          </h1>
-          <p className="text-lg text-muted-foreground mb-4">
-            Published January 2025 | By Star Tile LLC
-          </p>
-          <div className="h-1 w-20 bg-primary rounded-full"></div>
-        </header>
-
-        {/* Article Content */}
-        <article className="prose prose-lg max-w-none">
-          {/* Introduction */}
-          <div className="mb-12">
-            <p className="text-lg text-foreground leading-relaxed mb-6">
-              "How much will it cost?" It's the first question every Portland homeowner asks when considering a tile project. Whether you're dreaming of a stunning kitchen backsplash in your Hawthorne bungalow or planning a luxurious bathroom remodel in Lake Oswego, understanding the real costs upfront is crucial for successful planning.
+      
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-primary to-primary/90 text-primary-foreground py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{ backgroundImage: `url(${blogHeroImage})` }}
+        ></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6">
+              Tile Installation Expertise
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+              Professional insights, expert tips, and comprehensive guides for Portland area homeowners
             </p>
-            <p className="text-lg text-foreground leading-relaxed mb-6">
-              This comprehensive guide provides a transparent breakdown of the factors that determine your tile project budget in the Portland metro area. As a trusted local expert with over 10 years of experience, Star Tile LLC is committed to quality craftsmanship and clear communication—starting with honest pricing information.
+            <p className="text-lg text-primary-foreground/80">
+              From Beaverton to Gresham, learn from over 10 years of tile installation experience in the Pacific Northwest
             </p>
           </div>
+        </div>
+      </section>
 
-          {/* Main Content Sections */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-montserrat font-bold text-foreground mb-8">
-              The 4 Key Factors That Determine Your Final Cost
-            </h2>
-            <p className="text-lg text-foreground mb-8">
-              Understanding these core factors will help you budget accurately and avoid surprises during your Portland tile installation.
-            </p>
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-16 max-w-6xl">
+        {/* Breadcrumb */}
+        <nav className="text-sm text-muted-foreground mb-8">
+          <Link to="/" className="hover:text-primary">Home</Link> / Blog
+        </nav>
 
-            {/* Factor 1: Materials */}
-            <Card className="mb-8 bg-card shadow-lg">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-6">1. The Tile Itself: Material Costs</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Ceramic: The Budget-Friendly Workhorse</h4>
-                    <p className="text-foreground">Perfect for most applications, ceramic offers excellent value and comes in countless styles. Ideal for Portland homes seeking quality without premium pricing.</p>
+        {/* Featured Articles */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-montserrat font-bold text-foreground mb-8">Featured Articles</h2>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {blogPosts.filter(post => post.featured).map((post, index) => (
+              <Card key={post.slug} className="group hover:shadow-xl transition-all duration-300 bg-card border-border">
+                <CardContent className="p-0">
+                  <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/20 rounded-t-lg"></div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Badge variant="secondary" className="text-xs">
+                        {post.category}
+                      </Badge>
+                      <span className="text-sm text-muted-foreground">{post.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-montserrat font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      <Link to={`/blog/${post.slug}`}>
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <p className="text-muted-foreground mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">{post.date}</span>
+                      <Link 
+                        to={`/blog/${post.slug}`}
+                        className="text-primary hover:text-primary/80 font-medium text-sm"
+                      >
+                        Read More →
+                      </Link>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Porcelain: Mid-Range Durability</h4>
-                    <p className="text-foreground">Extremely durable and water-resistant, making it perfect for Portland's damp climate. Excellent for bathrooms and high-traffic areas.</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* All Articles */}
+        <section>
+          <h2 className="text-3xl font-montserrat font-bold text-foreground mb-8">All Articles</h2>
+          <div className="space-y-6">
+            {blogPosts.map((post, index) => (
+              <Card key={post.slug} className="group hover:shadow-lg transition-all duration-300 bg-card border-border">
+                <CardContent className="p-6">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="md:w-48 h-32 bg-gradient-to-br from-primary/10 to-secondary/20 rounded-lg flex-shrink-0"></div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-3">
+                        <Badge variant="secondary" className="text-xs">
+                          {post.category}
+                        </Badge>
+                        <span className="text-sm text-muted-foreground">{post.readTime}</span>
+                        <span className="text-sm text-muted-foreground">•</span>
+                        <span className="text-sm text-muted-foreground">{post.date}</span>
+                      </div>
+                      <h3 className="text-xl font-montserrat font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                        <Link to={`/blog/${post.slug}`}>
+                          {post.title}
+                        </Link>
+                      </h3>
+                      <p className="text-muted-foreground mb-4">
+                        {post.excerpt}
+                      </p>
+                      <Link 
+                        to={`/blog/${post.slug}`}
+                        className="inline-flex items-center text-primary hover:text-primary/80 font-medium text-sm"
+                      >
+                        Read Full Article
+                        <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Natural Stone (Marble, Travertine, Slate)</h4>
-                    <p className="text-foreground">Higher-end materials that bring unique beauty and character. Requires specialized installation and ongoing maintenance.</p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Artisan/Handmade Tile</h4>
-                    <p className="text-foreground">Premium option for homeowners wanting a unique, "Keep Portland Weird" aesthetic that reflects the city's creative spirit.</p>
-                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Categories Section */}
+        <section className="mt-16 pt-16 border-t border-border">
+          <h2 className="text-3xl font-montserrat font-bold text-foreground mb-8">Browse by Category</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-card border-border hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
                 </div>
+                <h3 className="text-lg font-montserrat font-semibold text-foreground mb-2">Planning & Budgeting</h3>
+                <p className="text-sm text-muted-foreground">
+                  Cost guides, project planning, and budgeting tips for Portland homeowners
+                </p>
               </CardContent>
             </Card>
 
-            {/* Factor 2: Size & Complexity */}
-            <Card className="mb-8 bg-card shadow-lg">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-6">2. Project Size & Complexity</h3>
-                <p className="text-foreground mb-4">
-                  While pricing often starts with square footage, complexity significantly impacts your final cost:
-                </p>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Simple Projects</h4>
-                    <p className="text-foreground">Straightforward kitchen backsplashes or rectangular floor layouts with minimal cuts and standard patterns.</p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Complex Projects</h4>
-                    <p className="text-foreground">Custom shower niches, intricate patterns like herringbone or mosaic, numerous detailed cuts, or leveling uneven floors in older Portland homes. These require advanced skills and additional time.</p>
-                  </div>
+            <Card className="bg-card border-border hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                 </div>
+                <h3 className="text-lg font-montserrat font-semibold text-foreground mb-2">Technical Guides</h3>
+                <p className="text-sm text-muted-foreground">
+                  Professional techniques, waterproofing, and installation best practices
+                </p>
               </CardContent>
             </Card>
 
-            {/* Factor 3: Labor */}
-            <Card className="mb-8 bg-card shadow-lg">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-6">3. Labor & Preparation: The Most Crucial Factor</h3>
-                <p className="text-foreground mb-6">
-                  Professional tile installation involves much more than placing tiles. Your investment covers:
-                </p>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Demolition & Removal</h4>
-                    <p className="text-foreground">Safely removing existing materials and preparing the workspace.</p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Surface Preparation</h4>
-                    <p className="text-foreground">Ensuring surfaces are perfectly flat, stable, and ready for long-lasting installation.</p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Waterproofing</h4>
-                    <p className="text-foreground">Critical for Portland bathrooms. We use proven systems like Schluter-Kerdi to protect against moisture damage in our climate.</p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-primary mb-2">Expert Installation & Finishing</h4>
-                    <p className="text-foreground">Precise tile placement, professional grouting, and sealing for lasting beauty and performance.</p>
-                  </div>
+            <Card className="bg-card border-border hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Factor 4: Home Character */}
-            <Card className="mb-8 bg-card shadow-lg">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-6">4. Your Home's Unique Character</h3>
-                <p className="text-foreground">
-                  The age and style of Portland homes can significantly impact project costs. Working in a historic Craftsman home in Southeast Portland may present different challenges—like uneven walls or unique architectural details—compared to a new construction in Beaverton or Hillsboro. Our experienced team adapts to each home's specific needs.
+                <h3 className="text-lg font-montserrat font-semibold text-foreground mb-2">DIY & Maintenance</h3>
+                <p className="text-sm text-muted-foreground">
+                  DIY repairs, maintenance tips, and when to call professionals
                 </p>
               </CardContent>
             </Card>
-          </section>
+          </div>
+        </section>
 
-          {/* Pricing Section */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-montserrat font-bold text-foreground mb-8">
-              2025 Tile Installation Cost Averages in the Portland Area
-            </h2>
-            <div className="bg-secondary border border-border p-6 rounded-lg mb-8">
-              <p className="text-sm text-foreground">
-                <strong>Important:</strong> These ranges are estimates for planning purposes only. Every project is unique, and accurate pricing requires an in-person assessment.
+        {/* Newsletter CTA */}
+        <section className="mt-16">
+          <Card className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground">
+            <CardContent className="p-8 text-center">
+              <h2 className="text-2xl font-montserrat font-bold mb-4">Stay Updated with Tile Tips</h2>
+              <p className="text-lg mb-6 text-primary-foreground/90">
+                Get expert tile installation tips and Portland home improvement insights delivered to your inbox
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-card shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-montserrat font-semibold text-foreground mb-4">Kitchen Backsplash</h3>
-                  <p className="text-2xl font-bold text-primary mb-4">$900 - $2,500+</p>
-                  <p className="text-sm text-muted-foreground">
-                    Cost depends on backsplash size, tile selection, and complexity of design.
-                  </p>
-                  <Link to="/services" className="text-primary hover:underline text-sm mt-4 inline-block">
-                    Learn more about our kitchen services →
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-montserrat font-semibold text-foreground mb-4">Bathroom Floor</h3>
-                  <p className="text-2xl font-bold text-primary mb-4">$1,200 - $4,000+</p>
-                  <p className="text-sm text-muted-foreground">
-                    Varies based on bathroom size, tile choice, and need for floor preparation.
-                  </p>
-                  <Link to="/services" className="text-primary hover:underline text-sm mt-4 inline-block">
-                    Explore our bathroom services →
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-montserrat font-semibold text-foreground mb-4">Walk-in Shower</h3>
-                  <p className="text-2xl font-bold text-primary mb-4">$3,500 - $10,000+</p>
-                  <p className="text-sm text-muted-foreground">
-                    Wide range due to waterproofing, custom features, and design complexity.
-                  </p>
-                  <Link to="/portfolio" className="text-primary hover:underline text-sm mt-4 inline-block">
-                    View our shower projects →
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          {/* Pro Tips Section */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-montserrat font-bold text-foreground mb-8">
-              Pro Tips for a Smart Tile Budget
-            </h2>
-            
-            <div className="space-y-6">
-              <Card className="bg-card shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-montserrat font-semibold text-foreground mb-4">Tip 1: Select Your Tile Early</h3>
-                  <p className="text-foreground">
-                    Falling in love with premium tile after setting a modest budget is a common pitfall. Visit tile showrooms early in your planning process to understand your options and their costs.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-montserrat font-semibold text-foreground mb-4">Tip 2: Factor in a Contingency</h3>
-                  <p className="text-foreground">
-                    Set aside an extra 10-15% for unexpected issues, especially in older Portland homes where hidden problems like water damage or uneven surfaces may emerge.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-montserrat font-semibold text-foreground mb-4">Tip 3: Understand Where Not to Skimp</h3>
-                  <p className="text-foreground">
-                    Cutting corners on professional labor or waterproofing will cost far more in the long run. Water damage repairs can easily exceed the cost of proper installation. Invest in quality from the start.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          {/* Investment Section */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-montserrat font-bold text-foreground mb-8">
-              Why Professional Installation is a Priceless Investment
-            </h2>
-            
-            <Card className="bg-card shadow-lg">
-              <CardContent className="p-8">
-                <p className="text-lg text-foreground mb-6">
-                  While DIY projects can be tempting, tile installation requires specialized skills, tools, and knowledge. Failed DIY attempts often result in:
-                </p>
-                <ul className="list-disc list-inside space-y-2 mb-6 text-muted-foreground">
-                  <li>Water leaks and costly damage</li>
-                  <li>Cracked or loose tiles</li>
-                  <li>Poor aesthetics that reduce home value</li>
-                  <li>Time-consuming repairs and reinstallation</li>
-                </ul>
-                <p className="text-lg text-foreground">
-                  The cost of professional installation is an investment in your home's value, durability, and your peace of mind. With Star Tile LLC, you're paying for expertise, quality craftsmanship, and a job done right the first time—backed by our commitment to excellence and our CCB license #200970.
-                </p>
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Conclusion & CTA */}
-          <section className="mb-12">
-            <Card className="bg-gradient-to-br from-primary to-primary/90 text-primary-foreground shadow-xl">
-              <CardContent className="p-8 text-center">
-                <h2 className="text-3xl font-montserrat font-bold mb-6">Ready to Start Your Portland Tile Project?</h2>
-                <p className="text-lg mb-8 text-primary-foreground/80">
-                  Successful budgeting means understanding materials, complexity, and the value of professional craftsmanship. Don't let cost uncertainty delay your dream project.
-                </p>
-                <Button size="lg" className="mb-4 bg-background text-foreground hover:bg-background/90">
-                  <Link to="/contact">
-                    Get Your Free Estimate Today
-                  </Link>
-                </Button>
-                <p className="text-sm text-primary-foreground/70">
-                  Contact Star Tile LLC for a clear, accurate, and no-obligation estimate. We'd love to help you bring your vision to life.
-                </p>
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Related Articles Placeholder */}
-          <section>
-            <h3 className="text-2xl font-montserrat font-bold text-foreground mb-6">Related Resources</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="bg-card shadow-lg">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-montserrat font-semibold text-foreground mb-2">
-                    <Link to="/services" className="hover:text-primary">
-                      Our Professional Services
-                    </Link>
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    Explore our comprehensive tile installation services for kitchens, bathrooms, and more.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-card shadow-lg">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-montserrat font-semibold text-foreground mb-2">
-                    <Link to="/portfolio" className="hover:text-primary">
-                      View Our Portfolio
-                    </Link>
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    See examples of our completed tile projects throughout the Portland area.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-        </article>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center bg-background text-foreground px-6 py-3 rounded-lg font-medium hover:bg-background/90 transition-colors"
+              >
+                Contact Us for Expert Advice
+              </Link>
+            </CardContent>
+          </Card>
+        </section>
       </div>
     </div>
   );

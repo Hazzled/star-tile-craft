@@ -16,6 +16,7 @@ const routesToPrerender = [
   '/portfolio',  // Portfolio page
   '/contact',    // Contact page
   '/blog',       // Blog page
+  '/blog/budgeting-tile-project-portland', // Budgeting blog post
   '/blog/fix-cracked-grout', // Grout repair blog post
   '/blog/waterproofing-before-tile', // Waterproofing blog post
   '/quote',      // Landing page for ads

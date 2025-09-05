@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import BlogBudgetingTileProject from "./pages/BlogBudgetingTileProject";
 import BlogGroutRepair from "./pages/BlogGroutRepair";
 import BlogWaterproofing from "./pages/BlogWaterproofing";
 import LandingPage from "./pages/LandingPage";
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/budgeting-tile-project-portland" element={<BlogBudgetingTileProject />} />
               <Route path="/blog/fix-cracked-grout" element={<BlogGroutRepair />} />
               <Route path="/blog/waterproofing-before-tile" element={<BlogWaterproofing />} />
               <Route path="/quote" element={<LandingPage />} />
