@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 import { generateBreadcrumbJsonLd } from "@/lib/breadcrumbs";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const BlogTileTrendsPortland = () => {
   const breadcrumbs = [
@@ -56,9 +57,11 @@ const BlogTileTrendsPortland = () => {
 
         {/* Hero Image */}
         <div className="mb-12">
-          <img 
-            src="/lovable-uploads/2888493a-862c-4bf9-b6b4-afe216d65fe0.png"
+          <OptimizedImage 
+            src="/images/blog/tile-trends-hero.png"
             alt="Modern kitchen with contemporary tile backsplash featuring large format porcelain tiles in neutral tones, showcasing 2025 Portland home design trends"
+            width={800}
+            height={400}
             className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
           />
         </div>
@@ -122,9 +125,11 @@ const BlogTileTrendsPortland = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-6">Natural Stone: Embracing Oregon's Natural Beauty</h3>
                 <div className="mb-6">
-                  <img 
-                    src="/lovable-uploads/1e2c9bbd-70db-42e5-841e-24bf20d30651.png"
+                  <OptimizedImage 
+                    src="/images/blog/subway-tile-example.png"
                     alt="Elegant bathroom featuring natural stone tiles in earth tones, showcasing the organic textures and patterns that connect Portland homes to the Pacific Northwest landscape"
+                    width={600}
+                    height={300}
                     className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
                   />
                 </div>
@@ -175,9 +180,11 @@ const BlogTileTrendsPortland = () => {
             <div className="mb-8">
               <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-6">Large Format Tiles: Maximizing Space and Style</h3>
               <div className="mb-6">
-                <img 
-                  src="/lovable-uploads/9a4c5268-b3ae-4c06-9be1-6f5976bf1606.png"
+                <OptimizedImage 
+                  src="/images/blog/large-format-tiles.png"
                   alt="Contemporary living space with large format tiles creating seamless, uninterrupted surfaces that emphasize clean lines and modern Portland home design aesthetics"
+                  width={600}
+                  height={300}
                   className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
                 />
               </div>

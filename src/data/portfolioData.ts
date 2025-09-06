@@ -6,7 +6,7 @@ export const portfolioItems = [
     id: 10,
     category: "Custom",
     title: "Elegant Marble Kitchen & Bath Suite",
-    image: "/lovable-uploads/00233517-2ee3-4c35-a70d-64b59947f822.png",
+    image: "/images/portfolio/kitchen-backsplash-1.png",
     alt: "Elegant marble kitchen backsplash and bathroom tile installation in Portland Oregon by Star Tile LLC",
     images: [
       {

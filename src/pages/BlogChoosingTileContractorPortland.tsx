@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { CheckCircle, XCircle, Phone, Mail } from "lucide-react";
 import SEO from "@/components/SEO";
+import OptimizedImage from "@/components/OptimizedImage";
 import { homeBreadcrumb, blogBreadcrumb, generateBreadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 export default function BlogChoosingTileContractorPortland() {
@@ -69,9 +70,11 @@ export default function BlogChoosingTileContractorPortland() {
 
           {/* Featured Image */}
           <div className="max-w-4xl mx-auto mb-12">
-            <img
-              src="/lovable-uploads/134f2083-588f-4f1a-9dcb-066727768e7c.png"
+            <OptimizedImage
+              src="/images/blog/contractor-working.png"
               alt="Professional tile contractor working on a beautiful bathroom renovation in Portland home"
+              width={800}
+              height={400}
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
             />
           </div>
@@ -101,9 +104,11 @@ export default function BlogChoosingTileContractorPortland() {
               </p>
 
               <div className="bg-secondary/50 rounded-lg p-6 mb-8">
-                <img
-                  src="/lovable-uploads/16761e63-6932-4234-b9d7-854e9a45b901.png"
+                <OptimizedImage
+                  src="/images/blog/tile-comparison.png"
                   alt="Before and after comparison of a professional tile installation in a Portland kitchen"
+                  width={600}
+                  height={300}
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <p className="text-sm text-muted-foreground italic text-center">
@@ -283,9 +288,11 @@ export default function BlogChoosingTileContractorPortland() {
               </p>
 
               <div className="bg-secondary/50 rounded-lg p-6 mb-8">
-                <img
-                  src="/lovable-uploads/1f219385-0286-432f-b4a6-63bd97af8bef.png"
+                <OptimizedImage
+                  src="/images/blog/satisfied-homeowners.png"
                   alt="Satisfied Portland homeowners with their newly completed tile installation project"
+                  width={600}
+                  height={300}
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <p className="text-sm text-muted-foreground italic text-center">
