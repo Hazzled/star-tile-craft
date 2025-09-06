@@ -7,7 +7,8 @@ interface PortfolioItem {
   category: string;
   title: string;
   image: string;
-  images?: string[];
+  alt?: string;
+  images?: Array<{src: string; alt: string}> | string[];
 }
 
 interface PortfolioGridProps {

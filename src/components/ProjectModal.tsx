@@ -6,6 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { ArrowUpRight, X, ArrowLeft, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import useEmblaCarousel from 'embla-carousel-react';
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -15,7 +16,8 @@ interface ProjectModalProps {
     title: string;
     category: string;
     image: string;
-    images?: string[];
+    alt?: string;
+    images?: Array<{src: string; alt: string}> | string[];
     description?: string;
   } | null;
 }
@@ -37,7 +39,15 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
   if (!project) return null;
 
-  const projectImages = project.images || [project.image];
+  // Handle both new and old image formats
+  const projectImages = project.images 
+    ? Array.isArray(project.images) && typeof project.images[0] === 'object'
+      ? (project.images as Array<{src: string; alt: string}>)
+      : (project.images as string[]).map((src, index) => ({ 
+          src, 
+          alt: `${project.title} - Image ${index + 1}` 
+        }))
+    : [{ src: project.image, alt: project.alt || project.title }];
 
   const handlePrevious = () => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -108,10 +118,12 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                 {projectImages.map((image, index) => (
                   <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
                     <div className="relative h-full w-full flex items-center justify-center">
-                      <img
-                        src={image}
-                        alt={`${project.title} - Image ${index + 1}`}
+                      <OptimizedImage
+                        src={typeof image === 'string' ? image : image.src}
+                        alt={typeof image === 'string' ? `${project.title} - Image ${index + 1}` : image.alt}
                         className="max-w-full max-h-full object-contain w-auto h-auto"
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        sizes="100vw"
                       />
                     </div>
                   </div>

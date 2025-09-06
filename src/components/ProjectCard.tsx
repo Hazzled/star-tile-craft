@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface ProjectCardProps {
   project: {
@@ -9,6 +10,8 @@ interface ProjectCardProps {
     title: string;
     category: string;
     image: string;
+    alt?: string;
+    images?: Array<{src: string; alt: string}> | string[];
   };
   onClick: () => void;
 }
@@ -20,10 +23,12 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       onClick={onClick}
     >
       <div className="relative overflow-hidden">
-        <img 
+        <OptimizedImage 
           src={project.image} 
-          alt={project.title} 
-          className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110" 
+          alt={project.alt || project.title} 
+          className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         
         {/* Hover Overlay */}
