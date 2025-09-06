@@ -127,12 +127,18 @@ const Contact = () => {
     });
   };
 
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    { name: "Contact", url: "https://startilellc.com/contact" }
+  ]);
+
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Contact Star Tile LLC | Free Tile Installation Quote Portland"
-        description="Request your free tile installation estimate. Call or message Star Tile LLC—licensed & insured contractors serving the Portland metro area."
+        title="Contact Portland Tile Contractors | Free Installation Quote | Star Tile LLC"
+        description="Get your free tile installation estimate today! Licensed Portland contractors specializing in kitchens, bathrooms & flooring. Call (503) 482-8395."
         canonical="https://startilellc.com/contact"
+        structuredData={breadcrumbs}
       />
       {/* Unified Hero + Contact Form Section */}
       <section ref={contactFormRef} className="relative py-20 min-h-screen overflow-hidden">

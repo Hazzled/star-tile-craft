@@ -48,11 +48,17 @@ const Services = () => {
       features: ["Fireplace surrounds", "Outdoor patios", "Accent walls", "Commercial spaces"]
     }
   ];
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    { name: "Services", url: "https://startilellc.com/services" }
+  ]);
+
   return <div className="min-h-screen">
       <SEO 
-        title="Professional Tile Installation Services Portland | Star Tile LLC"
-        description="Expert kitchen backsplashes, bathroom remodels, stone flooring & custom tile work in Portland Metro. Licensed contractors with 10+ years experience. Free estimates!"
+        title="Tile Installation Services in Portland, OR | Star Tile LLC"
+        description="Licensed tile contractor specializing in bathrooms, kitchens, and flooring in Portland. Expert craftsmanship with 10+ years experience. Free estimates!"
         canonical="https://startilellc.com/services"
+        structuredData={breadcrumbs}
       />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-navy via-gray-900 to-navy text-white py-24 overflow-hidden">

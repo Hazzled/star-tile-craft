@@ -66,14 +66,19 @@ const Blog = () => {
     }))
   };
 
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    { name: "Blog", url: "https://startilellc.com/blog" }
+  ]);
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Portland Tile Installation Blog | Expert DIY Tips & Professional Guides"
-        description="Learn tile installation, grout repair, waterproofing & budgeting from Portland's top contractors. Expert guides for kitchen, bathroom & flooring projects in Oregon."
+        title="Portland Tile Installation Blog | Expert Tips & Contractor Guides"
+        description="Learn tile installation, grout repair, waterproofing & budgeting from Portland's top contractors. Expert guides for kitchen, bathroom & flooring projects."
         canonical="https://startilellc.com/blog"
         type="website"
-        structuredData={structuredData}
+        structuredData={[structuredData, breadcrumbs]}
       />
       
       {/* Hero Section */}

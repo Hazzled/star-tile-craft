@@ -12,11 +12,17 @@ const About = () => {
       behavior: 'smooth'
     });
   };
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    { name: "About", url: "https://startilellc.com/about" }
+  ]);
+
   return <div className="min-h-screen">
       <SEO 
-        title="About Star Tile LLC | Portland Tile Experts"
-        description="Learn about our licensed and insured tile contractors with 10+ years serving the Portland metro area."
+        title="About Star Tile LLC | Portland's Premier Tile Installation Experts"
+        description="Meet Portland's trusted tile contractors. Licensed & insured with 10+ years experience serving the metro area. Quality craftsmanship you can count on."
         canonical="https://startilellc.com/about"
+        structuredData={breadcrumbs}
       />
       {/* Hero Section with Enhanced Overlay */}
       <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-24">
