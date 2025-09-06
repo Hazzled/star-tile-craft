@@ -42,9 +42,10 @@ const TileContractorBeaverton = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Tile Contractor Beaverton Oregon | Star Tile LLC - Licensed & Insured"
-        description="Top-rated tile contractor in Beaverton, OR. Kitchen & bathroom remodeling, custom tile work. Serving Cedar Hills, Murray Hill, Cooper Mountain. Free estimates!"
+        title="Professional Tile Contractor Beaverton OR | Star Tile LLC - Licensed"
+        description="Leading tile contractor in Beaverton, Oregon. Bathroom remodeling, kitchen backsplashes, custom installation. Cedar Hills, Murray Hill, Cooper Mountain. Call (503) 482-8395!"
         canonical="https://startilellc.com/tile-contractor-beaverton"
+        ogImage="https://startilellc.com/og-beaverton-tile.jpg"
         structuredData={structuredData}
       />
 

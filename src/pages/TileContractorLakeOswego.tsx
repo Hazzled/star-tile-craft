@@ -42,9 +42,10 @@ const TileContractorLakeOswego = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Luxury Tile Contractor Lake Oswego Oregon | Star Tile LLC - Premium Installation"
-        description="Luxury tile contractor in Lake Oswego, OR. Designer kitchens, spa bathrooms, natural stone, custom mosaics. Serving Forest Hills, Mountain Park. Free estimates!"
+        title="Luxury Tile Contractor Lake Oswego OR | Designer Tile & Natural Stone"
+        description="Premier luxury tile contractor in Lake Oswego, Oregon. Designer kitchens, spa master bathrooms, custom mosaics, natural stone. Forest Hills, Mountain Park areas. Premium service!"
         canonical="https://startilellc.com/tile-contractor-lake-oswego"
+        ogImage="https://startilellc.com/og-lake-oswego-tile.jpg"
         structuredData={structuredData}
       />
 
