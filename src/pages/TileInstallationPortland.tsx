@@ -20,24 +20,41 @@ const TileInstallationPortland = () => {
     "Waterproofing Services"
   ];
 
-  const structuredData = {
+  const serviceData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Star Tile LLC",
-    "description": "Professional tile installation services in Portland, Oregon",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Portland",
-      "addressRegion": "Oregon",
-      "addressCountry": "US"
+    "@type": "Service",
+    "name": "Tile Installation Services",
+    "description": "Professional tile installation for kitchens, bathrooms, and flooring in Portland, Oregon",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Star Tile LLC",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Portland",
+        "addressRegion": "Oregon",
+        "addressCountry": "US"
+      },
+      "telephone": "(503) 482-8395",
+      "url": "https://startilellc.com/tile-installation-portland"
     },
-    "telephone": "(503) 482-8395",
-    "url": "https://startilellc.com/tile-installation-portland",
-    "servedArea": {
-      "@type": "City",
-      "name": "Portland, Oregon"
-    },
-    "serviceType": ["Tile Installation", "Kitchen Backsplash", "Bathroom Tile", "Flooring"]
+    "areaServed": [
+      "Portland, Oregon",
+      "Pearl District",
+      "Alberta Arts District", 
+      "Sellwood",
+      "Hawthorne",
+      "Laurelhurst",
+      "Irvington",
+      "Beaumont-Wilshire"
+    ],
+    "serviceType": [
+      "Kitchen Backsplash Installation",
+      "Bathroom Tile Installation", 
+      "Shower Tile Installation",
+      "Floor Tile Installation",
+      "Custom Tile Work",
+      "Grout Repair"
+    ]
   };
 
   const breadcrumbs = generateBreadcrumbJsonLd([
@@ -53,7 +70,7 @@ const TileInstallationPortland = () => {
         description="Professional tile installation in Portland, OR. Kitchen backsplashes, bathroom tile, flooring experts. Serving Pearl District, Hawthorne, Alberta areas. Licensed & insured. Free quotes!"
         canonical="https://startilellc.com/tile-installation-portland"
         ogImage="https://startilellc.com/og-portland-tile.jpg"
-        structuredData={[structuredData, breadcrumbs]}
+        structuredData={[serviceData, breadcrumbs]}
       />
 
       {/* Hero Section */}
@@ -93,15 +110,23 @@ const TileInstallationPortland = () => {
             </h2>
             
             <p className="text-muted-foreground mb-6">
-              Portland's unique character deserves tile work that matches its creativity and craftsmanship. From the trendy Pearl District to the artistic Alberta neighborhood, Star Tile LLC has been transforming Portland homes with exceptional tile installations since 2014. Our local expertise means we understand Portland's architectural diversity, from classic Craftsman homes in Laurelhurst to modern condos in the South Waterfront.
+              Portland's unique character deserves tile work that matches its creativity and craftsmanship. From the trendy Pearl District lofts requiring sleek modern backsplashes to the artistic Alberta Arts District homes needing vibrant custom tile designs, Star Tile LLC has been transforming Portland homes with exceptional tile installations since 2014. Our deep understanding of Portland's diverse neighborhoods means we deliver tile solutions that perfectly complement each area's distinct architectural personality.
             </p>
 
             <p className="text-muted-foreground mb-6">
-              Portland's rainy climate demands proper waterproofing and moisture management in tile installations. Our licensed contractors are experts in Pacific Northwest building requirements, ensuring your tile work not only looks beautiful but withstands Portland's wet winters and dry summers. Whether you're renovating a historic home in Irvington or updating a mid-century modern in Beaumont-Wilshire, we bring the right expertise to every project.
+              In the historic Sellwood neighborhood, we specialize in preserving the charm of vintage homes while adding contemporary tile features that enhance both beauty and functionality. Our work in Laurelhurst focuses on honoring the area's classic Craftsman architecture with tile selections that complement original woodwork and period details. Meanwhile, in the bustling Hawthorne District, we create stunning kitchen backsplashes and bathroom renovations that match the area's eclectic, artistic vibe.
+            </p>
+
+            <p className="text-muted-foreground mb-6">
+              Portland's rainy climate demands expert waterproofing and moisture management in every tile installation. Our licensed contractors are specialists in Pacific Northwest building requirements, ensuring your tile work not only looks beautiful but withstands Portland's wet winters and dry summers. From Irvington's stately homes to Beaumont-Wilshire's mid-century moderns, we bring climate-appropriate expertise to every project. Our comprehensive <Link to="/services" className="text-primary hover:text-primary/80 underline">tile installation services</Link> include proper substrate preparation, moisture barriers, and premium waterproofing systems.
+            </p>
+
+            <p className="text-muted-foreground mb-6">
+              Whether you're renovating a Pearl District condo kitchen, updating a Belmont bungalow bathroom, or creating custom tile features in a Richmond craftsman, our team understands the unique requirements of each Portland neighborhood. We work with homeowners in Woodstock to select tiles that complement the area's family-friendly atmosphere, while our Beaumont-Wilshire projects often showcase sophisticated natural stone installations that match the neighborhood's upscale character.
             </p>
 
             <p className="text-muted-foreground mb-8">
-              We're proud to be Portland's go-to tile installation company, serving neighborhoods from Hawthorne to Sellwood, Richmond to Woodstock. Our commitment to quality craftsmanship, transparent pricing, and exceptional customer service has made us the trusted choice for hundreds of Portland homeowners who demand nothing less than perfection.
+              Our portfolio of completed Portland projects spans every neighborhood and style imaginable. From historic preservation work in Irvington to cutting-edge contemporary designs in the South Waterfront, we've earned our reputation as Portland's most trusted tile installation company. Browse our <Link to="/portfolio" className="text-primary hover:text-primary/80 underline">portfolio of completed projects</Link> to see examples of our work throughout the Rose City, including stunning kitchen transformations, spa-like bathroom retreats, and custom tile installations that truly capture the spirit of Portland living.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
