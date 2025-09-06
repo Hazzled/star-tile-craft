@@ -57,13 +57,13 @@ const ServicesOverview = () => {
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                     {service.description}
                   </p>
-                  <div className="flex justify-center mt-auto">
-                    <Link to="/services" aria-label={`Learn more about ${service.title} services`}>
-                      <Button variant="outline" className="text-navy border-navy hover:bg-navy hover:text-white transition-all duration-300 rounded-lg">
-                        Learn More
-                      </Button>
-                    </Link>
-                  </div>
+                   <div className="flex justify-center mt-auto">
+                     <Link to="/services" aria-label={`Learn more about ${service.title} services`}>
+                       <Button variant="outline" className="text-navy border-navy hover:bg-navy hover:text-white transition-all duration-300 rounded-lg">
+                         Learn About {service.title}
+                       </Button>
+                     </Link>
+                   </div>
                 </CardContent>
               </Card>
             </article>
