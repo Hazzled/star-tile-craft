@@ -6,6 +6,7 @@ import { CheckCircle, Hammer, Droplets, Home, Sparkles, Phone, ClipboardCheck, W
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const Services = () => {
   const serviceOverview = [{
@@ -226,7 +227,7 @@ const Services = () => {
                 duration: 0.3
               }}>
                     <Card className="overflow-hidden shadow-2xl border-0 rounded-2xl group">
-                      <img src={service.image} alt={service.title} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <OptimizedImage src={service.image} alt={service.title} width={400} height={320} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700" />
                     </Card>
                   </motion.div>
                 </div>

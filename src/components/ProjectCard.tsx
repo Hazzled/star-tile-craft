@@ -27,7 +27,6 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
           src={project.image} 
           alt={project.alt || project.title} 
           className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
-          loading="lazy"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         

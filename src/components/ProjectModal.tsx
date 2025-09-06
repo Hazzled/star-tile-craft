@@ -122,7 +122,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                         src={typeof image === 'string' ? image : image.src}
                         alt={typeof image === 'string' ? `${project.title} - Image ${index + 1}` : image.alt}
                         className="max-w-full max-h-full object-contain w-auto h-auto"
-                        loading={index === 0 ? 'eager' : 'lazy'}
+                        priority={index === 0}
                         sizes="100vw"
                       />
                     </div>
