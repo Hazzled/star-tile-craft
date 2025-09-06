@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Star, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb, servicesBreadcrumb } from "@/lib/breadcrumbs";
 
 const TileContractorTigard = () => {
   const neighborhoods = [
@@ -39,6 +40,12 @@ const TileContractorTigard = () => {
     "serviceType": ["Tile Contractor", "Bathroom Tile", "Kitchen Tile", "Natural Stone Installation"]
   };
 
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    servicesBreadcrumb,
+    { name: "Tile Contractor Tigard", url: "https://startilellc.com/tile-contractor-tigard" }
+  ]);
+
   return (
     <div className="min-h-screen">
       <SEO 
@@ -46,7 +53,7 @@ const TileContractorTigard = () => {
         description="Premium tile contractor in Tigard, OR. Luxury bathroom tile, kitchen backsplashes, stone installation. Bull Mountain, Summerfield, King City areas. Licensed CCB #200970!"
         canonical="https://startilellc.com/tile-contractor-tigard"
         ogImage="https://startilellc.com/og-tigard-tile.jpg"
-        structuredData={structuredData}
+        structuredData={[structuredData, breadcrumbs]}
       />
 
       {/* Hero Section */}

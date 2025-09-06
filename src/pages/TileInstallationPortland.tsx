@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Star, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb, servicesBreadcrumb } from "@/lib/breadcrumbs";
 
 const TileInstallationPortland = () => {
   const neighborhoods = [
@@ -39,6 +40,12 @@ const TileInstallationPortland = () => {
     "serviceType": ["Tile Installation", "Kitchen Backsplash", "Bathroom Tile", "Flooring"]
   };
 
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    servicesBreadcrumb,
+    { name: "Tile Installation Portland", url: "https://startilellc.com/tile-installation-portland" }
+  ]);
+
   return (
     <div className="min-h-screen">
       <SEO 
@@ -46,7 +53,7 @@ const TileInstallationPortland = () => {
         description="Professional tile installation in Portland, OR. Kitchen backsplashes, bathroom tile, flooring experts. Serving Pearl District, Hawthorne, Alberta areas. Licensed & insured. Free quotes!"
         canonical="https://startilellc.com/tile-installation-portland"
         ogImage="https://startilellc.com/og-portland-tile.jpg"
-        structuredData={structuredData}
+        structuredData={[structuredData, breadcrumbs]}
       />
 
       {/* Hero Section */}

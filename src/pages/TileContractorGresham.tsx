@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Star, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb, servicesBreadcrumb } from "@/lib/breadcrumbs";
 
 const TileContractorGresham = () => {
   const neighborhoods = [
@@ -39,6 +40,12 @@ const TileContractorGresham = () => {
     "serviceType": ["Tile Contractor", "Bathroom Remodel", "Kitchen Tile", "Outdoor Tile"]
   };
 
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    servicesBreadcrumb,
+    { name: "Tile Contractor Gresham", url: "https://startilellc.com/tile-contractor-gresham" }
+  ]);
+
   return (
     <div className="min-h-screen">
       <SEO 
@@ -46,7 +53,7 @@ const TileContractorGresham = () => {
         description="Trusted tile contractor in Gresham, Oregon. Farmhouse kitchens, spa bathrooms, outdoor patio tile. Powell Valley, Pleasant Valley, Centennial. Star Tile LLC - (503) 482-8395!"
         canonical="https://startilellc.com/tile-contractor-gresham"
         ogImage="https://startilellc.com/og-gresham-tile.jpg"
-        structuredData={structuredData}
+        structuredData={[structuredData, breadcrumbs]}
       />
 
       {/* Hero Section */}

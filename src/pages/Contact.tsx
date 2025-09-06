@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

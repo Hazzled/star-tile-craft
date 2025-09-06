@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 import blogHeroImage from "@/assets/blog-hero-image.jpg";
 
 const Blog = () => {

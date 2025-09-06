@@ -10,6 +10,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FinalCTA from "@/components/home/FinalCTA";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 
 const Index = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -28,32 +29,50 @@ const Index = () => {
     setSelectedProject(null);
   };
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Star Tile LLC",
+    "image": "https://startilellc.com/lovable-uploads/star-tile-logo.png",
+    "@id": "https://startilellc.com/",
+    "url": "https://startilellc.com/",
+    "telephone": "(503) 482-8395",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main St",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "postalCode": "97201",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.5152,
+      "longitude": -122.6784
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  };
+
+  const breadcrumbs = generateBreadcrumbJsonLd([homeBreadcrumb]);
+
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Expert Tile Installation in Gresham Oregon | Star Tile LLC"
-        description="Professional tile installation for kitchens, bathrooms, and floors in Gresham, OR. Licensed & insured with 10+ years of experience. Serving Gresham and surrounding areas."
-        canonical="https://startilellc.com/"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Star Tile LLC",
-          "description": "Professional tile installation services in Gresham, Oregon",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Gresham",
-            "addressRegion": "OR",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "45.5017",
-            "longitude": "-122.4315"
-          },
-          "areaServed": ["Gresham", "Portland", "Oregon City", "Fairview", "Wood Village"],
-          "serviceType": ["Tile Installation", "Kitchen Backsplash", "Bathroom Remodel", "Floor Tiling"],
-          "hasCredential": "CCB #200970"
-        }}
+        title="Star Tile LLC | Expert Tile Installation & Remodeling in Portland Oregon"
+        description="Portland's premier tile installation experts. Kitchen backsplashes, bathroom remodels, flooring & custom tile work. Licensed CCB #200970. Free estimates!"
+        canonical="https://startilellc.com"
+        structuredData={[structuredData, breadcrumbs]}
       />
       <HeroSection />
       {/* Enhanced intro section with internal links */}

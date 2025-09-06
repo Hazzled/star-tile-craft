@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, Hammer, Droplets, Home, Sparkles, Phone, ClipboardCheck, Wrench, Eye } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 
 const Services = () => {
   const serviceOverview = [{

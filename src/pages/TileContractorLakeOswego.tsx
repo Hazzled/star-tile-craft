@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Star, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb, servicesBreadcrumb } from "@/lib/breadcrumbs";
 
 const TileContractorLakeOswego = () => {
   const neighborhoods = [
@@ -39,6 +40,12 @@ const TileContractorLakeOswego = () => {
     "serviceType": ["Luxury Tile Contractor", "Natural Stone Installation", "Designer Tile", "Custom Tile Work"]
   };
 
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    servicesBreadcrumb,
+    { name: "Tile Contractor Lake Oswego", url: "https://startilellc.com/tile-contractor-lake-oswego" }
+  ]);
+
   return (
     <div className="min-h-screen">
       <SEO 
@@ -46,7 +53,7 @@ const TileContractorLakeOswego = () => {
         description="Premier luxury tile contractor in Lake Oswego, Oregon. Designer kitchens, spa master bathrooms, custom mosaics, natural stone. Forest Hills, Mountain Park areas. Premium service!"
         canonical="https://startilellc.com/tile-contractor-lake-oswego"
         ogImage="https://startilellc.com/og-lake-oswego-tile.jpg"
-        structuredData={structuredData}
+        structuredData={[structuredData, breadcrumbs]}
       />
 
       {/* Hero Section */}

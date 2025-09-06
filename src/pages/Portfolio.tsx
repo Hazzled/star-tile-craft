@@ -8,6 +8,7 @@ import PortfolioStats from "@/components/portfolio/PortfolioStats";
 import PortfolioCTA from "@/components/portfolio/PortfolioCTA";
 import { portfolioItems, filters } from "@/data/portfolioData";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -26,12 +27,18 @@ const Portfolio = () => {
     setSelectedProject(null);
   };
 
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    { name: "Portfolio", url: "https://startilellc.com/portfolio" }
+  ]);
+
   return (
     <div className="min-h-screen">
       <SEO 
         title="Tile Installation Portfolio | Star Tile LLC Portland"
         description="Browse our completed kitchen backsplashes, bathroom remodels, flooring, and custom tile projects across Portland."
         canonical="https://startilellc.com/portfolio"
+        structuredData={breadcrumbs}
       />
       <PortfolioHero />
       {/* Enhanced Filter Section */}

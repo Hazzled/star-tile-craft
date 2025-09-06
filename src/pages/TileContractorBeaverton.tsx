@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Star, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
+import { generateBreadcrumbJsonLd, homeBreadcrumb, servicesBreadcrumb } from "@/lib/breadcrumbs";
 
 const TileContractorBeaverton = () => {
   const neighborhoods = [
@@ -39,6 +40,12 @@ const TileContractorBeaverton = () => {
     "serviceType": ["Tile Contractor", "Bathroom Remodel", "Kitchen Backsplash", "Tile Installation"]
   };
 
+  const breadcrumbs = generateBreadcrumbJsonLd([
+    homeBreadcrumb,
+    servicesBreadcrumb,
+    { name: "Tile Contractor Beaverton", url: "https://startilellc.com/tile-contractor-beaverton" }
+  ]);
+
   return (
     <div className="min-h-screen">
       <SEO 
@@ -46,7 +53,7 @@ const TileContractorBeaverton = () => {
         description="Leading tile contractor in Beaverton, Oregon. Bathroom remodeling, kitchen backsplashes, custom installation. Cedar Hills, Murray Hill, Cooper Mountain. Call (503) 482-8395!"
         canonical="https://startilellc.com/tile-contractor-beaverton"
         ogImage="https://startilellc.com/og-beaverton-tile.jpg"
-        structuredData={structuredData}
+        structuredData={[structuredData, breadcrumbs]}
       />
 
       {/* Hero Section */}
