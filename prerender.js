@@ -19,6 +19,9 @@ const routesToPrerender = [
   '/blog/budgeting-tile-project-portland', // Budgeting blog post
   '/blog/fix-cracked-grout', // Grout repair blog post
   '/blog/waterproofing-before-tile', // Waterproofing blog post
+  '/blog/tile-trends-portland', // Tile trends blog post
+  '/blog/best-tile-stores-portland', // Best tile stores blog post
+  '/blog/choosing-tile-contractor-portland', // Choosing contractor blog post
   '/tile-installation-portland', // Portland location page
   '/tile-contractor-beaverton', // Beaverton location page
   '/tile-contractor-tigard', // Tigard location page
