@@ -1,7 +1,6 @@
 
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone } from "lucide-react";
-import OptimizedImage from "@/components/OptimizedImage";
 
 const Footer = () => {
   return (
@@ -10,11 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <OptimizedImage 
-              src="/images/ui/logo.png" 
-              alt="Star Tile LLC Logo" 
-              width={120}
-              height={64}
+            <img 
+              src="/lovable-uploads/8dab7745-2763-4f3f-9253-bf508df70d21.png" 
+              alt="Star Tile LLC" 
               className="h-16 w-auto mb-4 filter invert"
             />
             <p className="text-mist mb-4">

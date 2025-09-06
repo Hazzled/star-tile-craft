@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { CheckCircle, Award, Users, Clock, ArrowUp, Quote } from "lucide-react";
 import SEO from "@/components/SEO";
 import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
-import OptimizedImage from "@/components/OptimizedImage";
 const About = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -87,13 +86,7 @@ const About = () => {
             
             <div className="lg:pl-8">
               <div className="relative">
-                <OptimizedImage 
-                  src="/images/ui/about-quality-tile.jpg" 
-                  alt="Quality tile installation craftsmanship" 
-                  width={800}
-                  height={600}
-                  className="rounded-xl shadow-2xl" 
-                />
+                <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quality tile installation" className="rounded-xl shadow-2xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
               </div>
             </div>
@@ -232,13 +225,7 @@ const About = () => {
             
             <div className="lg:pl-8">
               <div className="relative">
-                <OptimizedImage 
-                  src="/images/ui/about-quality-tile.jpg" 
-                  alt="Quality tile installation craftsmanship" 
-                  width={800}
-                  height={600}
-                  className="rounded-xl shadow-2xl" 
-                />
+                <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quality tile installation" className="rounded-xl shadow-2xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
               </div>
             </div>

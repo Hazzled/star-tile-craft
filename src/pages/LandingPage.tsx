@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import { Phone, Star, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
 import ProjectModal from "@/components/ProjectModal";
-import OptimizedImage from "@/components/OptimizedImage";
 import { portfolioItems } from "@/data/portfolioData";
 import { useToast } from "@/hooks/use-toast";
 
@@ -148,13 +147,11 @@ const LandingPage = () => {
                   onClick={() => handleProjectClick(project)}
                 >
                   <div className="relative aspect-square">
-                    <OptimizedImage 
+                    <img 
                       src={project.image} 
                       alt={`${project.title} - Professional tile installation in Portland`}
-                      width={400}
-                      height={400}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      priority={index < 4}
+                      loading={index < 4 ? "eager" : "lazy"}
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <Badge className="bg-white text-primary">

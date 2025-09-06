@@ -3,10 +3,8 @@ import React, { useState } from 'react';
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
   className?: string;
-  priority?: boolean;
+  loading?: 'lazy' | 'eager';
   sizes?: string;
   onLoad?: () => void;
   onError?: () => void;
@@ -15,10 +13,8 @@ interface OptimizedImageProps {
 const OptimizedImage = ({ 
   src, 
   alt, 
-  width,
-  height,
   className = '', 
-  priority = false,
+  loading = 'lazy',
   sizes,
   onLoad,
   onError 
@@ -26,21 +22,24 @@ const OptimizedImage = ({
   const [imageError, setImageError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Fallback to placeholder image on error
-  const fallbackSrc = '/images/placeholder.jpg';
-  
-  // Generate different format sources for the picture element
-  const getImageSources = (originalSrc: string) => {
-    if (imageError) return { avif: fallbackSrc, webp: fallbackSrc, original: fallbackSrc };
+  // Convert PNG to WebP if supported
+  const getOptimizedSrc = (originalSrc: string) => {
+    if (imageError) return originalSrc;
     
-    const basePath = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '');
-    const extension = originalSrc.match(/\.(jpg|jpeg|png)$/i)?.[1] || 'jpg';
-    
-    return {
-      avif: `${basePath}.avif`,
-      webp: `${basePath}.webp`, 
-      original: originalSrc
+    // Check if browser supports WebP
+    const supportsWebP = () => {
+      const canvas = document.createElement('canvas');
+      return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
     };
+
+    // For portfolio images, try to serve WebP version if available
+    if (originalSrc.includes('/lovable-uploads/') && supportsWebP()) {
+      // In a real implementation, you would have WebP versions generated
+      // For now, we'll use the original but add WebP to the src set
+      return originalSrc;
+    }
+
+    return originalSrc;
   };
 
   const handleLoad = () => {
@@ -49,43 +48,28 @@ const OptimizedImage = ({
   };
 
   const handleError = () => {
-    if (!imageError) {
-      setImageError(true);
-      onError?.();
-    }
+    setImageError(true);
+    onError?.();
   };
-
-  const sources = getImageSources(src);
-  const loading = priority ? 'eager' : 'lazy';
-  const decoding = priority ? 'sync' : 'async';
 
   return (
     <div className="relative">
       {!isLoaded && (
-        <div 
-          className={`absolute inset-0 bg-muted animate-pulse rounded ${className}`}
-          style={{ width, height }}
-        />
+        <div className={`absolute inset-0 bg-muted animate-pulse ${className}`} />
       )}
-      <picture>
-        {/* AVIF source for modern browsers */}
-        <source srcSet={sources.avif} type="image/avif" />
-        {/* WebP source for broader support */}
-        <source srcSet={sources.webp} type="image/webp" />
-        {/* Fallback for all browsers */}
-        <img
-          src={imageError ? fallbackSrc : sources.original}
-          alt={alt}
-          width={width}
-          height={height}
-          className={`${className} ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
-          loading={loading}
-          decoding={decoding}
-          sizes={sizes}
-          onLoad={handleLoad}
-          onError={handleError}
-        />
-      </picture>
+      <img
+        src={getOptimizedSrc(src)}
+        alt={alt}
+        className={`${className} ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+        loading={loading}
+        sizes={sizes}
+        onLoad={handleLoad}
+        onError={handleError}
+        // Add WebP support via picture element when available
+        {...(src.includes('/lovable-uploads/') && {
+          srcSet: `${src.replace('.png', '.webp')} 1x, ${src.replace('.png', '@2x.webp')} 2x`
+        })}
+      />
     </div>
   );
 };
