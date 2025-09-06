@@ -26,6 +26,33 @@ const Blog = () => {
       featured: true
     },
     {
+      title: "Top Tile Trends in Portland Homes (2025 Update)",
+      excerpt: "Discover the hottest tile trends transforming Portland homes in 2025. From sustainable materials to bold patterns, see what's trending in Pacific Northwest design.",
+      slug: "tile-trends-portland",
+      date: "January 6, 2025",
+      category: "Design & Trends",
+      readTime: "6 min read",
+      featured: true
+    },
+    {
+      title: "Best Tile Stores in Portland for Homeowners & Contractors",
+      excerpt: "Complete guide to Portland's top tile suppliers including Bedrosians, Oregon Tile & Marble, and Pratt & Larson. Find the best selection and prices for your project.",
+      slug: "best-tile-stores-portland",
+      date: "January 6, 2025",
+      category: "Resources",
+      readTime: "7 min read",
+      featured: false
+    },
+    {
+      title: "How to Choose the Right Tile Contractor in Portland",
+      excerpt: "Essential guide to selecting a licensed, insured tile contractor in Portland. Learn about CCB licensing, insurance requirements, and red flags to avoid.",
+      slug: "choosing-tile-contractor-portland",
+      date: "January 6, 2025",
+      category: "Planning & Budgeting",
+      readTime: "8 min read",
+      featured: false
+    },
+    {
       title: "How to Fix Cracked Grout: Portland Homeowner's Complete Guide 2025",
       excerpt: "Learn how to fix cracked grout in Portland's damp climate. Step-by-step DIY guide plus when to call professionals for grout repair in the Pacific Northwest.",
       slug: "fix-cracked-grout",
@@ -195,7 +222,7 @@ const Blog = () => {
         {/* Categories Section */}
         <section className="mt-16 pt-16 border-t border-border">
           <h2 className="text-3xl font-montserrat font-bold text-foreground mb-8">Browse by Category</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-4 gap-6">
             <Card className="bg-card border-border hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
@@ -235,6 +262,20 @@ const Blog = () => {
                 <h3 className="text-lg font-montserrat font-semibold text-foreground mb-2">DIY & Maintenance</h3>
                 <p className="text-sm text-muted-foreground">
                   DIY repairs, maintenance tips, and when to call professionals
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-montserrat font-semibold text-foreground mb-2">Design & Trends</h3>
+                <p className="text-sm text-muted-foreground">
+                  Latest tile trends, design inspiration, and style guides
                 </p>
               </CardContent>
             </Card>
