@@ -49,8 +49,8 @@ const Services = () => {
   ];
   return <div className="min-h-screen">
       <SEO 
-        title="Tile Installation Services in Portland | Star Tile LLC"
-        description="Kitchen backsplashes, bathroom tile, flooring, and custom tile installations. Licensed & insured Portland contractors."
+        title="Professional Tile Installation Services Portland | Star Tile LLC"
+        description="Expert kitchen backsplashes, bathroom remodels, stone flooring & custom tile work in Portland Metro. Licensed contractors with 10+ years experience. Free estimates!"
         canonical="https://startilellc.com/services"
       />
       {/* Hero Section */}

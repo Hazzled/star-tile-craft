@@ -68,8 +68,8 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Tile Installation Blog | Expert Tips & Guides for Portland Homeowners"
-        description="Expert tile installation guides, maintenance tips, and design inspiration for Portland area homeowners. Learn from licensed professionals with 10+ years experience."
+        title="Portland Tile Installation Blog | Expert DIY Tips & Professional Guides"
+        description="Learn tile installation, grout repair, waterproofing & budgeting from Portland's top contractors. Expert guides for kitchen, bathroom & flooring projects in Oregon."
         canonical="https://startilellc.com/blog"
         type="website"
         structuredData={structuredData}
