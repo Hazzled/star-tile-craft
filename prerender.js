@@ -19,6 +19,11 @@ const routesToPrerender = [
   '/blog/budgeting-tile-project-portland', // Budgeting blog post
   '/blog/fix-cracked-grout', // Grout repair blog post
   '/blog/waterproofing-before-tile', // Waterproofing blog post
+  '/tile-installation-portland', // Portland location page
+  '/tile-contractor-beaverton', // Beaverton location page
+  '/tile-contractor-tigard', // Tigard location page
+  '/tile-contractor-gresham', // Gresham location page
+  '/tile-contractor-lake-oswego', // Lake Oswego location page
   '/quote',      // Landing page for ads
   // Add new routes here when adding new pages
 ]
