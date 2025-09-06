@@ -22,26 +22,6 @@ const OptimizedImage = ({
   const [imageError, setImageError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Convert PNG to WebP if supported
-  const getOptimizedSrc = (originalSrc: string) => {
-    if (imageError) return originalSrc;
-    
-    // Check if browser supports WebP
-    const supportsWebP = () => {
-      const canvas = document.createElement('canvas');
-      return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-    };
-
-    // For portfolio images, try to serve WebP version if available
-    if (originalSrc.includes('/lovable-uploads/') && supportsWebP()) {
-      // In a real implementation, you would have WebP versions generated
-      // For now, we'll use the original but add WebP to the src set
-      return originalSrc;
-    }
-
-    return originalSrc;
-  };
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
@@ -52,23 +32,21 @@ const OptimizedImage = ({
     onError?.();
   };
 
+  const imageSrc = imageError ? '/images/portfolio/placeholder.jpg' : src;
+
   return (
     <div className="relative">
       {!isLoaded && (
         <div className={`absolute inset-0 bg-muted animate-pulse ${className}`} />
       )}
       <img
-        src={getOptimizedSrc(src)}
+        src={imageSrc}
         alt={alt}
         className={`${className} ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
         loading={loading}
         sizes={sizes}
         onLoad={handleLoad}
         onError={handleError}
-        // Add WebP support via picture element when available
-        {...(src.includes('/lovable-uploads/') && {
-          srcSet: `${src.replace('.png', '.webp')} 1x, ${src.replace('.png', '@2x.webp')} 2x`
-        })}
       />
     </div>
   );

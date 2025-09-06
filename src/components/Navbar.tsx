@@ -26,7 +26,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/8dab7745-2763-4f3f-9253-bf508df70d21.png" 
+              src="/images/brand/star-tile-logo.png" 
               alt="Star Tile LLC" 
               className="h-12 w-auto"
             />
