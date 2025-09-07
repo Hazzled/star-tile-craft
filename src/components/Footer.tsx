@@ -25,7 +25,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-montserrat font-semibold mb-4">Quick Links</h4>
+            <h3 className="text-lg font-montserrat font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-mist hover:text-ivory transition-colors">
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-montserrat font-semibold mb-4">Contact Info</h4>
+            <h3 className="text-lg font-montserrat font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-mist" />
