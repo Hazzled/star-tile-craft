@@ -19,20 +19,20 @@ export function generateBreadcrumbJsonLd(breadcrumbs: BreadcrumbItem[]) {
 // Common breadcrumb patterns
 export const homeBreadcrumb: BreadcrumbItem = {
   name: "Home",
-  url: "https://startilellc.com"
+  url: "https://www.startilellc.com"
 };
 
 export const servicesBreadcrumb: BreadcrumbItem = {
   name: "Services",
-  url: "https://startilellc.com/services"
+  url: "https://www.startilellc.com/services"
 };
 
 export const portfolioBreadcrumb: BreadcrumbItem = {
   name: "Portfolio", 
-  url: "https://startilellc.com/portfolio"
+  url: "https://www.startilellc.com/portfolio"
 };
 
 export const blogBreadcrumb: BreadcrumbItem = {
   name: "Blog",
-  url: "https://startilellc.com/blog"
+  url: "https://www.startilellc.com/blog"
 };

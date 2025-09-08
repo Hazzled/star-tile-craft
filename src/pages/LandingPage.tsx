@@ -87,7 +87,7 @@ const LandingPage = () => {
       "addressRegion": "Oregon"
     },
     "telephone": "(503) 555-0123",
-    "url": "https://startilellc.com",
+    "url": "https://www.startilellc.com",
     "priceRange": "$$"
   };
 
@@ -96,7 +96,7 @@ const LandingPage = () => {
       <SEO
         title="Get Your Dream Tile Project Quote | Star Tile LLC Portland"
         description="View our stunning tile installation portfolio and get a free quote. Kitchen backsplashes, bathroom remodels, and custom tile work in Portland."
-        canonical="https://startilellc.com/quote"
+        canonical="https://www.startilellc.com/quote"
         structuredData={structuredData}
       />
 

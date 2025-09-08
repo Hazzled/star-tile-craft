@@ -33,9 +33,9 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Star Tile LLC",
-    "image": "https://startilellc.com/lovable-uploads/star-tile-logo.png",
-    "@id": "https://startilellc.com/",
-    "url": "https://startilellc.com/",
+    "image": "https://www.startilellc.com/lovable-uploads/star-tile-logo.png",
+    "@id": "https://www.startilellc.com/",
+    "url": "https://www.startilellc.com/",
     "telephone": "(503) 482-8395",
     "address": {
       "@type": "PostalAddress",
@@ -71,7 +71,7 @@ const Index = () => {
       <SEO 
         title="Star Tile LLC | Expert Tile Installation & Remodeling in Portland Oregon"
         description="Portland's premier tile installation experts. Kitchen backsplashes, bathroom remodels, flooring & custom tile work. Licensed CCB #200970. Free estimates!"
-        canonical="https://startilellc.com"
+        canonical="https://www.startilellc.com"
         structuredData={[structuredData, breadcrumbs]}
       />
       <HeroSection />
