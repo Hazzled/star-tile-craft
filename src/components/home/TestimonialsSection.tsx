@@ -7,18 +7,18 @@ import { Star } from "lucide-react";
 
 const TestimonialsSection = () => {
   const testimonials = [{
-    name: "Sarah Johnson",
-    initials: "SJ",
+    name: "Verified Customer",
+    initials: "VC",
     text: "Star Tile completely transformed our kitchen! The craftsmanship is impeccable and they finished on time.",
     rating: 5
   }, {
-    name: "Mike Davis",
-    initials: "MD",
+    name: "Portland Homeowner",
+    initials: "PH",
     text: "Professional, reliable, and their attention to detail is amazing. Highly recommend for any tile work!",
     rating: 5
   }, {
-    name: "Jennifer Liu",
-    initials: "JL",
+    name: "Local Resident", 
+    initials: "LR",
     text: "Our bathroom remodel exceeded expectations. The team was courteous and the quality is outstanding.",
     rating: 5
   }];
