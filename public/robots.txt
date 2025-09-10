@@ -4,7 +4,6 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /404
 
 # Block access to development and build files
 Disallow: /src/
