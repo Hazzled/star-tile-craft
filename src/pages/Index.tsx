@@ -7,7 +7,7 @@ import HeroSection from "@/components/home/HeroSection";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import PortfolioPreview from "@/components/home/PortfolioPreview";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
+import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
 import SEO from "@/components/SEO";
 import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
@@ -94,7 +94,7 @@ const Index = () => {
         onProjectClick={handleProjectClick}
       />
       <WhyChooseUs />
-      <TestimonialsSection />
+      <FAQSection />
       <FinalCTA />
 
       {/* Project Modal */}
