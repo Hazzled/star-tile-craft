@@ -188,7 +188,7 @@ const TileInstallationPortland = () => {
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="border-background text-background hover:bg-background hover:text-primary">
+              <Button size="lg" variant="outline" className="border-background text-foreground hover:bg-background hover:text-primary">
                 View Portland Projects
               </Button>
             </Link>
