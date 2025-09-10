@@ -4,6 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
 import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 import blogHeroImage from "@/assets/blog-hero-image.jpg";
+import blogBudgetingTile from "@/assets/blog-budgeting-tile.jpg";
+import blogWaterproofing from "@/assets/blog-waterproofing.jpg";
+import blogTileTrends from "@/assets/blog-tile-trends.jpg";
+import blogTileStores from "@/assets/blog-tile-stores.jpg";
+import blogChoosingContractor from "@/assets/blog-choosing-contractor.jpg";
+import blogGroutRepair from "@/assets/blog-grout-repair.jpg";
 
 const Blog = () => {
   const blogPosts = [
@@ -14,7 +20,8 @@ const Blog = () => {
       date: "January 19, 2025",
       category: "Planning & Budgeting",
       readTime: "8 min read",
-      featured: true
+      featured: true,
+      image: blogBudgetingTile
     },
     {
       title: "Waterproofing Before Tile: The Critical Step Portland Homeowners Can't Skip",
@@ -23,7 +30,8 @@ const Blog = () => {
       date: "January 19, 2025",
       category: "Technical Guide",
       readTime: "10 min read",
-      featured: true
+      featured: true,
+      image: blogWaterproofing
     },
     {
       title: "Top Tile Trends in Portland Homes (2025 Update)",
@@ -32,7 +40,8 @@ const Blog = () => {
       date: "January 6, 2025",
       category: "Design & Trends",
       readTime: "6 min read",
-      featured: true
+      featured: true,
+      image: blogTileTrends
     },
     {
       title: "Best Tile Stores in Portland for Homeowners & Contractors",
@@ -41,7 +50,8 @@ const Blog = () => {
       date: "January 6, 2025",
       category: "Resources",
       readTime: "7 min read",
-      featured: false
+      featured: false,
+      image: blogTileStores
     },
     {
       title: "How to Choose the Right Tile Contractor in Portland",
@@ -50,7 +60,8 @@ const Blog = () => {
       date: "January 6, 2025",
       category: "Planning & Budgeting",
       readTime: "8 min read",
-      featured: false
+      featured: false,
+      image: blogChoosingContractor
     },
     {
       title: "How to Fix Cracked Grout: Portland Homeowner's Complete Guide 2025",
@@ -59,7 +70,8 @@ const Blog = () => {
       date: "January 19, 2025",
       category: "DIY & Maintenance",
       readTime: "7 min read",
-      featured: false
+      featured: false,
+      image: blogGroutRepair
     }
   ];
 
@@ -144,7 +156,10 @@ const Blog = () => {
             {blogPosts.filter(post => post.featured).map((post, index) => (
               <Card key={post.slug} className="group hover:shadow-xl transition-all duration-300 bg-card border-border">
                 <CardContent className="p-0">
-                  <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/20 rounded-t-lg"></div>
+                  <div 
+                    className="h-48 bg-cover bg-center rounded-t-lg"
+                    style={{ backgroundImage: `url(${post.image})` }}
+                  ></div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <Badge variant="secondary" className="text-xs">
@@ -184,7 +199,10 @@ const Blog = () => {
               <Card key={post.slug} className="group hover:shadow-lg transition-all duration-300 bg-card border-border">
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-48 h-32 bg-gradient-to-br from-primary/10 to-secondary/20 rounded-lg flex-shrink-0"></div>
+                    <div 
+                      className="md:w-48 h-32 bg-cover bg-center rounded-lg flex-shrink-0"
+                      style={{ backgroundImage: `url(${post.image})` }}
+                    ></div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
                         <Badge variant="secondary" className="text-xs">
