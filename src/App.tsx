@@ -13,6 +13,9 @@ import Blog from "./pages/Blog";
 import BlogBudgetingTileProject from "./pages/BlogBudgetingTileProject";
 import BlogGroutRepair from "./pages/BlogGroutRepair";
 import BlogWaterproofing from "./pages/BlogWaterproofing";
+import BlogChoosingTileContractorPortland from "./pages/BlogChoosingTileContractorPortland";
+import BlogTileTrendsPortland from "./pages/BlogTileTrendsPortland";
+import BlogBestTileStoresPortland from "./pages/BlogBestTileStoresPortland";
 import TileInstallationPortland from "./pages/TileInstallationPortland";
 import TileContractorBeaverton from "./pages/TileContractorBeaverton";
 import TileContractorTigard from "./pages/TileContractorTigard";
@@ -43,6 +46,9 @@ const App = () => (
               <Route path="/blog/budgeting-tile-project-portland" element={<BlogBudgetingTileProject />} />
               <Route path="/blog/fix-cracked-grout" element={<BlogGroutRepair />} />
               <Route path="/blog/waterproofing-before-tile" element={<BlogWaterproofing />} />
+              <Route path="/blog/choosing-tile-contractor-portland" element={<BlogChoosingTileContractorPortland />} />
+              <Route path="/blog/tile-trends-portland" element={<BlogTileTrendsPortland />} />
+              <Route path="/blog/best-tile-stores-portland" element={<BlogBestTileStoresPortland />} />
               <Route path="/tile-installation-portland" element={<TileInstallationPortland />} />
               <Route path="/tile-contractor-beaverton" element={<TileContractorBeaverton />} />
               <Route path="/tile-contractor-tigard" element={<TileContractorTigard />} />
