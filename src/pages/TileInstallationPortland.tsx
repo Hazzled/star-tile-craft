@@ -91,7 +91,7 @@ const TileInstallationPortland = () => {
                 </Button>
               </Link>
               <a href="tel:5034828395">
-                <Button size="lg" variant="outline" className="border-background text-background hover:bg-background hover:text-primary">
+                <Button size="lg" variant="outline" className="border-background text-foreground hover:bg-background hover:text-primary">
                   <Phone className="mr-2 h-5 w-5" />
                   (503) 482-8395
                 </Button>
