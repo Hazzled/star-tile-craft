@@ -39,10 +39,10 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-3 py-2 text-sm font-medium transition-colors ${
+                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                     isActive(link.path)
-                      ? "text-navy border-b-2 border-navy"
-                      : "text-noir hover:text-navy"
+                      ? "text-primary border-b-2 border-primary"
+                      : "text-foreground hover:text-primary"
                   }`}
                 >
                   {link.label}
@@ -54,7 +54,7 @@ const Navbar = () => {
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
             <Link to="/contact">
-              <Button className="bg-navy hover:bg-navy/90 text-ivory">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 Get Free Quote
               </Button>
             </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-noir hover:text-navy"
+              className="text-foreground hover:text-primary"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -80,10 +80,10 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 text-base font-medium transition-colors ${
+                   className={`block px-3 py-2 text-base font-medium transition-colors ${
                     isActive(link.path)
-                      ? "text-navy bg-almond"
-                      : "text-noir hover:text-navy hover:bg-almond"
+                      ? "text-primary bg-secondary"
+                      : "text-foreground hover:text-primary hover:bg-secondary"
                   }`}
                 >
                   {link.label}
@@ -91,7 +91,7 @@ const Navbar = () => {
               ))}
               <div className="px-3 py-2">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full bg-navy hover:bg-navy/90 text-ivory">
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                     Get Free Quote
                   </Button>
                 </Link>

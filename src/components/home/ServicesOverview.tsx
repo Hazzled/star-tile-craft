@@ -59,7 +59,7 @@ const ServicesOverview = () => {
                   </p>
                    <div className="flex justify-center mt-auto">
                      <Link to="/services" aria-label={`Learn more about ${service.title} services`}>
-                       <Button variant="outline" className="text-navy border-navy hover:bg-navy hover:text-white transition-all duration-300 rounded-lg">
+                       <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-lg">
                          Learn About {service.title}
                        </Button>
                      </Link>

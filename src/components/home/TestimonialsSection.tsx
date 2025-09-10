@@ -32,8 +32,8 @@ const TestimonialsSection = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
             Don't just take our word for it. See what Portland homeowners are saying about our 
-            <Link to="/services" className="text-navy hover:underline font-medium"> tile installation services</Link> and 
-            <Link to="/portfolio" className="text-navy hover:underline font-medium"> browse our completed projects</Link>.
+            <Link to="/services" className="text-primary hover:underline font-medium"> tile installation services</Link> and 
+            <Link to="/portfolio" className="text-primary hover:underline font-medium"> browse our completed projects</Link>.
           </p>
         </div>
         
@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
             <Card key={index} className="bg-white shadow-xl border-0 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 rounded-2xl overflow-hidden">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-navy to-navy/80 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center text-primary-foreground font-bold mr-4">
                     {testimonial.initials}
                   </div>
                   <div>
@@ -66,7 +66,7 @@ const TestimonialsSection = () => {
         
         <div className="text-center">
           <Link to="/portfolio">
-            <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-white px-8 py-3 rounded-xl">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-xl">
               View More of Our Work
             </Button>
           </Link>

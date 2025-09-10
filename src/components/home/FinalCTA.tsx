@@ -24,7 +24,7 @@ const FinalCTA = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="bg-white text-navy hover:bg-gray-100 border-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
+            className="bg-card text-primary hover:bg-muted border-card px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
             onClick={handleGetQuoteClick}
           >
             Get Free Quote

@@ -51,7 +51,7 @@ const PortfolioPreview = ({ recentProjects, onProjectClick }: PortfolioPreviewPr
         
         <div className="text-center">
           <Link to="/portfolio">
-            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               View Full Portfolio
             </Button>
           </Link>

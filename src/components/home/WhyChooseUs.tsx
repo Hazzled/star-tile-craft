@@ -13,17 +13,17 @@ const WhyChooseUs = () => {
             Why Choose Star Tile LLC?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            <Link to="/about" className="text-navy hover:underline font-medium">Our experienced team</Link> has 
+            <Link to="/about" className="text-primary hover:underline font-medium">Our experienced team</Link> has 
             built a reputation for excellence throughout the Portland Metro Area. 
-            <Link to="/services" className="text-navy hover:underline font-medium">Discover our proven process</Link> and 
+            <Link to="/services" className="text-primary hover:underline font-medium">Discover our proven process</Link> and 
             see why we're the trusted choice for tile installation.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="text-center group">
-            <div className="bg-gradient-to-br from-navy to-navy/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
-              <Clock className="h-10 w-10 text-white" />
+            <div className="bg-gradient-to-br from-primary to-primary/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+              <Clock className="h-10 w-10 text-primary-foreground" />
             </div>
             <h3 className="text-2xl font-montserrat font-semibold text-noir mb-4">
               Over a Decade of Experience
@@ -34,8 +34,8 @@ const WhyChooseUs = () => {
           </div>
           
           <div className="text-center group">
-            <div className="bg-gradient-to-br from-navy to-navy/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
-              <Shield className="h-10 w-10 text-white" />
+            <div className="bg-gradient-to-br from-primary to-primary/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+              <Shield className="h-10 w-10 text-primary-foreground" />
             </div>
             <h3 className="text-2xl font-montserrat font-semibold text-noir mb-4">
               Licensed & Insured
@@ -46,8 +46,8 @@ const WhyChooseUs = () => {
           </div>
           
           <div className="text-center group">
-            <div className="bg-gradient-to-br from-navy to-navy/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
-              <Trophy className="h-10 w-10 text-white" />
+            <div className="bg-gradient-to-br from-primary to-primary/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+              <Trophy className="h-10 w-10 text-primary-foreground" />
             </div>
             <h3 className="text-2xl font-montserrat font-semibold text-noir mb-4">
               Meticulous Craftsmanship
@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
         
         <div className="text-center mt-12">
           <Link to="/about">
-            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-xl">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-xl">
               Read Our Full Story
             </Button>
           </Link>

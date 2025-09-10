@@ -19,14 +19,14 @@ const FilterTabs = ({ filters, activeFilter, onFilterChange }: FilterTabsProps) 
           className={`
             px-8 py-3 text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative overflow-hidden
             ${activeFilter === filter 
-              ? "bg-navy text-white shadow-navy/30 scale-105" 
-              : "text-navy border-navy/30 hover:bg-navy hover:text-white hover:border-navy bg-white"
+              ? "bg-primary text-primary-foreground shadow-primary/30 scale-105" 
+              : "text-primary border-primary/30 hover:bg-primary hover:text-primary-foreground hover:border-primary bg-card"
             }
           `}
         >
           <span className="relative z-10">{filter}</span>
           {activeFilter === filter && (
-            <div className="absolute inset-0 bg-gradient-to-r from-navy to-navy/80 animate-fade-in" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 animate-fade-in" />
           )}
         </Button>
       ))}

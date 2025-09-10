@@ -56,7 +56,7 @@ const FAQSection = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Get answers to common questions about our 
-            <Link to="/services" className="text-navy hover:underline font-medium"> tile installation services</Link> in Portland.
+            <Link to="/services" className="text-primary hover:underline font-medium"> tile installation services</Link> in Portland.
           </p>
         </div>
         
@@ -67,7 +67,7 @@ const FAQSection = () => {
               value={`item-${index}`}
               className="bg-white rounded-lg shadow-md border-0 px-6"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold text-noir hover:text-navy py-6">
+              <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-primary py-6">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 leading-relaxed pb-6">
@@ -82,7 +82,7 @@ const FAQSection = () => {
             Have more questions? We're here to help!
           </p>
           <Link to="/contact">
-            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-xl">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-xl">
               Contact Us Today
             </Button>
           </Link>
