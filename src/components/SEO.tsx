@@ -19,7 +19,7 @@ export default function SEO({
   canonical,
   ogImage = DEFAULT_OG_IMAGE,
   type = "website",
-  robots,
+  robots = "index, follow",
   structuredData,
 }: SEOProps) {
   const jsonLd = typeof structuredData === "string" ? structuredData : structuredData ? JSON.stringify(structuredData) : null;
