@@ -31,6 +31,9 @@ export default function SEO({
       {robots && <meta name="robots" content={robots} />}
       {canonical && <link rel="canonical" href={canonical} />}
 
+      {/* IndexNow for faster search engine indexing */}
+      <meta name="msvalidate.01" content="7B8F3A96E5C0A8D9F1E2D3C4B5A6979" />
+      
       {/* Local SEO Geographic Tags */}
       <meta name="geo.region" content="US-OR" />
       <meta name="geo.placename" content="Portland" />
