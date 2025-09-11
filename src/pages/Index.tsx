@@ -29,40 +29,7 @@ const Index = () => {
     setSelectedProject(null);
   };
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Star Tile LLC",
-    "image": "https://www.startilellc.com/lovable-uploads/star-tile-logo.png",
-    "@id": "https://www.startilellc.com/",
-    "url": "https://www.startilellc.com/",
-    "telephone": "(503) 482-8395",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Main St",
-      "addressLocality": "Portland",
-      "addressRegion": "OR",
-      "postalCode": "97201",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 45.5152,
-      "longitude": -122.6784
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "08:00",
-      "closes": "17:00"
-    }
-  };
+  // Remove duplicate LocalBusiness schema - using only index.html version
 
   const breadcrumbs = generateBreadcrumbJsonLd([homeBreadcrumb]);
 
@@ -72,7 +39,7 @@ const Index = () => {
         title="Star Tile LLC | Expert Tile Installation & Remodeling in Portland Oregon"
         description="Portland's premier tile installation experts. Kitchen backsplashes, bathroom remodels, flooring & custom tile work. Licensed CCB #200970. Free estimates!"
         canonical="https://www.startilellc.com"
-        structuredData={[structuredData, breadcrumbs]}
+        structuredData={breadcrumbs}
       />
       <HeroSection />
       {/* Enhanced intro section with internal links */}
