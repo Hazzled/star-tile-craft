@@ -32,7 +32,7 @@ export default function SEO({
       {canonical && <link rel="canonical" href={canonical} />}
 
       {/* IndexNow for faster search engine indexing */}
-      <meta name="msvalidate.01" content="78e05171a7b54bcf93f3fb81e0674b8b" />
+<meta name="msvalidate.01" content="1146586dfbb546c5840d75ae3040e784" />
       
       {/* Local SEO Geographic Tags */}
       <meta name="geo.region" content="US-OR" />
