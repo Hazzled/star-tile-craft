@@ -31,12 +31,19 @@ export default function SEO({
       {robots && <meta name="robots" content={robots} />}
       {canonical && <link rel="canonical" href={canonical} />}
 
+      {/* Local SEO Geographic Tags */}
+      <meta name="geo.region" content="US-OR" />
+      <meta name="geo.placename" content="Portland" />
+      <meta name="geo.position" content="45.5152;-122.6784" />
+      <meta name="ICBM" content="45.5152, -122.6784" />
+
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       {description && <meta property="og:description" content={description} />}
       {canonical && <meta property="og:url" content={canonical} />} 
       <meta property="og:type" content={type} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
       <meta name="twitter:card" content={DEFAULT_TWITTER_CARD} />
