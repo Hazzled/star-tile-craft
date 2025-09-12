@@ -277,6 +277,27 @@ export const portfolioItems = [
         alt: "Marble shower with built-in niches and rain shower head"
       }
     ]
+  },
+  {
+    id: 9,
+    category: "Custom",
+    title: "Modern Minimalist Kitchen Design",
+    image: "/lovable-uploads/c96a9bb1-0d6e-4a56-865b-6063c5063904.png",
+    alt: "Modern minimalist kitchen featuring clean white surfaces, floating shelves, and contemporary styling",
+    images: [
+      {
+        src: "/lovable-uploads/c96a9bb1-0d6e-4a56-865b-6063c5063904.png",
+        alt: "Minimalist kitchen with white cabinets, clean backsplash, and floating wood shelf"
+      },
+      {
+        src: "/lovable-uploads/ac9f87e8-485a-4d53-bf52-e360d43b1109.png",
+        alt: "Modern kitchen with skylights, white cabinetry, and panoramic city views"
+      },
+      {
+        src: "/lovable-uploads/e6cc215e-6485-4b8a-a9cd-94282ac9dc89.png",
+        alt: "Contemporary kitchen island with colorful acrylic bar stools and white stone countertops"
+      }
+    ]
   }
 ];
 
