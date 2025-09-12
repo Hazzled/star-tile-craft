@@ -211,6 +211,23 @@ export const portfolioItems = [
         alt: "Master bathroom with floating wood vanity and grey linear stone tile feature wall"
       }
     ]
+  },
+  {
+    id: 7,
+    category: "Custom",
+    title: "Contemporary White Kitchen with Marble Accents",
+    image: "/lovable-uploads/9001353d-1c90-4337-8deb-d2d22be6061d.png",
+    alt: "Modern white kitchen featuring marble backsplash, white cabinetry, and contemporary open concept design",
+    images: [
+      {
+        src: "/lovable-uploads/9001353d-1c90-4337-8deb-d2d22be6061d.png",
+        alt: "Modern white kitchen with marble backsplash, white island, and open dining area"
+      },
+      {
+        src: "/lovable-uploads/010852a7-81e0-497c-9105-6c8dabfb911c.png",
+        alt: "Contemporary kitchen island with marble countertops and pendant lighting"
+      }
+    ]
   }
 ];
 
