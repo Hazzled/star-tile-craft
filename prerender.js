@@ -10,36 +10,24 @@ const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 // Check if SSR build exists
 const ssrPath = toAbsolute('./dist/server/entry-server.js')
 if (!fs.existsSync(ssrPath)) {
-  console.error('SSR build not found. Run "npm run build:ssr" first.')
+  console.error('❌ SSR build not found. Run "npm run build:ssr" first.')
   process.exit(1)
 }
 
 const { render } = await import('./dist/server/entry-server.js')
 
-// Define routes to prerender based on App.tsx routing configuration
+// Define all routes to prerender
 const routesToPrerender = [
-  '/',           // Index page
-  '/about',      // About page
-  '/services',   // Services page
-  '/portfolio',  // Portfolio page
-  '/contact',    // Contact page
-  '/blog',       // Blog page
-  '/blog/budgeting-tile-project-portland', // Budgeting blog post
-  '/blog/fix-cracked-grout', // Grout repair blog post
-  '/blog/waterproofing-before-tile', // Waterproofing blog post
-  '/blog/tile-trends-portland', // Tile trends blog post
-  '/blog/best-tile-stores-portland', // Best tile stores blog post
-  '/blog/choosing-tile-contractor-portland', // Choosing contractor blog post
-  '/tile-installation-portland', // Portland location page
-  '/tile-contractor-beaverton', // Beaverton location page
-  '/tile-contractor-tigard', // Tigard location page
-  '/tile-contractor-gresham', // Gresham location page
-  '/tile-contractor-lake-oswego', // Lake Oswego location page
-  '/quote',      // Landing page for ads
-  // Add new routes here when adding new pages
+  '/', '/about', '/services', '/portfolio', '/contact',
+  '/blog', '/blog/budgeting-tile-project-portland', '/blog/fix-cracked-grout',
+  '/blog/waterproofing-before-tile', '/blog/tile-trends-portland',
+  '/blog/best-tile-stores-portland', '/blog/choosing-tile-contractor-portland',
+  '/tile-installation-portland', '/tile-contractor-beaverton',
+  '/tile-contractor-tigard', '/tile-contractor-gresham',
+  '/tile-contractor-lake-oswego', '/quote'
 ]
 
-// Function to ensure directory exists
+// Helper to ensure folder path exists
 const ensureDirectoryExists = (filePath) => {
   const dir = path.dirname(filePath)
   if (!fs.existsSync(dir)) {
@@ -48,36 +36,23 @@ const ensureDirectoryExists = (filePath) => {
 }
 
 ;(async () => {
-  for (const url of routesToPrerender) {
+  for (const route of routesToPrerender) {
     try {
-      const { appHtml, headHtml } = render(url);
-      let html = template.replace(`<!--app-html-->`, appHtml)
-      
-      // Inject head elements if available
-      if (headHtml) {
-        if (headHtml.title) {
-          html = html.replace(/<title>.*?<\/title>/, headHtml.title)
-        }
-        if (headHtml.meta) {
-          html = html.replace('</head>', `${headHtml.meta}</head>`)
-        }
-        if (headHtml.link) {
-          html = html.replace('</head>', `${headHtml.link}</head>`)
-        }
-        if (headHtml.script) {
-          html = html.replace('</head>', `${headHtml.script}</head>`)
-        }
-      }
+      const { appHtml, headHtml } = render(route)
 
-      const filePath = toAbsolute(`dist${url === '/' ? '/index' : url}.html`)
-      
-      // Ensure the directory exists before writing
+      // Inject both content and head into template
+      let html = template
+        .replace(`<!--app-html-->`, appHtml)
+        .replace('</head>', `${headHtml}</head>`)
+
+      // Create file path: e.g., dist/about/index.html
+      const filePath = toAbsolute(`dist${route === '/' ? '/index' : `${route}/index`}.html`)
       ensureDirectoryExists(filePath)
-      
+
       fs.writeFileSync(filePath, html)
-      console.log('pre-rendered:', filePath)
+      console.log('✅ Pre-rendered:', filePath)
     } catch (error) {
-      console.error(`Failed to prerender ${url}:`, error)
+      console.error(`❌ Failed to prerender ${route}:`, error)
     }
   }
 })()
