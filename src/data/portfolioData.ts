@@ -190,6 +190,27 @@ export const portfolioItems = [
         alt: "Detail view of natural stone floor tile installation with precision grout lines"
       }
     ]
+  },
+  {
+    id: 6,
+    category: "Custom",
+    title: "Modern Luxury Wood Grain & Stone Design",
+    image: "/lovable-uploads/389ae208-ae6b-49b9-9048-64bc10595090.png",
+    alt: "Modern luxury home featuring wood grain cabinets, white chevron backsplash, and contemporary styling",
+    images: [
+      {
+        src: "/lovable-uploads/389ae208-ae6b-49b9-9048-64bc10595090.png",
+        alt: "Contemporary kitchen with wood grain cabinets, white chevron backsplash, and black pendant lighting"
+      },
+      {
+        src: "/lovable-uploads/d0339b0c-f481-4967-8975-1cb0846694d3.png",
+        alt: "Open concept kitchen and living area with modern wood cabinetry and white stone countertops"
+      },
+      {
+        src: "/lovable-uploads/e425a321-981b-4eee-a42b-d93e3a60e925.png",
+        alt: "Master bathroom with floating wood vanity and grey linear stone tile feature wall"
+      }
+    ]
   }
 ];
 
