@@ -83,6 +83,55 @@ export const portfolioItems = [
         alt: "Brass sink faucet detail with modern design"
       }
     ]
+  },
+  {
+    id: 3,
+    category: "Custom",
+    title: "Contemporary Mixed-Material Home Design",
+    image: "/lovable-uploads/f7ccc3f4-c0e2-42bc-a125-5e1b280766ec.png",
+    alt: "Contemporary home featuring mixed materials including wood, marble, and mosaic tiles",
+    images: [
+      {
+        src: "/lovable-uploads/f7ccc3f4-c0e2-42bc-a125-5e1b280766ec.png",
+        alt: "Modern bathroom with grey mosaic tile shower and wood floating vanity"
+      },
+      {
+        src: "/lovable-uploads/641d78c1-ff40-4402-a5aa-00e17cb661f9.png",
+        alt: "Contemporary living room with textured fireplace surround and neutral palette"
+      },
+      {
+        src: "/lovable-uploads/a03fbc58-ab59-4b81-a8f8-7301a6af596c.png",
+        alt: "Modern white kitchen with marble waterfall island and wood accents"
+      },
+      {
+        src: "/lovable-uploads/5e1448b3-9865-4709-bb27-8f5462aecb5d.png",
+        alt: "Minimalist shower with brass fixtures and rain head"
+      },
+      {
+        src: "/lovable-uploads/0d9eca38-d6e3-4ba6-8187-9d2dcd1027c1.png",
+        alt: "Clean white shower with brass fixtures and built-in storage niche"
+      },
+      {
+        src: "/lovable-uploads/6c65003e-f9fe-4e43-a1e1-75309239788a.png",
+        alt: "Double vanity with wood cabinets and brass fixtures"
+      },
+      {
+        src: "/lovable-uploads/9476b452-c3ff-430f-b72b-66036e8854fb.png",
+        alt: "Custom integrated wood sink with wall-mounted black faucet"
+      },
+      {
+        src: "/lovable-uploads/b7fcaced-def6-4076-b523-74dffee8accb.png",
+        alt: "Detail view of custom wood sink installation"
+      },
+      {
+        src: "/lovable-uploads/d2c37cc2-c38c-4347-8dfe-05dd835092d4.png",
+        alt: "Grey marble mosaic tile detail in shower installation"
+      },
+      {
+        src: "/lovable-uploads/33cf3230-0bb6-4c94-872d-e0f067a8d820.png",
+        alt: "Modern kitchen with dark lower cabinets and white upper cabinets"
+      }
+    ]
   }
 ];
 
