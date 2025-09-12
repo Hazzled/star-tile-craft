@@ -6,6 +6,14 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const toAbsolute = (p) => path.resolve(__dirname, p)
 
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
+
+// Check if SSR build exists
+const ssrPath = toAbsolute('./dist/server/entry-server.js')
+if (!fs.existsSync(ssrPath)) {
+  console.error('SSR build not found. Run "npm run build:ssr" first.')
+  process.exit(1)
+}
+
 const { render } = await import('./dist/server/entry-server.js')
 
 // Define routes to prerender based on App.tsx routing configuration
@@ -42,8 +50,24 @@ const ensureDirectoryExists = (filePath) => {
 ;(async () => {
   for (const url of routesToPrerender) {
     try {
-      const appHtml = render(url);
-      const html = template.replace(`<!--app-html-->`, appHtml)
+      const { appHtml, headHtml } = render(url);
+      let html = template.replace(`<!--app-html-->`, appHtml)
+      
+      // Inject head elements if available
+      if (headHtml) {
+        if (headHtml.title) {
+          html = html.replace(/<title>.*?<\/title>/, headHtml.title)
+        }
+        if (headHtml.meta) {
+          html = html.replace('</head>', `${headHtml.meta}</head>`)
+        }
+        if (headHtml.link) {
+          html = html.replace('</head>', `${headHtml.link}</head>`)
+        }
+        if (headHtml.script) {
+          html = html.replace('</head>', `${headHtml.script}</head>`)
+        }
+      }
 
       const filePath = toAbsolute(`dist${url === '/' ? '/index' : url}.html`)
       

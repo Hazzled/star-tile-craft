@@ -17,7 +17,7 @@ export default async (req: Request) => {
     const res = await fetch(target, {
       headers: {
         "User-Agent": ua,
-        "X-Prerender-Token": Deno.env.get("sypAczLB33z82Mc15aKr") ?? "",
+        "X-Prerender-Token": Deno.env.get("PRERENDER_TOKEN") ?? "",
       },
     });
     // If snapshot works, return it; otherwise fall back to normal response
