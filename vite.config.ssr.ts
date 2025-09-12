@@ -6,13 +6,13 @@ export default defineConfig({
   plugins: [react()],
   build: {
     ssr: true,
-    outDir: 'dist/server', // 👈 required so prerender.js can import it
+    outDir: 'dist/server', // ✅ Where prerender.js looks
     rollupOptions: {
       input: path.resolve(__dirname, 'src/entry-server.tsx')
     },
-    emptyOutDir: false // ✅ prevents deleting dist/index.html
+    emptyOutDir: false // ✅ Prevents wiping out dist/index.html
   },
   ssr: {
-    external: ['react-helmet-async'] // Avoid bundling this
+    external: ['react-helmet-async']
   }
 })
