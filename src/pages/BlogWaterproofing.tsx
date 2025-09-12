@@ -30,7 +30,7 @@ export default function BlogWaterproofing() {
       <SEO
         title="Bathroom Waterproofing Portland OR | Essential Guide Before Tile Installation"
         description="Essential Portland bathroom waterproofing guide: Schluter systems vs liquid membranes, cost comparison, common myths debunked. Prevent costly water damage in Oregon's climate."
-        canonical="https://www.startilellc.com/blog/waterproofing-before-tile"
+        canonical="https://startilellc.com/blog/waterproofing-before-tile"
         structuredData={structuredData}
       />
       

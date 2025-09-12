@@ -70,7 +70,7 @@ const BlogBestTileStoresPortland = () => {
       <SEO
         title="Best Tile Stores Portland Oregon 2025 | Bedrosians, Oregon Tile & Marble Reviews"
         description="2025 guide to Portland's best tile suppliers: Bedrosians pricing, Oregon Tile & Marble selection, Pratt & Larson artisan ceramics. Compare showrooms and specialties."
-        canonical="https://www.startilellc.com/blog/best-tile-stores-portland"
+        canonical="https://startilellc.com/blog/best-tile-stores-portland"
         structuredData={structuredData}
       />
 

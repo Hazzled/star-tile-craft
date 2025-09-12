@@ -39,25 +39,21 @@ const ensureDirectoryExists = (filePath) => {
   }
 }
 
-(async () => {
+;(async () => {
   for (const url of routesToPrerender) {
     try {
-      const { appHtml, headHtml } = render(url);
+      const appHtml = render(url);
+      const html = template.replace(`<!--app-html-->`, appHtml)
 
-      // Inject server-rendered head first so crawlers see correct tags
-      let html = template.replace('<!--app-html-->', appHtml);
-      html = html.replace('<head>', `<head>\n${headHtml}\n`);
-
-      // Write to dist/<route>/index.html (or dist/index.html for root)
-      const filePath = toAbsolute(url === '/' ? 'dist/index.html' : `dist${url}/index.html`);
-
+      const filePath = toAbsolute(`dist${url === '/' ? '/index' : url}.html`)
+      
       // Ensure the directory exists before writing
-      ensureDirectoryExists(filePath);
-
-      fs.writeFileSync(filePath, html);
-      console.log('pre-rendered:', filePath);
+      ensureDirectoryExists(filePath)
+      
+      fs.writeFileSync(filePath, html)
+      console.log('pre-rendered:', filePath)
     } catch (error) {
-      console.error(`Failed to prerender ${url}:`, error);
+      console.error(`Failed to prerender ${url}:`, error)
     }
   }
-})();
+})()

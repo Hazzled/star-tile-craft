@@ -51,7 +51,7 @@ const TileContractorGresham = () => {
       <SEO 
         title="Gresham Tile Contractor | Powell Valley & Pleasant Valley Kitchen Bathroom Specialists"
         description="Gresham tile installation experts: Powell Valley, Pleasant Valley, Centennial. Farmhouse kitchens, spa bathrooms, outdoor patio tile. 10+ years local experience."
-        canonical="https://www.startilellc.com/tile-contractor-gresham"
+        canonical="https://startilellc.com/tile-contractor-gresham"
         ogImage="https://startilellc.com/og-gresham-tile.jpg"
         structuredData={[structuredData, breadcrumbs]}
       />

@@ -18,9 +18,8 @@ Disallow: /*.config.ts$
 Disallow: /package.json
 Disallow: /package-lock.json
 
-# Allow sitemap
+# Allow sitemap (This is not strictly necessary if you don't have a broad disallow)
 Allow: /sitemap.xml
-Allow: /robots.txt
 
 # Crawl delay for politeness (1 second)
 Crawl-delay: 1
