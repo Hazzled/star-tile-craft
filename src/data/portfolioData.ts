@@ -132,6 +132,27 @@ export const portfolioItems = [
         alt: "Modern kitchen with dark lower cabinets and white upper cabinets"
       }
     ]
+  },
+  {
+    id: 4,
+    category: "Custom",
+    title: "Modern Black & White Kitchen Design",
+    image: "/lovable-uploads/b5164f85-fd5d-401c-9071-c184fb9cb0d0.png",
+    alt: "Modern kitchen featuring black cabinets, white countertops, and sophisticated design elements",
+    images: [
+      {
+        src: "/lovable-uploads/b5164f85-fd5d-401c-9071-c184fb9cb0d0.png",
+        alt: "Modern kitchen with black cabinets, white countertop island, and clear bar stools"
+      },
+      {
+        src: "/lovable-uploads/142aedb3-b9c1-414d-91c2-cf8c37b82854.png",
+        alt: "Contemporary kitchen with black cabinetry and spherical pendant lighting"
+      },
+      {
+        src: "/lovable-uploads/154ed4c8-c5d5-4f92-8545-4533cd6abdd9.png",
+        alt: "Elegant wet bar area with sliding barn doors and white stone backsplash"
+      }
+    ]
   }
 ];
 
