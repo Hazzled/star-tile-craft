@@ -228,6 +228,55 @@ export const portfolioItems = [
         alt: "Contemporary kitchen island with marble countertops and pendant lighting"
       }
     ]
+  },
+  {
+    id: 8,
+    category: "Custom",
+    title: "Classic Marble Bathroom Suite",
+    image: "/lovable-uploads/5c0a60a0-f5f2-4e90-9467-05e3abd75c8c.png",
+    alt: "Classic marble bathroom featuring elegant white marble with traditional styling and detailed craftsmanship",
+    images: [
+      {
+        src: "/lovable-uploads/5c0a60a0-f5f2-4e90-9467-05e3abd75c8c.png",
+        alt: "Double vanity with marble countertops and white cabinetry with classic styling"
+      },
+      {
+        src: "/lovable-uploads/4dbbf69f-b0e5-4285-a01e-05f0cb875026.png",
+        alt: "Close-up detail of marble countertop with polished chrome faucet and subway tile backsplash"
+      },
+      {
+        src: "/lovable-uploads/5a4cca41-dd33-4d4e-9031-40bcd2ff90d9.png",
+        alt: "Walk-in shower with white marble walls and mosaic flooring"
+      },
+      {
+        src: "/lovable-uploads/50079ceb-ebb7-444c-92a4-31ca85ba0f08.png",
+        alt: "Classic marble tub surround with subway tile and chrome fixtures"
+      },
+      {
+        src: "/lovable-uploads/0d4f6f1e-6e03-4db9-9a55-a52ff7d0c81e.png",
+        alt: "Elegant marble floor pattern with black accent dots"
+      },
+      {
+        src: "/lovable-uploads/ecbebcc6-b905-4ce4-81e8-405e39a59d9d.png",
+        alt: "White marble subway tile wall with built-in storage niches"
+      },
+      {
+        src: "/lovable-uploads/dd700aec-d7d5-48fb-a0a4-4d98405e4ed6.png",
+        alt: "Detailed marble tile work with black accent stripe"
+      },
+      {
+        src: "/lovable-uploads/25aa35dc-240b-45b1-85e9-eedfabb67342.png",
+        alt: "Classic powder room with pedestal sink and marble subway tile"
+      },
+      {
+        src: "/lovable-uploads/2f2eee2d-717b-4e17-90fc-ab53e7dbe798.png",
+        alt: "White marble floor with diagonal pattern around pedestal sink"
+      },
+      {
+        src: "/lovable-uploads/380cf8dc-2f84-4266-9416-a70bf1a31d9f.png",
+        alt: "Marble shower with built-in niches and rain shower head"
+      }
+    ]
   }
 ];
 
