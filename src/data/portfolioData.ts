@@ -298,6 +298,43 @@ export const portfolioItems = [
         alt: "Contemporary kitchen island with colorful acrylic bar stools and white stone countertops"
       }
     ]
+  },
+  {
+    id: 10,
+    category: "Custom",
+    title: "Dramatic Contemporary Luxury Home",
+    image: "/lovable-uploads/60c34c5f-76ca-4bde-b06d-2c6a98ba31ae.png",
+    alt: "Dramatic contemporary home featuring artistic tile work, black marble, and luxury finishes",
+    images: [
+      {
+        src: "/lovable-uploads/60c34c5f-76ca-4bde-b06d-2c6a98ba31ae.png",
+        alt: "Dramatic powder room with artistic blue wallpaper and crystal chandelier"
+      },
+      {
+        src: "/lovable-uploads/dfeea298-cf07-4121-b810-87e7d3d3c6ef.png",
+        alt: "Modern kitchen with charcoal grey cabinets and white countertops"
+      },
+      {
+        src: "/lovable-uploads/87129ee7-2491-479e-8eea-ef50f877c540.png",
+        alt: "Contemporary kitchen featuring dramatic black marble waterfall island"
+      },
+      {
+        src: "/lovable-uploads/0d72ab2f-da80-45d9-92f3-b58f3c2d2c04.png",
+        alt: "Close-up detail of dramatic black marble backsplash with white veining"
+      },
+      {
+        src: "/lovable-uploads/2c0a50e4-4ef2-4f6e-ac13-a28e0824b24b.png",
+        alt: "Master bathroom with white marble and floating wood vanity"
+      },
+      {
+        src: "/lovable-uploads/acaa2f29-6006-4400-80fc-17783ad2f977.png",
+        alt: "Luxury bathroom featuring white marble, freestanding tub, and glass shower"
+      },
+      {
+        src: "/lovable-uploads/4eecdafd-919a-4fd6-908c-5dc82bd94b11.png",
+        alt: "Corner bathroom vanity with wood cabinetry and marble countertops"
+      }
+    ]
   }
 ];
 
