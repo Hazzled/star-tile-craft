@@ -1,87 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Homepage -->
   <url>
-    <loc>https://www.startilellc.com/</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Main Pages -->
   <url>
-    <loc>https://www.startilellc.com/about</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/about</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://startilellc.com/services</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/services</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/portfolio</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/portfolio</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/contact</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/contact</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/quote</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/quote</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Blog Pages -->
   <url>
-    <loc>https://www.startilellc.com/blog</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/blog</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/blog/budgeting-tile-project-portland</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/blog/budgeting-tile-project-portland</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/blog/fix-cracked-grout</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/blog/fix-cracked-grout</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/blog/waterproofing-before-tile</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/blog/waterproofing-before-tile</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/tile-installation-portland</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/blog/tile-trends-portland</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/blog/choosing-tile-contractor-portland</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/blog/best-tile-stores-portland</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/blog/tile-trends-portland</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://www.startilellc.com/blog/choosing-tile-contractor-portland</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/blog/best-tile-stores-portland</loc>
+    <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Location-Specific Pages -->
+  <url>
+    <loc>https://startilellc.com/tile-installation-portland</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://startilellc.com/tile-contractor-beaverton</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://startilellc.com/tile-contractor-tigard</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://startilellc.com/tile-contractor-gresham</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://startilellc.com/tile-contractor-lake-oswego</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

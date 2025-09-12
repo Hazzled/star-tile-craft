@@ -1,1 +1,10 @@
-/* /index.html 200
+# Handle trailing slashes consistently
+/about/        /about          301
+/services/     /services       301  
+/portfolio/    /portfolio      301
+/contact/      /contact        301
+/blog/         /blog           301
+/quote/        /quote          301
+
+# Fallback for SPA routes
+/*             /index.html     200
