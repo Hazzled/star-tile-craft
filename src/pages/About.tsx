@@ -112,7 +112,7 @@ const About = () => {
                 <div className="bg-gradient-to-br from-navy to-navy/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Clock className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-4xl font-montserrat font-bold text-noir mb-2">10+</h3>
+                <div className="text-4xl font-montserrat font-bold text-noir mb-2">10+</div>
                 <p className="text-gray-600 font-medium">Years Experience</p>
               </CardContent>
             </Card>
@@ -122,7 +122,7 @@ const About = () => {
                 <div className="bg-gradient-to-br from-navy to-navy/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Users className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-4xl font-montserrat font-bold text-noir mb-2">500+</h3>
+                <div className="text-4xl font-montserrat font-bold text-noir mb-2">500+</div>
                 <p className="text-gray-600 font-medium">Happy Clients</p>
               </CardContent>
             </Card>
@@ -132,7 +132,7 @@ const About = () => {
                 <div className="bg-gradient-to-br from-navy to-navy/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Award className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-4xl font-montserrat font-bold text-noir mb-2">100%</h3>
+                <div className="text-4xl font-montserrat font-bold text-noir mb-2">100%</div>
                 <p className="text-gray-600 font-medium">Licensed & Insured</p>
               </CardContent>
             </Card>
@@ -142,7 +142,7 @@ const About = () => {
                 <div className="bg-gradient-to-br from-navy to-navy/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <CheckCircle className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-4xl font-montserrat font-bold text-noir mb-2">CCB</h3>
+                <div className="text-4xl font-montserrat font-bold text-noir mb-2">CCB</div>
                 <p className="text-gray-600 font-medium">#200970</p>
               </CardContent>
             </Card>
