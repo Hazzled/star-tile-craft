@@ -34,6 +34,55 @@ export const portfolioItems = [
         alt: "Close-up detail of Calacatta marble showcasing natural veining patterns"
       }
     ]
+  },
+  {
+    id: 2,
+    category: "Custom",
+    title: "Modern Green Tile & Brass Contemporary Home",
+    image: "/lovable-uploads/b2a92540-0db3-4131-a8ac-f728b9078b86.png",
+    alt: "Modern home featuring green tiles, brass fixtures, and contemporary design elements",
+    images: [
+      {
+        src: "/lovable-uploads/b2a92540-0db3-4131-a8ac-f728b9078b86.png",
+        alt: "Luxury bathroom with green tile walls, copper bathtub, and brass fixtures"
+      },
+      {
+        src: "/lovable-uploads/8befd08a-1f3f-450c-a6c6-cd1e588a9bac.png",
+        alt: "Master bedroom with view into modern bathroom suite"
+      },
+      {
+        src: "/lovable-uploads/664453d9-d40b-46e5-a6bc-72d50d52b130.png",
+        alt: "Kitchen area with geometric marble backsplash and brass wall sconce"
+      },
+      {
+        src: "/lovable-uploads/e0fd7569-0200-4d3b-a937-ac5352e5dcd2.png",
+        alt: "Kitchen backsplash with geometric pattern and black countertops"
+      },
+      {
+        src: "/lovable-uploads/72bb2276-0d1e-4b65-863e-41be8514ce3d.png",
+        alt: "Bathroom with mosaic tile shower and marble vanity"
+      },
+      {
+        src: "/lovable-uploads/0c9f6d28-784d-45ac-88f1-ccd53928c008.png",
+        alt: "Kitchen detail with pot filler and marble backsplash"
+      },
+      {
+        src: "/lovable-uploads/9d361f3f-487e-4997-ae4e-ac84a3c32e44.png",
+        alt: "Modern kitchen with wood cabinets and white quartz countertops"
+      },
+      {
+        src: "/lovable-uploads/6b2fa821-30bb-49f5-9911-7aa168108741.png",
+        alt: "Detailed view of marble countertop with natural veining"
+      },
+      {
+        src: "/lovable-uploads/6ca5d50e-fba2-495b-847a-e08378b6a364.png",
+        alt: "Green tiled shower with dual brass rain heads and fixtures"
+      },
+      {
+        src: "/lovable-uploads/d571516b-0dcd-416b-9147-4ef0d35a3bd4.png",
+        alt: "Brass sink faucet detail with modern design"
+      }
+    ]
   }
 ];
 
