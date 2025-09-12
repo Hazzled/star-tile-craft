@@ -57,7 +57,7 @@ const Services = () => {
       <SEO 
         title="Professional Tile Installation Services | Kitchen & Bathroom Specialists Portland OR"
         description="Comprehensive tile services: kitchen backsplashes, bathroom & shower tile, natural stone flooring, waterproofing. Portland Metro specialists. Professional installation guaranteed."
-        canonical="https://startilellc.com/services"
+        canonical="https://www.startilellc.com/services"
         structuredData={breadcrumbs}
       />
       {/* Hero Section */}

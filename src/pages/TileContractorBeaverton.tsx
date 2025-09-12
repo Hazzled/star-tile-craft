@@ -51,7 +51,7 @@ const TileContractorBeaverton = () => {
       <SEO 
         title="Tile Contractor Beaverton Oregon | Cedar Hills & Cooper Mountain Kitchen & Bath"
         description="Beaverton's trusted tile contractor: Cedar Hills, Murray Hill, Cooper Mountain specialists. Kitchen remodels, luxury bathrooms, custom installations. Licensed Oregon CCB #200970."
-        canonical="https://startilellc.com/tile-contractor-beaverton"
+        canonical="https://www.startilellc.com/tile-contractor-beaverton"
         ogImage="https://startilellc.com/og-beaverton-tile.jpg"
         structuredData={[structuredData, breadcrumbs]}
       />

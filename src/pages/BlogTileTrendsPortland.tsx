@@ -33,7 +33,7 @@ const BlogTileTrendsPortland = () => {
       <SEO 
         title="Portland Tile Trends 2025 | Popular Ceramic, Porcelain & Natural Stone Styles"
         description="2025 Portland tile trends: sustainable materials, Pacific Northwest color palettes, popular sizes & patterns. Local preferences from Pearl District to Lake Oswego homes."
-        canonical="https://startilellc.com/blog/tile-trends-portland-2025"
+        canonical="https://www.startilellc.com/blog/tile-trends-portland-2025"
         type="article"
         structuredData={JSON.stringify(structuredData)}
       />

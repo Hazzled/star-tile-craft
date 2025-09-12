@@ -115,7 +115,7 @@ const Blog = () => {
       <SEO 
         title="Tile Installation Blog Portland OR | DIY Tips & Professional Contractor Guides"
         description="Expert tile installation blog: Pacific Northwest climate tips, cost guides, contractor selection, DIY repairs. 10+ years Portland Metro experience sharing professional insights."
-        canonical="https://startilellc.com/blog"
+        canonical="https://www.startilellc.com/blog"
         type="website"
         structuredData={[structuredData, breadcrumbs]}
       />
