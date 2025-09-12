@@ -1,24 +1,25 @@
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
-import { HelmetProvider, FilledContext } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 
 export function render(url: string) {
-  const helmetContext: FilledContext = {} as FilledContext;
+  const helmetContext: Record<string, any> = {};
 
   const app = (
-    <HelmetProvider context={helmetContext}>
-      <StaticRouter location={url}>
+    <StaticRouter location={url}>
+      <HelmetProvider context={helmetContext}>
         <App />
-      </StaticRouter>
-    </HelmetProvider>
+      </HelmetProvider>
+    </StaticRouter>
   );
 
   const appHtml = ReactDOMServer.renderToString(app);
-  const helmet = helmetContext.helmet;
+  const helmet = helmetContext.helmet as any;
 
   const headHtml = [
     helmet?.title?.toString?.() ?? '',
+    helmet?.priority?.toString?.() ?? '',
     helmet?.meta?.toString?.() ?? '',
     helmet?.link?.toString?.() ?? '',
     helmet?.script?.toString?.() ?? '',
