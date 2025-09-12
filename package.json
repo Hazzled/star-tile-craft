@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
 
-    // ✅ SSR + Prerendering support
+    
     "build:ssr": "vite build --ssr src/entry-server.tsx",
     "postbuild": "node prerender.js",
     "build:all": "npm run build && npm run build:ssr && npm run postbuild"
