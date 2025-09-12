@@ -335,6 +335,47 @@ export const portfolioItems = [
         alt: "Corner bathroom vanity with wood cabinetry and marble countertops"
       }
     ]
+  },
+  {
+    id: 11,
+    category: "Custom",
+    title: "Sophisticated Black & White Marble Collection",
+    image: "/lovable-uploads/15470096-54c5-43c2-9ae8-42effcd1bf63.png",
+    alt: "Sophisticated design featuring dramatic black and white marble with striking contrasts and luxury finishes",
+    images: [
+      {
+        src: "/lovable-uploads/15470096-54c5-43c2-9ae8-42effcd1bf63.png",
+        alt: "Dramatic shower with striking black and white marble and black fixtures"
+      },
+      {
+        src: "/lovable-uploads/db9c6dde-73b3-4713-ac6d-35073c97dcd1.png",
+        alt: "Black stone vessel sink with wall-mounted black faucet and textured tile backsplash"
+      },
+      {
+        src: "/lovable-uploads/997916f7-58b6-49a0-a9fa-f4fd5117babe.png",
+        alt: "Dramatic marble shower enclosure with glass panels and black mosaic flooring"
+      },
+      {
+        src: "/lovable-uploads/83712e2f-53a7-416f-8f54-04dedafc9ac1.png",
+        alt: "Modern kitchen with white cabinetry, marble backsplash, and black ceiling beams"
+      },
+      {
+        src: "/lovable-uploads/8c7b4b8b-9e2e-4c21-bf05-f54fee9f8ebb.png",
+        alt: "Kitchen island with marble countertops and professional-grade appliances"
+      },
+      {
+        src: "/lovable-uploads/97b5eea6-0db0-4b59-bfc2-6b00becd9c70.png",
+        alt: "Master bathroom with freestanding tub and large format marble tiles"
+      },
+      {
+        src: "/lovable-uploads/dbf8fed3-f7e0-4bd5-b8a7-88ce9603ba4e.png",
+        alt: "Modern shower with geometric accent tile and marble surround"
+      },
+      {
+        src: "/lovable-uploads/c4cd9a00-3e51-49b3-9896-70cd6cd99289.png",
+        alt: "Luxury bathroom vanity with black countertops and decorative accessories"
+      }
+    ]
   }
 ];
 
