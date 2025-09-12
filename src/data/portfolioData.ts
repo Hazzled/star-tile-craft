@@ -153,6 +153,43 @@ export const portfolioItems = [
         alt: "Elegant wet bar area with sliding barn doors and white stone backsplash"
       }
     ]
+  },
+  {
+    id: 5,
+    category: "Custom",
+    title: "Elegant Blue Accent & Natural Stone Suite",
+    image: "/lovable-uploads/67b83607-25a6-4066-95b0-1d6b23af6703.png",
+    alt: "Luxury bathroom and kitchen featuring blue decorative tiles with natural stone elements",
+    images: [
+      {
+        src: "/lovable-uploads/67b83607-25a6-4066-95b0-1d6b23af6703.png",
+        alt: "Luxury master bathroom with natural stone tiles, soaking tub, and glass shower enclosure"
+      },
+      {
+        src: "/lovable-uploads/2ba7c6bd-d20b-4fe6-8b5f-16ee3c859764.png",
+        alt: "Kitchen backsplash featuring ornate blue decorative tiles with white subway tile surround"
+      },
+      {
+        src: "/lovable-uploads/ffcf1ed5-fc84-449f-9e4d-cb6a6823a089.png",
+        alt: "Close-up detail of blue mosaic tile work with curved edge finishing"
+      },
+      {
+        src: "/lovable-uploads/68e12d6e-2315-4bb2-aafe-8a02ae649a2a.png",
+        alt: "Blue glass mosaic tile detail on countertop edge with modern styling"
+      },
+      {
+        src: "/lovable-uploads/c2ba5486-0bea-47d5-a2ee-f0499f5d5707.png",
+        alt: "Bathroom vanity with decorative mosaic backsplash and polished chrome fixtures"
+      },
+      {
+        src: "/lovable-uploads/03661633-3b42-493c-b52c-9c3cf14d8fcd.png",
+        alt: "Walk-in shower with large format natural stone tiles and built-in storage niche"
+      },
+      {
+        src: "/lovable-uploads/51fd61f2-44d4-4a9a-85d0-09da8191a554.png",
+        alt: "Detail view of natural stone floor tile installation with precision grout lines"
+      }
+    ]
   }
 ];
 
