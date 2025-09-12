@@ -29,7 +29,7 @@ export default function BlogGroutRepair() {
     <>
       <SEO
         title="Fix Cracked Grout Portland OR | Pacific Northwest Climate DIY Repair Guide 2025"
-        description="Learn how to fix cracked grout in Portland's damp climate. Step-by-step DIY guide plus when to call professionals for grout repair in the Pacific Northwest."
+        description="Fix cracked grout in Portland's wet climate: step-by-step DIY repair guide, tools needed, when to call professionals. Pacific Northwest-specific moisture protection tips."
         canonical="https://startilellc.com/blog/fix-cracked-grout"
         structuredData={structuredData}
       />

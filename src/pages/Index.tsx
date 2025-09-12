@@ -37,7 +37,7 @@ const Index = () => {
     <div className="min-h-screen">
       <SEO 
         title="Star Tile LLC | Expert Tile Installation & Remodeling in Portland Oregon"
-        description="Portland's premier tile installation experts. Kitchen backsplashes, bathroom remodels, flooring & custom tile work. Licensed CCB #200970. Free estimates!"
+        description="Portland Metro's trusted tile installation company since 2014. Kitchen backsplashes, bathroom remodels & custom flooring. Licensed CCB #200970. Serving Gresham to Beaverton. Free estimates!"
         canonical="https://www.startilellc.com"
         structuredData={breadcrumbs}
       />

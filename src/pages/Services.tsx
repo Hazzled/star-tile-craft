@@ -56,7 +56,7 @@ const Services = () => {
   return <div className="min-h-screen">
       <SEO 
         title="Professional Tile Installation Services | Kitchen & Bathroom Specialists Portland OR"
-        description="Licensed tile contractor specializing in bathrooms, kitchens, and flooring in Portland. Expert craftsmanship with 10+ years experience. Free estimates!"
+        description="Comprehensive tile services: kitchen backsplashes, bathroom & shower tile, natural stone flooring, waterproofing. Portland Metro specialists. Professional installation guaranteed."
         canonical="https://startilellc.com/services"
         structuredData={breadcrumbs}
       />

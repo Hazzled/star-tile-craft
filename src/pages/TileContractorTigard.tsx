@@ -50,7 +50,7 @@ const TileContractorTigard = () => {
     <div className="min-h-screen">
       <SEO 
         title="Tigard Tile Contractor | Bull Mountain & King City Natural Stone Installation"
-        description="Premium tile contractor in Tigard, OR. Luxury bathroom tile, kitchen backsplashes, stone installation. Bull Mountain, Summerfield, King City areas. Licensed CCB #200970!"
+        description="Premium Tigard tile contractor: Bull Mountain, Summerfield, King City areas. Luxury bathroom tile, natural stone installation, high-end kitchen backsplashes. Insured & licensed."
         canonical="https://startilellc.com/tile-contractor-tigard"
         ogImage="https://startilellc.com/og-tigard-tile.jpg"
         structuredData={[structuredData, breadcrumbs]}

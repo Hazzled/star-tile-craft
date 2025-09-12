@@ -36,7 +36,7 @@ const Portfolio = () => {
     <div className="min-h-screen">
       <SEO 
         title="Portland Tile Installation Portfolio | Before & After Projects Gallery"
-        description="Browse our completed kitchen backsplashes, bathroom remodels, flooring, and custom tile projects across Portland."
+        description="View 50+ completed tile projects across Portland Metro: modern kitchens, luxury bathrooms, custom showers. Before & after photos from Hawthorne to Lake Oswego."
         canonical="https://startilellc.com/portfolio"
         structuredData={breadcrumbs}
       />

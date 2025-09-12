@@ -20,7 +20,7 @@ const About = () => {
   return <div className="min-h-screen">
       <SEO 
         title="About Star Tile LLC | Licensed Tile Contractors Serving Portland Metro Area"
-        description="Meet Portland's trusted tile contractors. Licensed & insured with 10+ years experience serving the metro area. Quality craftsmanship you can count on."
+        description="Family-owned tile contractors serving Portland Metro since 2014. CCB licensed #200970, fully insured. Specializing in Pacific Northwest climate installations. 500+ satisfied customers."
         canonical="https://startilellc.com/about"
         structuredData={breadcrumbs}
       />

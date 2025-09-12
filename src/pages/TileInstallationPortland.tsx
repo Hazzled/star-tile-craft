@@ -67,7 +67,7 @@ const TileInstallationPortland = () => {
     <div className="min-h-screen">
       <SEO 
         title="Portland Tile Installation | Pearl District Hawthorne Alberta Kitchen Bathroom Experts"
-        description="Professional tile installation in Portland, OR. Kitchen backsplashes, bathroom tile, flooring experts. Serving Pearl District, Hawthorne, Alberta areas. Licensed & insured. Free quotes!"
+        description="Portland tile installation specialists: Pearl District, Hawthorne, Alberta, Sellwood. Kitchen backsplashes, bathroom tile, hardwood-look flooring. Licensed contractors with local expertise."
         canonical="https://startilellc.com/tile-installation-portland"
         ogImage="https://startilellc.com/og-portland-tile.jpg"
         structuredData={[serviceData, breadcrumbs]}
