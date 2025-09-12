@@ -5,51 +5,68 @@ export const portfolioItems = [
   {
     id: 1,
     category: "Kitchens",
-    title: "Elegant White Kitchen with Marble Backsplash",
-    image: "/images/portfolio/kitchen-marble-complete.png",
-    alt: "Elegant white kitchen with marble backsplash and custom cabinetry in Portland Oregon",
+    title: "Sample Kitchen Project",
+    image: "/images/portfolio/placeholder.jpg",
+    alt: "Sample kitchen tile installation project",
     images: [
       {
-        src: "/images/portfolio/kitchen-marble-complete.png",
-        alt: "White kitchen with marble backsplash installation Portland Oregon"
+        src: "/images/portfolio/placeholder.jpg",
+        alt: "Sample kitchen project image 1"
       },
       {
-        src: "/images/portfolio/kitchen-marble-detail.png",
-        alt: "Marble countertop detail with gold faucet Portland Metro"
+        src: "/images/portfolio/placeholder.jpg",
+        alt: "Sample kitchen project image 2"
       }
     ]
   },
   {
     id: 2,
     category: "Bathrooms", 
-    title: "Luxury Marble Bathroom Suite",
-    image: "/images/portfolio/bathroom-marble-tub.png",
-    alt: "Luxury marble bathroom with custom bathtub surround in Portland Oregon",
+    title: "Sample Bathroom Project",
+    image: "/images/portfolio/placeholder.jpg",
+    alt: "Sample bathroom tile installation project",
     images: [
       {
-        src: "/images/portfolio/bathroom-marble-tub.png",
-        alt: "Marble bathtub surround installation Portland Oregon"
+        src: "/images/portfolio/placeholder.jpg",
+        alt: "Sample bathroom project image 1"
       },
       {
-        src: "/images/portfolio/bathroom-marble-wall.png",
-        alt: "Marble wall detail with decorative vessel Portland Metro"
+        src: "/images/portfolio/placeholder.jpg",
+        alt: "Sample bathroom project image 2"
       }
     ]
   },
   {
     id: 3,
-    category: "Custom",
-    title: "Marble Detail Work & Custom Features",
-    image: "/images/portfolio/bathroom-marble-wall.png", 
-    alt: "Custom marble detail work and decorative features in Portland Oregon",
+    category: "Flooring",
+    title: "Sample Flooring Project",
+    image: "/images/portfolio/placeholder.jpg", 
+    alt: "Sample flooring tile installation project",
     images: [
       {
-        src: "/images/portfolio/bathroom-marble-wall.png",
-        alt: "Custom marble wall installation with decorative elements"
+        src: "/images/portfolio/placeholder.jpg",
+        alt: "Sample flooring project image 1"
       },
       {
-        src: "/images/portfolio/kitchen-marble-detail.png",
-        alt: "Marble countertop detail with premium fixtures"
+        src: "/images/portfolio/placeholder.jpg",
+        alt: "Sample flooring project image 2"
+      }
+    ]
+  },
+  {
+    id: 4,
+    category: "Custom",
+    title: "Sample Custom Project",
+    image: "/images/portfolio/placeholder.jpg", 
+    alt: "Sample custom tile installation project",
+    images: [
+      {
+        src: "/images/portfolio/placeholder.jpg",
+        alt: "Sample custom project image 1"
+      },
+      {
+        src: "/images/portfolio/placeholder.jpg",
+        alt: "Sample custom project image 2"
       }
     ]
   }
