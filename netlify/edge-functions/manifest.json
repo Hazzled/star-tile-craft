@@ -1,5 +1,0 @@
-{
-  "functions": [
-    { "path": "/*", "function": "prerender" }
-  ]
-}
