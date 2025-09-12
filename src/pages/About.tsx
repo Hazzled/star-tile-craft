@@ -19,7 +19,7 @@ const About = () => {
 
   return <div className="min-h-screen">
       <SEO 
-        title="About Star Tile LLC | Portland's Premier Tile Installation Experts"
+        title="About Star Tile LLC | Licensed Tile Contractors Serving Portland Metro Area"
         description="Meet Portland's trusted tile contractors. Licensed & insured with 10+ years experience serving the metro area. Quality craftsmanship you can count on."
         canonical="https://startilellc.com/about"
         structuredData={breadcrumbs}

@@ -135,7 +135,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Contact Portland Tile Contractors | Free Installation Quote | Star Tile LLC"
+        title="Get Free Tile Installation Quote Portland Metro | Licensed Contractors (503) 482-8395"
         description="Get your free tile installation estimate today! Licensed Portland contractors specializing in kitchens, bathrooms & flooring. Call (503) 482-8395."
         canonical="https://startilellc.com/contact"
         structuredData={breadcrumbs}

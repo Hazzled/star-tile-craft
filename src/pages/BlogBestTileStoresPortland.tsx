@@ -68,7 +68,7 @@ const BlogBestTileStoresPortland = () => {
   return (
     <>
       <SEO
-        title="Best Tile Stores in Portland for Homeowners & Contractors | Star Tile LLC"
+        title="Best Tile Stores Portland Oregon 2025 | Bedrosians, Oregon Tile & Marble Reviews"
         description="Discover Portland's top tile suppliers including Bedrosians, Oregon Tile & Marble, and Pratt & Larson. Compare selection, prices, and specialties for your next tile project."
         canonical="https://startilellc.com/blog/best-tile-stores-portland"
         structuredData={structuredData}

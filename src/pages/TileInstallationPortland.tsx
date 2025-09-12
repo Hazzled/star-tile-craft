@@ -66,7 +66,7 @@ const TileInstallationPortland = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Tile Installation Portland Oregon | Expert Contractors - Star Tile LLC"
+        title="Portland Tile Installation | Pearl District Hawthorne Alberta Kitchen Bathroom Experts"
         description="Professional tile installation in Portland, OR. Kitchen backsplashes, bathroom tile, flooring experts. Serving Pearl District, Hawthorne, Alberta areas. Licensed & insured. Free quotes!"
         canonical="https://startilellc.com/tile-installation-portland"
         ogImage="https://startilellc.com/og-portland-tile.jpg"

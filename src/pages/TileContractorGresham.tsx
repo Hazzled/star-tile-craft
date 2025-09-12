@@ -49,7 +49,7 @@ const TileContractorGresham = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Tile Contractor Gresham OR | Indoor & Outdoor Tile Installation Specialists"
+        title="Gresham Tile Contractor | Powell Valley & Pleasant Valley Kitchen Bathroom Specialists"
         description="Trusted tile contractor in Gresham, Oregon. Farmhouse kitchens, spa bathrooms, outdoor patio tile. Powell Valley, Pleasant Valley, Centennial. Star Tile LLC - (503) 482-8395!"
         canonical="https://startilellc.com/tile-contractor-gresham"
         ogImage="https://startilellc.com/og-gresham-tile.jpg"

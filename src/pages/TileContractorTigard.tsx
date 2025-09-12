@@ -49,7 +49,7 @@ const TileContractorTigard = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Expert Tile Contractor Tigard Oregon | Natural Stone & Tile Installation"
+        title="Tigard Tile Contractor | Bull Mountain & King City Natural Stone Installation"
         description="Premium tile contractor in Tigard, OR. Luxury bathroom tile, kitchen backsplashes, stone installation. Bull Mountain, Summerfield, King City areas. Licensed CCB #200970!"
         canonical="https://startilellc.com/tile-contractor-tigard"
         ogImage="https://startilellc.com/og-tigard-tile.jpg"

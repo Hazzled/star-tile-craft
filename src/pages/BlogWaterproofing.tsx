@@ -28,7 +28,7 @@ export default function BlogWaterproofing() {
   return (
     <>
       <SEO
-        title="Waterproofing Before Tile: The Critical Step Portland Homeowners Can't Skip"
+        title="Bathroom Waterproofing Portland OR | Essential Guide Before Tile Installation"
         description="Learn why waterproofing before tile installation is essential in Portland's damp climate. Expert guide to shower waterproofing methods, common myths, and how to hire the right contractor."
         canonical="https://startilellc.com/blog/waterproofing-before-tile"
         structuredData={structuredData}

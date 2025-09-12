@@ -35,7 +35,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Tile Installation Portfolio | Star Tile LLC Portland"
+        title="Portland Tile Installation Portfolio | Before & After Projects Gallery"
         description="Browse our completed kitchen backsplashes, bathroom remodels, flooring, and custom tile projects across Portland."
         canonical="https://startilellc.com/portfolio"
         structuredData={breadcrumbs}

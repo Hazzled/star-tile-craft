@@ -94,7 +94,7 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Get Your Dream Tile Project Quote | Star Tile LLC Portland"
+        title="Free Tile Installation Quote Portland Metro | Kitchen Bathroom Flooring Contractors"
         description="View our stunning tile installation portfolio and get a free quote. Kitchen backsplashes, bathroom remodels, and custom tile work in Portland."
         canonical="https://www.startilellc.com/quote"
         structuredData={structuredData}

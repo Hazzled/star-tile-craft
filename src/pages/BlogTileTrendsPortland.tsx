@@ -31,7 +31,7 @@ const BlogTileTrendsPortland = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Top Tile Trends in Portland Homes (2025 Update) | Star Tile LLC"
+        title="Portland Tile Trends 2025 | Popular Ceramic, Porcelain & Natural Stone Styles"
         description="Discover the latest tile trends transforming Portland homes in 2025. From ceramic and porcelain to natural stone, plus popular styles like subway tile and hexagon patterns."
         canonical="https://startilellc.com/blog/tile-trends-portland-2025"
         type="article"

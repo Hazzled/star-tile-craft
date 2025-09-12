@@ -44,7 +44,7 @@ export default function BlogChoosingTileContractorPortland() {
   return (
     <>
       <SEO
-        title="How to Choose the Right Tile Contractor in Portland | Star Tile LLC"
+        title="How to Choose Licensed Tile Contractor Portland Oregon | CCB Requirements Guide"
         description="Expert guide to selecting the best tile contractor in Portland. Learn about licensing, insurance, experience, and what to look for in a professional tile installer."
         canonical="https://startilellc.com/blog/choosing-tile-contractor-portland"
         structuredData={[structuredData, generateBreadcrumbJsonLd(breadcrumbs)]}
