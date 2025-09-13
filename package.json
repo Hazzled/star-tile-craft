@@ -8,12 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview",
-
-    
-    "build:ssr": "vite build --ssr src/entry-server.tsx",
-    "postbuild": "node prerender.js",
-    "build:all": "npm run build && npm run build:ssr && npm run postbuild"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
