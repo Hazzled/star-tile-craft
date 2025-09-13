@@ -7,7 +7,7 @@ const FinalCTA = () => {
   const navigate = useNavigate();
 
   const handleGetQuoteClick = () => {
-    navigate('/contact');
+    navigate('/quote');
   };
 
   return (

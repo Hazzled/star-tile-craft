@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
   const navigate = useNavigate();
   const handleGetQuoteClick = () => {
-    navigate('/contact');
+    navigate('/quote');
   };
   return <section className="relative h-[700px] bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{

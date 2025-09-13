@@ -53,7 +53,7 @@ const Navbar = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Link to="/contact">
+            <Link to="/quote">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 Get Free Quote
               </Button>
@@ -90,7 +90,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Link to="/quote" onClick={() => setIsOpen(false)}>
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                     Get Free Quote
                   </Button>
