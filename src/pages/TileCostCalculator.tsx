@@ -32,20 +32,67 @@ export default function TileCostCalculator() {
     { name: 'Tile Cost Calculator', url: 'https://www.startilellc.com/tile-cost-calculator' }
   ];
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Tile Cost Calculator",
-    "description": "Free tile cost calculator for Portland homeowners. Calculate tiles needed, costs, and waste buffer for your tile installation project.",
-    "url": "https://www.startilellc.com/tile-cost-calculator",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Any",
-    "provider": {
-      "@type": "Organization",
-      "name": "Star Tile LLC",
-      "url": "https://www.startilellc.com"
+  const structuredData = [
+    generateBreadcrumbJsonLd(breadcrumbs),
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Tile Cost Calculator",
+      "description": "Free tile cost calculator for Portland homeowners. Calculate tiles needed, costs, and waste buffer for your tile installation project.",
+      "url": "https://www.startilellc.com/tile-cost-calculator",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "provider": {
+        "@type": "Organization",
+        "name": "Star Tile LLC",
+        "url": "https://www.startilellc.com",
+        "telephone": "+1-503-765-3742",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Portland",
+          "addressRegion": "OR",
+          "addressCountry": "US"
+        }
+      },
+      "featureList": [
+        "Calculate total square footage",
+        "Determine number of tiles needed", 
+        "Estimate material costs",
+        "Calculate waste buffer percentage",
+        "Support multiple tile sizes"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How accurate is this tile calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our calculator provides estimates based on standard tile sizes and installation practices. Actual requirements may vary based on room layout, pattern complexity, and specific tile dimensions."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "What's not included in these estimates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estimates don't include substrate preparation, waterproofing, grout, adhesive, trim pieces, or removal of existing flooring."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I hire a professional tile installer?",
+          "acceptedAnswer": {
+            "@type": "Answer", 
+            "text": "Consider professional installation for bathrooms, kitchens, complex patterns, large format tiles, or when waterproofing is critical."
+          }
+        }
+      ]
     }
-  };
+  ];
 
   const calculate = () => {
     const roomLength = parseFloat(length);
@@ -92,7 +139,8 @@ export default function TileCostCalculator() {
         title="Tile Cost Calculator Portland | Free Tile Estimator - Star Tile LLC"
         description="Free tile cost calculator for Portland projects. Calculate tiles needed, material costs, and waste buffer. Get accurate estimates for your tile installation project."
         canonical="https://www.startilellc.com/tile-cost-calculator"
-        structuredData={[generateBreadcrumbJsonLd(breadcrumbs), structuredData]}
+        structuredData={structuredData}
+        robots="index, follow"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-primary/10">
