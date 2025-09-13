@@ -35,7 +35,7 @@ const TileInstallationPortland = () => {
         "addressCountry": "US"
       },
       "telephone": "(503) 482-8395",
-      "url": "https://startilellc.com/tile-installation-portland"
+      "url": "https://www.startilellc.com/tile-installation-portland"
     },
     "areaServed": [
       "Portland, Oregon",
@@ -60,7 +60,7 @@ const TileInstallationPortland = () => {
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
     servicesBreadcrumb,
-    { name: "Tile Installation Portland", url: "https://startilellc.com/tile-installation-portland" }
+    { name: "Tile Installation Portland", url: "https://www.startilellc.com/tile-installation-portland" }
   ]);
 
   return (
@@ -68,7 +68,7 @@ const TileInstallationPortland = () => {
       <SEO 
         title="Portland Tile Installation | Pearl District Hawthorne Alberta Kitchen Bathroom Experts"
         description="Portland tile installation specialists: Pearl District, Hawthorne, Alberta, Sellwood. Kitchen backsplashes, bathroom tile, hardwood-look flooring. Licensed contractors with local expertise."
-        canonical="https://startilellc.com/tile-installation-portland"
+        canonical="https://www.startilellc.com/tile-installation-portland"
         ogImage="https://startilellc.com/og-portland-tile.jpg"
         structuredData={[serviceData, breadcrumbs]}
       />
