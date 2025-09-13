@@ -80,11 +80,7 @@ export default function TileCostCalculator() {
       totalTiles,
       wastePercentage,
       materialCost: materialCost.toFixed(2),
-      totalWithWaste: totalWithWaste.toFixed(2),
-      laborEstimate: {
-        low: (totalSqFt * 8).toFixed(2),
-        high: (totalSqFt * 15).toFixed(2)
-      }
+      totalWithWaste: totalWithWaste.toFixed(2)
     };
   };
 
@@ -225,10 +221,6 @@ export default function TileCostCalculator() {
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">With Waste Buffer:</span>
                         <span className="font-semibold text-primary">${results.totalWithWaste}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Labor Est. Range:</span>
-                        <span className="font-semibold">${results.laborEstimate.low} - ${results.laborEstimate.high}</span>
                       </div>
                     </div>
 
