@@ -96,7 +96,7 @@ const LandingPage = () => {
       <SEO
         title="Free Tile Installation Quote Portland Metro | Kitchen Bathroom Flooring Contractors"
         description="View our award-winning tile portfolio & request free quote. Portland Metro's top-rated contractors for kitchen backsplashes, bathroom remodels, custom installations. Quick response guaranteed."
-        canonical="https://www.startilellc.com/quote"
+        canonical="https://startilellc.com/quote"
         structuredData={structuredData}
       />
 
