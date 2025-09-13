@@ -16,6 +16,7 @@ const Navbar = () => {
     { path: "/services", label: "Services" },
     { path: "/portfolio", label: "Portfolio" },
     { path: "/blog", label: "Blog" },
+    { path: "/tile-cost-calculator", label: "Calculator" },
     { path: "/contact", label: "Contact" },
   ];
 
