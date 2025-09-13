@@ -95,13 +95,13 @@ export default function TileCostCalculator() {
         structuredData={[generateBreadcrumbJsonLd(breadcrumbs), structuredData]}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-background via-blue-50/30 to-blue-100/20">
+      <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-primary/10">
         <div className="container mx-auto px-4 py-8">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Calculator className="h-10 w-10 text-blue-600" />
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">Tile Cost Calculator</h1>
+              <Calculator className="h-10 w-10 text-primary" />
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Tile Cost Calculator</h1>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Plan your Portland tile project with our free calculator. Get accurate estimates for tiles needed, costs, and waste buffer.
@@ -110,10 +110,10 @@ export default function TileCostCalculator() {
 
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Calculator Form */}
-            <Card className="border-blue-200 shadow-lg shadow-blue-100/50">
+            <Card className="border-primary/20 shadow-lg shadow-primary/10">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-blue-700">
-                  <Calculator className="h-5 w-5 text-blue-600" />
+                <CardTitle className="flex items-center gap-2 text-primary">
+                  <Calculator className="h-5 w-5 text-primary" />
                   Project Details
                 </CardTitle>
                 <CardDescription>
@@ -130,7 +130,7 @@ export default function TileCostCalculator() {
                       placeholder="12"
                       value={length}
                       onChange={(e) => setLength(e.target.value)}
-                      className="border-2 border-blue-200 bg-card focus:border-blue-500 focus:ring-blue-200"
+                      className="border-2 border-primary/20 bg-card focus:border-primary focus:ring-primary/20"
                     />
                   </div>
                   <div className="space-y-2">
@@ -141,7 +141,7 @@ export default function TileCostCalculator() {
                       placeholder="10"
                       value={width}
                       onChange={(e) => setWidth(e.target.value)}
-                      className="border-2 border-blue-200 bg-card focus:border-blue-500 focus:ring-blue-200"
+                      className="border-2 border-primary/20 bg-card focus:border-primary focus:ring-primary/20"
                     />
                   </div>
                 </div>
@@ -149,10 +149,10 @@ export default function TileCostCalculator() {
                 <div className="space-y-2">
                   <Label htmlFor="tile-size">Tile Size</Label>
                   <Select value={selectedTileSize} onValueChange={setSelectedTileSize}>
-                    <SelectTrigger className="border-2 border-blue-200 bg-card focus:border-blue-500 focus:ring-blue-200">
+                    <SelectTrigger className="border-2 border-primary/20 bg-card focus:border-primary focus:ring-primary/20">
                       <SelectValue placeholder="Select tile size" />
                     </SelectTrigger>
-                    <SelectContent className="bg-card border-blue-200 z-50">
+                    <SelectContent className="bg-card border-primary/20 z-50">
                       {tileSizes.map((tile) => (
                         <SelectItem key={tile.size} value={tile.size}>
                           {tile.name}
@@ -171,20 +171,20 @@ export default function TileCostCalculator() {
                     placeholder="8.50"
                     value={pricePerSqFt}
                     onChange={(e) => setPricePerSqFt(e.target.value)}
-                    className="border-2 border-blue-200 bg-card focus:border-blue-500 focus:ring-blue-200"
+                    className="border-2 border-primary/20 bg-card focus:border-primary focus:ring-primary/20"
                   />
                 </div>
 
-                <Button onClick={calculate} className="w-full bg-blue-600 hover:bg-blue-700 text-white" size="lg">
+                <Button onClick={calculate} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" size="lg">
                   Calculate Estimate
                 </Button>
               </CardContent>
             </Card>
 
             {/* Results */}
-            <Card className="border-blue-200 shadow-lg shadow-blue-100/50">
+            <Card className="border-primary/20 shadow-lg shadow-primary/10">
               <CardHeader>
-                <CardTitle className="text-blue-700">Your Estimate</CardTitle>
+                <CardTitle className="text-primary">Your Estimate</CardTitle>
                 <CardDescription>
                   {showResults ? 'Based on your project specifications' : 'Enter details to see your estimate'}
                 </CardDescription>
@@ -207,7 +207,7 @@ export default function TileCostCalculator() {
                       </div>
                       <div>
                         <p className="text-muted-foreground">Total Tiles</p>
-                        <p className="font-semibold text-blue-600">{results.totalTiles} tiles</p>
+                        <p className="font-semibold text-primary">{results.totalTiles} tiles</p>
                       </div>
                     </div>
 
@@ -220,25 +220,25 @@ export default function TileCostCalculator() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">With Waste Buffer:</span>
-                        <span className="font-semibold text-blue-600">${results.totalWithWaste}</span>
+                        <span className="font-semibold text-primary">${results.totalWithWaste}</span>
                       </div>
                     </div>
 
                     <Separator />
 
-                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                      <h4 className="font-semibold mb-2 text-blue-800">Ready for Professional Installation?</h4>
-                      <p className="text-sm text-blue-700 mb-4">
+                    <div className="bg-primary/10 p-4 rounded-lg border border-primary/20">
+                      <h4 className="font-semibold mb-2 text-primary">Ready for Professional Installation?</h4>
+                      <p className="text-sm text-primary/80 mb-4">
                         Get a detailed quote from Portland's trusted tile experts
                       </p>
                       <div className="flex flex-col sm:flex-row gap-2">
-                        <Button asChild className="flex-1 bg-blue-600 hover:bg-blue-700">
+                        <Button asChild className="flex-1 bg-primary hover:bg-primary/90">
                           <a href="tel:503-765-3742" className="flex items-center gap-2">
                             <Phone className="h-4 w-4" />
                             Call Now
                           </a>
                         </Button>
-                        <Button variant="outline" asChild className="flex-1 border-blue-300 text-blue-700 hover:bg-blue-50">
+                        <Button variant="outline" asChild className="flex-1 border-primary/30 text-primary hover:bg-primary/10">
                           <a href="/contact" className="flex items-center gap-2">
                             <Mail className="h-4 w-4" />
                             Get Quote
@@ -249,7 +249,7 @@ export default function TileCostCalculator() {
                   </div>
                 ) : (
                   <div className="text-center py-8 text-muted-foreground">
-                    <Calculator className="h-12 w-12 mx-auto mb-4 opacity-50 text-blue-300" />
+                    <Calculator className="h-12 w-12 mx-auto mb-4 opacity-50 text-primary/30" />
                     <p>Enter your project details to see the estimate</p>
                   </div>
                 )}
@@ -259,11 +259,11 @@ export default function TileCostCalculator() {
 
           {/* Educational Content */}
           <div className="max-w-4xl mx-auto mt-16">
-            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">Tile Planning Guide</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Tile Planning Guide</h2>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-blue-50/50 p-6 rounded-lg border border-blue-200">
-                <h3 className="text-xl font-semibold mb-4 text-blue-800">Why Add Waste Buffer?</h3>
+              <div className="bg-primary/5 p-6 rounded-lg border border-primary/20">
+                <h3 className="text-xl font-semibold mb-4 text-primary">Why Add Waste Buffer?</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Covers cutting waste around edges</li>
                   <li>• Accounts for breakage during installation</li>
@@ -273,8 +273,8 @@ export default function TileCostCalculator() {
                 </ul>
               </div>
               
-              <div className="bg-blue-50/50 p-6 rounded-lg border border-blue-200">
-                <h3 className="text-xl font-semibold mb-4 text-blue-800">Professional Installation Benefits</h3>
+              <div className="bg-primary/5 p-6 rounded-lg border border-primary/20">
+                <h3 className="text-xl font-semibold mb-4 text-primary">Professional Installation Benefits</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Proper substrate preparation</li>
                   <li>• Precise layout and alignment</li>
@@ -288,7 +288,7 @@ export default function TileCostCalculator() {
 
           {/* FAQ Section */}
           <div className="max-w-3xl mx-auto mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-blue-700">Frequently Asked Questions</h3>
+            <h3 className="text-2xl font-bold text-center mb-8 text-primary">Frequently Asked Questions</h3>
             
             <div className="space-y-6">
               <div>
