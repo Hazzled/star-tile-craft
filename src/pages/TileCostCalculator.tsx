@@ -130,7 +130,7 @@ export default function TileCostCalculator() {
                       placeholder="12"
                       value={length}
                       onChange={(e) => setLength(e.target.value)}
-                      className="border-2 border-input bg-background focus:border-primary"
+                      className="border-2 border-input bg-card focus:border-primary"
                     />
                   </div>
                   <div className="space-y-2">
@@ -141,7 +141,7 @@ export default function TileCostCalculator() {
                       placeholder="10"
                       value={width}
                       onChange={(e) => setWidth(e.target.value)}
-                      className="border-2 border-input bg-background focus:border-primary"
+                      className="border-2 border-input bg-card focus:border-primary"
                     />
                   </div>
                 </div>
@@ -149,10 +149,10 @@ export default function TileCostCalculator() {
                 <div className="space-y-2">
                   <Label htmlFor="tile-size">Tile Size</Label>
                   <Select value={selectedTileSize} onValueChange={setSelectedTileSize}>
-                    <SelectTrigger className="border-2 border-input bg-background focus:border-primary">
+                    <SelectTrigger className="border-2 border-input bg-card focus:border-primary">
                       <SelectValue placeholder="Select tile size" />
                     </SelectTrigger>
-                    <SelectContent className="bg-background border-2 z-50">
+                    <SelectContent className="bg-card border-2 z-50">
                       {tileSizes.map((tile) => (
                         <SelectItem key={tile.size} value={tile.size}>
                           {tile.name}
@@ -171,7 +171,7 @@ export default function TileCostCalculator() {
                     placeholder="8.50"
                     value={pricePerSqFt}
                     onChange={(e) => setPricePerSqFt(e.target.value)}
-                    className="border-2 border-input bg-background focus:border-primary"
+                    className="border-2 border-input bg-card focus:border-primary"
                   />
                 </div>
 
