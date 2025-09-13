@@ -45,7 +45,7 @@ export default function BlogChoosingTileContractorPortland() {
     <>
       <SEO
         title="How to Choose Licensed Tile Contractor Portland Oregon | CCB Requirements Guide"
-        description="How to choose licensed tile contractors in Oregon: CCB requirements, insurance verification, red flags to avoid. Portland Metro contractor selection guide with expert insights."
+        description="Choose a licensed Portland tile contractor: CCB requirements, insurance checks, red flags to avoid. Expert guide for hiring with confidence."
         canonical="https://startilellc.com/blog/choosing-tile-contractor-portland"
         structuredData={[structuredData, generateBreadcrumbJsonLd(breadcrumbs)]}
       />

@@ -136,7 +136,7 @@ const Contact = () => {
     <div className="min-h-screen">
       <SEO 
         title="Get Free Tile Installation Quote Portland Metro | Licensed Contractors (503) 482-8395"
-        description="Request your free in-home tile consultation! Serving Portland, Beaverton, Gresham, Tigard, Lake Oswego. Licensed contractors respond within 24 hours. Call (503) 482-8395."
+        description="Request a free in-home tile consultation across Portland Metro. Licensed contractors respond within 24 hours. Call (503) 482-8395."
         canonical="https://startilellc.com/contact"
         structuredData={breadcrumbs}
       />

@@ -8,7 +8,7 @@ const BlogBudgetingTileProject = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="2025 Tile Installation Cost Guide Portland OR | Budgeting Tips from Local Experts"
-        description="Complete 2025 Portland tile cost breakdown: ceramic vs porcelain vs stone pricing, labor costs, complexity factors. Real examples from Cedar Hills to Alberta District."
+        description="2025 Portland tile cost guide: ceramic vs porcelain vs stone pricing, labor costs, complexity factors. Real examples from Cedar Hills to Alberta."
         canonical="https://startilellc.com/blog/budgeting-tile-project-portland"
         type="article"
         structuredData={{
