@@ -24,4 +24,4 @@ Allow: /sitemap.xml
 # Crawl delay for politeness (1 second)
 Crawl-delay: 1
 
-Sitemap: https://startilellc.com/sitemap.xml
+Sitemap: https://www.startilellc.com/sitemap.xml
