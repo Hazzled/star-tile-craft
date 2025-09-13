@@ -47,7 +47,7 @@ const App = () => (
               <Route path="/blog/fix-cracked-grout" element={<BlogGroutRepair />} />
               <Route path="/blog/waterproofing-before-tile" element={<BlogWaterproofing />} />
               <Route path="/blog/choosing-tile-contractor-portland" element={<BlogChoosingTileContractorPortland />} />
-              <Route path="/blog/tile-trends-portland" element={<BlogTileTrendsPortland />} />
+              <Route path="/blog/tile-trends-portland-2025" element={<BlogTileTrendsPortland />} />
               <Route path="/blog/best-tile-stores-portland" element={<BlogBestTileStoresPortland />} />
               <Route path="/tile-installation-portland" element={<TileInstallationPortland />} />
               <Route path="/tile-contractor-beaverton" element={<TileContractorBeaverton />} />
