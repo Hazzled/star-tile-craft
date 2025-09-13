@@ -21,47 +21,19 @@ const OptimizedImage = ({
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
   onLoad,
   onError,
-  quality = 80,
-  priority = false,
-  responsive = true
+  priority = false
 }: OptimizedImageProps) => {
   const [imageError, setImageError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority || loading === 'eager');
   const imgRef = useRef<HTMLImageElement>(null);
-  const [currentSrc, setCurrentSrc] = useState<string>('');
-
-  // Generate responsive image sources
-  const generateResponsiveSources = (originalSrc: string) => {
-    if (!responsive || originalSrc.includes('placeholder.jpg')) {
-      return { webp: originalSrc, fallback: originalSrc };
-    }
-
-    // For uploaded images, try to generate WebP version
-    const baseSrc = originalSrc.replace(/\.(png|jpg|jpeg)$/i, '');
-    const extension = originalSrc.match(/\.(png|jpg|jpeg)$/i)?.[1] || 'jpg';
-    
-    return {
-      webp: `${baseSrc}.webp`,
-      fallback: originalSrc,
-      srcSet: [
-        `${baseSrc}-400w.webp 400w`,
-        `${baseSrc}-800w.webp 800w`,
-        `${baseSrc}-1200w.webp 1200w`,
-        originalSrc // fallback
-      ].join(', '),
-      fallbackSrcSet: [
-        `${baseSrc}-400w.${extension} 400w`,
-        `${baseSrc}-800w.${extension} 800w`,
-        `${baseSrc}-1200w.${extension} 1200w`,
-        originalSrc
-      ].join(', ')
-    };
-  };
 
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (priority || loading === 'eager') return;
+    if (priority || loading === 'eager') {
+      setIsInView(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -80,13 +52,6 @@ const OptimizedImage = ({
     return () => observer.disconnect();
   }, [priority, loading]);
 
-  // Update current src when in view
-  useEffect(() => {
-    if (isInView && !imageError) {
-      setCurrentSrc(src);
-    }
-  }, [isInView, src, imageError]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
@@ -94,62 +59,37 @@ const OptimizedImage = ({
 
   const handleError = () => {
     setImageError(true);
-    setCurrentSrc('/images/portfolio/placeholder.jpg');
     onError?.();
   };
 
-  const imageSources = generateResponsiveSources(imageError ? '/images/portfolio/placeholder.jpg' : currentSrc);
-
-  // Generate blur placeholder
-  const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOmhzbCgyMTAgMTAlIDkwJSk7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjpoc2woMjEwIDUlIDk1JSk7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=";
+  const imageSrc = imageError ? '/images/portfolio/placeholder.jpg' : src;
 
   return (
     <div className="relative overflow-hidden" ref={imgRef}>
-      {/* Blur placeholder */}
+      {/* Loading skeleton */}
       {!isLoaded && isInView && (
-        <img
-          src={blurDataURL}
-          alt=""
-          className={`absolute inset-0 w-full h-full object-cover blur-sm scale-110 ${className}`}
-          aria-hidden="true"
-        />
+        <div className={`absolute inset-0 bg-gradient-to-br from-muted to-muted/60 animate-pulse ${className}`} />
       )}
       
-      {/* Loading skeleton */}
+      {/* Placeholder for lazy loading */}
       {!isInView && !priority && (
-        <div className={`bg-gradient-to-br from-muted to-muted/60 animate-pulse ${className}`} />
+        <div className={`bg-gradient-to-br from-muted to-muted/60 ${className}`} />
       )}
 
-      {/* Main image with WebP support */}
-      {(isInView || priority) && (
-        <picture>
-          {responsive && !imageError && (
-            <source
-              srcSet={imageSources.srcSet}
-              sizes={sizes}
-              type="image/webp"
-            />
-          )}
-          {responsive && !imageError && (
-            <source
-              srcSet={imageSources.fallbackSrcSet}
-              sizes={sizes}
-              type="image/jpeg"
-            />
-          )}
-          <img
-            src={imageSources.fallback}
-            alt={alt}
-            className={`${className} transition-all duration-500 ${
-              !isLoaded ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
-            }`}
-            loading={priority ? 'eager' : loading}
-            sizes={sizes}
-            onLoad={handleLoad}
-            onError={handleError}
-            decoding="async"
-          />
-        </picture>
+      {/* Main image */}
+      {isInView && (
+        <img
+          src={imageSrc}
+          alt={alt}
+          className={`${className} transition-all duration-300 ${
+            !isLoaded ? 'opacity-0' : 'opacity-100'
+          }`}
+          loading={priority ? 'eager' : loading}
+          sizes={sizes}
+          onLoad={handleLoad}
+          onError={handleError}
+          decoding="async"
+        />
       )}
     </div>
   );

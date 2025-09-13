@@ -1,12 +1,13 @@
 
 import React, { useEffect, useState } from 'react';
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowUpRight, X, ArrowLeft, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import useEmblaCarousel from 'embla-carousel-react';
 import OptimizedImage from "@/components/OptimizedImage";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -65,6 +66,10 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-[95vw] max-h-[95vh] h-[95vh] w-[95vw] p-0 overflow-hidden bg-transparent border-none">
+        <VisuallyHidden>
+          <DialogTitle>{project?.title || 'Project Gallery'}</DialogTitle>
+          <DialogDescription>View project images and details</DialogDescription>
+        </VisuallyHidden>
         <div className="relative h-full flex flex-col bg-black/20 backdrop-blur-sm">
           {/* Close Button */}
           <button
