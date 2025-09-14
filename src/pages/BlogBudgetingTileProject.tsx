@@ -9,14 +9,14 @@ const BlogBudgetingTileProject = () => {
       <SEO 
         title="2025 Tile Installation Cost Guide Portland OR | Budgeting Tips from Local Experts"
         description="2025 Portland tile cost guide: ceramic vs porcelain vs stone pricing, labor costs, complexity factors. Real examples from Cedar Hills to Alberta."
-        canonical="https://startilellc.com/blog/budgeting-tile-project-portland"
+        canonical="https://www.startilellc.com/blog/budgeting-tile-project-portland"
         type="article"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           "headline": "Your 2025 Guide to Budgeting a Tile Project in Portland, OR",
           "author": { "@type": "Organization", "name": "Star Tile LLC" },
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://startilellc.com/blog/budgeting-tile-project-portland" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.startilellc.com/blog/budgeting-tile-project-portland" },
           "datePublished": "2025-01-19",
           "dateModified": "2025-01-19"
         }}
