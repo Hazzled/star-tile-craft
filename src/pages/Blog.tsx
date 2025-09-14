@@ -90,7 +90,7 @@ const Blog = () => {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://startilellc.com/blog"
+      "@id": "https://www.startilellc.com/blog"
     },
     "blogPost": blogPosts.map(post => ({
       "@type": "BlogPosting",
@@ -115,7 +115,7 @@ const Blog = () => {
       <SEO 
         title="Tile Installation Blog Portland OR | DIY Tips & Professional Contractor Guides"
         description="Portland tile blog: PNW climate tips, cost guides, choosing contractors, DIY repairs. 10+ years of local expertise."
-        canonical="https://startilellc.com/blog"
+        canonical="https://www.startilellc.com/blog"
         type="website"
         structuredData={[structuredData, breadcrumbs]}
       />
