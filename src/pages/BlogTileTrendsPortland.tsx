@@ -8,7 +8,7 @@ const BlogTileTrendsPortland = () => {
   const breadcrumbs = [
     { name: "Home", url: "https://startilellc.com" },
     { name: "Blog", url: "https://startilellc.com/blog" },
-    { name: "Top Tile Trends in Portland Homes (2025 Update)", url: "https://startilellc.com/blog/tile-trends-portland-2025" }
+    { name: "Top Tile Trends in Portland Homes (2025 Update)", url: "https://www.startilellc.com/blog/tile-trends-portland-2025" }
   ];
   
   const breadcrumbSchema = generateBreadcrumbJsonLd(breadcrumbs);
@@ -19,7 +19,7 @@ const BlogTileTrendsPortland = () => {
       "@type": "BlogPosting",
       "headline": "Top Tile Trends in Portland Homes (2025 Update)",
       "author": { "@type": "Organization", "name": "Star Tile LLC" },
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://startilellc.com/blog/tile-trends-portland-2025" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.startilellc.com/blog/tile-trends-portland-2025" },
       "datePublished": "2025-09-06",
       "dateModified": "2025-09-06",
       "image": "https://startilellc.com/lovable-uploads/2888493a-862c-4bf9-b6b4-afe216d65fe0.png",
@@ -33,7 +33,7 @@ const BlogTileTrendsPortland = () => {
       <SEO 
         title="Portland Tile Trends 2025 | Popular Ceramic, Porcelain & Natural Stone Styles"
         description="2025 Portland tile trends: sustainable materials, PNW color palettes, popular sizes and patterns. From Pearl District to Lake Oswego homes."
-        canonical="https://startilellc.com/blog/tile-trends-portland-2025"
+        canonical="https://www.startilellc.com/blog/tile-trends-portland-2025"
         type="article"
         structuredData={JSON.stringify(structuredData)}
       />
