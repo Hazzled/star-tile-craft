@@ -12,7 +12,7 @@ export default function BlogChoosingTileContractorPortland() {
     blogBreadcrumb,
     {
       name: "How to Choose the Right Tile Contractor in Portland",
-      url: "https://startilellc.com/blog/choosing-tile-contractor-portland"
+      url: "https://www.startilellc.com/blog/choosing-tile-contractor-portland"
     }
   ];
 
@@ -37,7 +37,7 @@ export default function BlogChoosingTileContractorPortland() {
     "dateModified": "2025-01-06",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://startilellc.com/blog/choosing-tile-contractor-portland"
+      "@id": "https://www.startilellc.com/blog/choosing-tile-contractor-portland"
     }
   };
 
