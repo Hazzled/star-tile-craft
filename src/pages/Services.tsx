@@ -50,14 +50,14 @@ const Services = () => {
   ];
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
-    { name: "Services", url: "https://startilellc.com/services" }
+    { name: "Services", url: "https://www.startilellc.com/services" }
   ]);
 
   return <div className="min-h-screen">
       <SEO 
         title="Professional Tile Installation Services | Kitchen & Bathroom Specialists Portland OR"
         description="Kitchen backsplashes, bathroom & shower tile, stone flooring, waterproofing. Portland Metro specialists delivering professional installation."
-        canonical="https://startilellc.com/services"
+        canonical="https://www.startilellc.com/services"
         structuredData={breadcrumbs}
       />
       {/* Hero Section */}
