@@ -32,7 +32,7 @@ const TileContractorLakeOswego = () => {
       "addressCountry": "US"
     },
     "telephone": "(503) 482-8395",
-    "url": "https://startilellc.com/tile-contractor-lake-oswego",
+    "url": "https://www.startilellc.com/tile-contractor-lake-oswego",
     "servedArea": {
       "@type": "City",
       "name": "Lake Oswego, Oregon"
@@ -43,7 +43,7 @@ const TileContractorLakeOswego = () => {
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
     servicesBreadcrumb,
-    { name: "Tile Contractor Lake Oswego", url: "https://startilellc.com/tile-contractor-lake-oswego" }
+    { name: "Tile Contractor Lake Oswego", url: "https://www.startilellc.com/tile-contractor-lake-oswego" }
   ]);
 
   return (
@@ -51,8 +51,8 @@ const TileContractorLakeOswego = () => {
       <SEO 
         title="Lake Oswego Luxury Tile Contractor | Forest Hills & Mountain Park Designer Installations"
         description="Lake Oswego luxury tile contractor: Forest Hills, Mountain Park, Westlake. Designer master bathrooms, custom mosaics, premium natural stone. Elite craftsmanship for discerning homeowners."
-        canonical="https://startilellc.com/tile-contractor-lake-oswego"
-        ogImage="https://startilellc.com/og-lake-oswego-tile.jpg"
+        canonical="https://www.startilellc.com/tile-contractor-lake-oswego"
+        ogImage="https://www.startilellc.com/og-lake-oswego-tile.jpg"
         structuredData={[structuredData, breadcrumbs]}
       />
 

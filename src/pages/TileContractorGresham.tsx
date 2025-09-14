@@ -32,7 +32,7 @@ const TileContractorGresham = () => {
       "addressCountry": "US"
     },
     "telephone": "(503) 482-8395",
-    "url": "https://startilellc.com/tile-contractor-gresham",
+    "url": "https://www.startilellc.com/tile-contractor-gresham",
     "servedArea": {
       "@type": "City",
       "name": "Gresham, Oregon"
@@ -43,7 +43,7 @@ const TileContractorGresham = () => {
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
     servicesBreadcrumb,
-    { name: "Tile Contractor Gresham", url: "https://startilellc.com/tile-contractor-gresham" }
+    { name: "Tile Contractor Gresham", url: "https://www.startilellc.com/tile-contractor-gresham" }
   ]);
 
   return (
@@ -51,8 +51,8 @@ const TileContractorGresham = () => {
       <SEO 
         title="Gresham Tile Contractor | Powell Valley & Pleasant Valley Kitchen Bathroom Specialists"
         description="Gresham tile installation experts: Powell Valley, Pleasant Valley, Centennial. Farmhouse kitchens, spa bathrooms, outdoor patio tile. 10+ years local experience."
-        canonical="https://startilellc.com/tile-contractor-gresham"
-        ogImage="https://startilellc.com/og-gresham-tile.jpg"
+        canonical="https://www.startilellc.com/tile-contractor-gresham"
+        ogImage="https://www.startilellc.com/og-gresham-tile.jpg"
         structuredData={[structuredData, breadcrumbs]}
       />
 

@@ -21,7 +21,7 @@ const BlogBestTileStoresPortland = () => {
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://startilellc.com/logo.png"
+        "url": "https://www.startilellc.com/logo.png"
       }
     },
     "datePublished": "2025-01-15",

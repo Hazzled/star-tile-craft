@@ -29,7 +29,7 @@ const Portfolio = () => {
 
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
-    { name: "Portfolio", url: "https://startilellc.com/portfolio" }
+    { name: "Portfolio", url: "https://www.startilellc.com/portfolio" }
   ]);
 
   return (
@@ -37,7 +37,7 @@ const Portfolio = () => {
       <SEO 
         title="Portland Tile Installation Portfolio | Before & After Projects Gallery"
         description="View 50+ completed tile projects across Portland Metro: modern kitchens, luxury bathrooms, custom showers. Before & after photos from Hawthorne to Lake Oswego."
-        canonical="https://startilellc.com/portfolio"
+        canonical="https://www.startilellc.com/portfolio"
         structuredData={breadcrumbs}
       />
       <PortfolioHero />

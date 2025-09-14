@@ -32,7 +32,7 @@ const TileContractorBeaverton = () => {
       "addressCountry": "US"
     },
     "telephone": "(503) 482-8395",
-    "url": "https://startilellc.com/tile-contractor-beaverton",
+    "url": "https://www.startilellc.com/tile-contractor-beaverton",
     "servedArea": {
       "@type": "City",
       "name": "Beaverton, Oregon"
@@ -43,7 +43,7 @@ const TileContractorBeaverton = () => {
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
     servicesBreadcrumb,
-    { name: "Tile Contractor Beaverton", url: "https://startilellc.com/tile-contractor-beaverton" }
+    { name: "Tile Contractor Beaverton", url: "https://www.startilellc.com/tile-contractor-beaverton" }
   ]);
 
   return (
@@ -51,8 +51,8 @@ const TileContractorBeaverton = () => {
       <SEO 
         title="Tile Contractor Beaverton Oregon | Cedar Hills & Cooper Mountain Kitchen & Bath"
         description="Beaverton's trusted tile contractor: Cedar Hills, Murray Hill, Cooper Mountain specialists. Kitchen remodels, luxury bathrooms, custom installations. Licensed Oregon CCB #200970."
-        canonical="https://startilellc.com/tile-contractor-beaverton"
-        ogImage="https://startilellc.com/og-beaverton-tile.jpg"
+        canonical="https://www.startilellc.com/tile-contractor-beaverton"
+        ogImage="https://www.startilellc.com/og-beaverton-tile.jpg"
         structuredData={[structuredData, breadcrumbs]}
       />
 

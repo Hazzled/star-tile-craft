@@ -21,7 +21,7 @@ export default function BlogGroutRepair() {
     "dateModified": "2025-01-19",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://startilellc.com/blog/fix-cracked-grout"
+      "@id": "https://www.startilellc.com/blog/fix-cracked-grout"
     }
   };
 
@@ -30,7 +30,7 @@ export default function BlogGroutRepair() {
       <SEO
         title="Fix Cracked Grout Portland OR | Pacific Northwest Climate DIY Repair Guide 2025"
         description="Fix cracked grout in Portland's wet climate: step-by-step DIY guide, tools needed, and when to call pros. PNW-specific moisture protection tips."
-        canonical="https://startilellc.com/blog/fix-cracked-grout"
+        canonical="https://www.startilellc.com/blog/fix-cracked-grout"
         structuredData={structuredData}
       />
       

@@ -32,7 +32,7 @@ const TileContractorTigard = () => {
       "addressCountry": "US"
     },
     "telephone": "(503) 482-8395",
-    "url": "https://startilellc.com/tile-contractor-tigard",
+    "url": "https://www.startilellc.com/tile-contractor-tigard",
     "servedArea": {
       "@type": "City",
       "name": "Tigard, Oregon"
@@ -43,7 +43,7 @@ const TileContractorTigard = () => {
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
     servicesBreadcrumb,
-    { name: "Tile Contractor Tigard", url: "https://startilellc.com/tile-contractor-tigard" }
+    { name: "Tile Contractor Tigard", url: "https://www.startilellc.com/tile-contractor-tigard" }
   ]);
 
   return (
@@ -51,8 +51,8 @@ const TileContractorTigard = () => {
       <SEO 
         title="Tigard Tile Contractor | Bull Mountain & King City Natural Stone Installation"
         description="Premium Tigard tile contractor: Bull Mountain, Summerfield, King City areas. Luxury bathroom tile, natural stone installation, high-end kitchen backsplashes. Insured & licensed."
-        canonical="https://startilellc.com/tile-contractor-tigard"
-        ogImage="https://startilellc.com/og-tigard-tile.jpg"
+        canonical="https://www.startilellc.com/tile-contractor-tigard"
+        ogImage="https://www.startilellc.com/og-tigard-tile.jpg"
         structuredData={[structuredData, breadcrumbs]}
       />
 

@@ -85,7 +85,7 @@ const Blog = () => {
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://startilellc.com/logo.png"
+        "url": "https://www.startilellc.com/logo.png"
       }
     },
     "mainEntityOfPage": {
@@ -96,7 +96,7 @@ const Blog = () => {
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.excerpt,
-      "url": `https://startilellc.com/blog/${post.slug}`,
+      "url": `https://www.startilellc.com/blog/${post.slug}`,
       "datePublished": "2025-01-19",
       "author": {
         "@type": "Organization",
@@ -107,7 +107,7 @@ const Blog = () => {
 
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
-    { name: "Blog", url: "https://startilellc.com/blog" }
+    { name: "Blog", url: "https://www.startilellc.com/blog" }
   ]);
 
   return (

@@ -6,8 +6,8 @@ import { generateBreadcrumbJsonLd } from "@/lib/breadcrumbs";
 
 const BlogTileTrendsPortland = () => {
   const breadcrumbs = [
-    { name: "Home", url: "https://startilellc.com" },
-    { name: "Blog", url: "https://startilellc.com/blog" },
+    { name: "Home", url: "https://www.startilellc.com" },
+    { name: "Blog", url: "https://www.startilellc.com/blog" },
     { name: "Top Tile Trends in Portland Homes (2025 Update)", url: "https://www.startilellc.com/blog/tile-trends-portland-2025" }
   ];
   
@@ -22,7 +22,7 @@ const BlogTileTrendsPortland = () => {
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.startilellc.com/blog/tile-trends-portland-2025" },
       "datePublished": "2025-09-06",
       "dateModified": "2025-09-06",
-      "image": "https://startilellc.com/lovable-uploads/2888493a-862c-4bf9-b6b4-afe216d65fe0.png",
+      "image": "https://www.startilellc.com/lovable-uploads/2888493a-862c-4bf9-b6b4-afe216d65fe0.png",
       "description": "Discover the latest tile trends transforming Portland homes in 2025. From ceramic and porcelain to natural stone, plus popular styles like subway tile and hexagon patterns."
     },
     breadcrumbSchema

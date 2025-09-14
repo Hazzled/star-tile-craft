@@ -129,7 +129,7 @@ const Contact = () => {
 
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
-    { name: "Contact", url: "https://startilellc.com/contact" }
+    { name: "Contact", url: "https://www.startilellc.com/contact" }
   ]);
 
   return (
@@ -137,7 +137,7 @@ const Contact = () => {
       <SEO 
         title="Get Free Tile Installation Quote Portland Metro | Licensed Contractors (503) 482-8395"
         description="Request a free in-home tile consultation across Portland Metro. Licensed contractors respond within 24 hours. Call (503) 482-8395."
-        canonical="https://startilellc.com/contact"
+        canonical="https://www.startilellc.com/contact"
         structuredData={breadcrumbs}
       />
       {/* Unified Hero + Contact Form Section */}
