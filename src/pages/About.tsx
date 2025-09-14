@@ -14,7 +14,7 @@ const About = () => {
   };
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
-    { name: "About", url: "https://startilellc.com/about" }
+    { name: "About", url: "https://www.startilellc.com/about" }
   ]);
 
   return <div className="min-h-screen">
