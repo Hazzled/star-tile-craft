@@ -1,5 +1,6 @@
 
 import { useState, useMemo, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -184,9 +185,18 @@ const Contact = () => {
                   <CardTitle className="text-2xl font-montserrat font-bold text-gray-800">
                     Request Your Free Consultation
                   </CardTitle>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 mb-4">
                     Fill out the form below and we'll contact you within 24 hours to discuss your project.
                   </p>
+                  <div className="flex flex-wrap gap-2 text-sm">
+                    <Link to="/tile-cost-calculator" className="text-navy hover:underline">
+                      Try our cost calculator first →
+                    </Link>
+                    <span className="text-gray-400">•</span>
+                    <Link to="/tile-installation-portland" className="text-navy hover:underline">
+                      Portland services info
+                    </Link>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-4">

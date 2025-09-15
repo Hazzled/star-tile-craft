@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-noir text-ivory">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <img 
@@ -23,33 +23,65 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Services */}
           <div>
-            <h3 className="text-lg font-montserrat font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-montserrat font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-mist hover:text-ivory transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-mist hover:text-ivory transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
                 <Link to="/services" className="text-mist hover:text-ivory transition-colors">
-                  Services
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/tile-installation-portland" className="text-mist hover:text-ivory transition-colors">
+                  Portland Tile Installation
+                </Link>
+              </li>
+              <li>
+                <Link to="/tile-cost-calculator" className="text-mist hover:text-ivory transition-colors">
+                  Cost Calculator
                 </Link>
               </li>
               <li>
                 <Link to="/portfolio" className="text-mist hover:text-ivory transition-colors">
-                  Portfolio
+                  Our Work
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-mist hover:text-ivory transition-colors">
+                  Tile Tips & Guides
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <h3 className="text-lg font-montserrat font-semibold mb-4">Service Areas</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/tile-contractor-beaverton" className="text-mist hover:text-ivory transition-colors">
+                  Beaverton
+                </Link>
+              </li>
+              <li>
+                <Link to="/tile-contractor-gresham" className="text-mist hover:text-ivory transition-colors">
+                  Gresham
+                </Link>
+              </li>
+              <li>
+                <Link to="/tile-contractor-lake-oswego" className="text-mist hover:text-ivory transition-colors">
+                  Lake Oswego
+                </Link>
+              </li>
+              <li>
+                <Link to="/tile-contractor-tigard" className="text-mist hover:text-ivory transition-colors">
+                  Tigard
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-mist hover:text-ivory transition-colors">
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>

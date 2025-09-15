@@ -76,6 +76,14 @@ export default function BlogGroutRepair() {
               </p>
             </section>
 
+            <div className="mb-8 p-4 bg-navy/5 rounded-lg border-l-4 border-navy">
+              <p className="text-sm text-gray-700">
+                💡 <strong>Need Professional Help?</strong> For larger projects or if DIY isn't your thing, check out our 
+                <Link to="/tile-installation-portland" className="text-navy hover:underline font-medium">Portland tile installation services</Link> or 
+                use our <Link to="/tile-cost-calculator" className="text-navy hover:underline font-medium">cost calculator</Link> to estimate your project.
+              </p>
+            </div>
+
             <section className="mb-10">
               <h2 className="text-3xl font-bold text-foreground mb-6">Why Grout Cracks in Portland Homes</h2>
               

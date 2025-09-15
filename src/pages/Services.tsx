@@ -126,9 +126,26 @@ const Services = () => {
               Our Specialized Services
             </h2>
             <div className="w-24 h-1 bg-navy mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
               From kitchen backsplashes to custom installations, we bring decades of experience to every project.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <Link to="/tile-installation-portland" className="text-navy hover:underline font-medium">
+                Portland Tile Installation Services
+              </Link>
+              <span className="text-gray-400">•</span>
+              <Link to="/tile-cost-calculator" className="text-navy hover:underline font-medium">
+                Free Cost Calculator
+              </Link>
+              <span className="text-gray-400">•</span>
+              <Link to="/tile-contractor-beaverton" className="text-navy hover:underline font-medium">
+                Beaverton Contractors
+              </Link>
+              <span className="text-gray-400">•</span>
+              <Link to="/tile-contractor-lake-oswego" className="text-navy hover:underline font-medium">
+                Lake Oswego Services
+              </Link>
+            </div>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -157,6 +174,12 @@ const Services = () => {
                     <p className="text-gray-600 text-sm leading-relaxed">
                       {service.description}
                     </p>
+                    {/* Add strategic internal links */}
+                    {service.title === "Flooring Solutions" && (
+                      <Link to="/tile-installation-portland" className="text-navy text-sm font-medium hover:underline mt-2 block">
+                        Learn more about Portland tile installation →
+                      </Link>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>)}

@@ -101,6 +101,18 @@ const BlogBestTileStoresPortland = () => {
             />
           </div>
 
+          {/* Quick Links */}
+          <div className="mb-8 p-4 bg-navy text-white rounded-lg">
+            <p className="text-sm mb-2">
+              📋 <strong>Planning a tile project?</strong> Use our tools and services:
+            </p>
+            <div className="flex flex-wrap gap-4 text-sm">
+              <Link to="/tile-cost-calculator" className="text-white hover:underline">Free Cost Calculator</Link>
+              <Link to="/tile-installation-portland" className="text-white hover:underline">Professional Installation</Link>
+              <Link to="/contact" className="text-white hover:underline">Free Consultation</Link>
+            </div>
+          </div>
+
           {/* Introduction */}
           <section className="prose prose-lg max-w-none mb-12">
             <p className="text-lg text-charcoal leading-relaxed mb-6">

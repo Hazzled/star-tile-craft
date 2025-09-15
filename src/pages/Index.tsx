@@ -45,13 +45,21 @@ const Index = () => {
       {/* Enhanced intro section with internal links */}
       <section className="py-12 bg-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-gray-600 leading-relaxed">
-            As Gresham's premier tile installation company, we bring over a decade of expertise to every project in the greater Portland metro area. 
-            From <Link to="/services" className="text-navy hover:underline font-medium">kitchen backsplashes and bathroom remodels</Link> to 
-            custom flooring solutions, our team delivers exceptional craftsmanship that stands the test of time. 
-            <Link to="/about" className="text-navy hover:underline font-medium">Learn more about our story</Link> and 
-            discover why hundreds of Gresham and East Portland homeowners trust us with their tile installation needs.
+          <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8">
+            Welcome to Star Tile LLC, your premier tile installation company serving the Portland Metro Area. 
+            We specialize in kitchen backsplashes, bathroom renovations, and custom tile work that transforms your space. 
+            Ready to get started? <Link to="/services" className="text-navy hover:underline font-semibold">Explore our services</Link>, 
+            <Link to="/tile-installation-portland" className="text-navy hover:underline font-semibold ml-1">learn about Portland tile installation</Link>, 
+            or <Link to="/portfolio" className="text-navy hover:underline font-semibold">view our portfolio</Link> to see our craftsmanship in action.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
+            <Link to="/tile-cost-calculator" className="bg-navy text-white px-4 py-2 rounded-lg hover:bg-navy/90 transition-colors">
+              Get Cost Estimate
+            </Link>
+            <Link to="/contact" className="border border-navy text-navy px-4 py-2 rounded-lg hover:bg-navy hover:text-white transition-colors">
+              Free Consultation
+            </Link>
+          </div>
         </div>
       </section>
 
