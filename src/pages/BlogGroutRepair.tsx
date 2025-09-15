@@ -72,7 +72,7 @@ export default function BlogGroutRepair() {
               </p>
               
               <p className="text-lg leading-relaxed mb-6">
-                The good news? Most grout repair is well within the capabilities of a DIY-savvy homeowner. With the right approach and materials from your local Portland hardware store, you can tackle this project over a weekend and protect your investment for years to come.
+                The good news? Most grout repair is well within the capabilities of a DIY-savvy homeowner. Whether you're dealing with cracking grout on tile floors or space between the tiles that's deteriorating, the right approach and materials from your local Portland hardware store can help you tackle this project over a weekend and protect your investment for years to come.
               </p>
             </section>
 
@@ -96,7 +96,7 @@ export default function BlogGroutRepair() {
               </Card>
 
               <p className="text-lg leading-relaxed mb-6">
-                Beyond climate, common causes include house settling (especially in areas with clay soil), improper initial installation, and simple wear and tear from daily use. The key is catching cracks early before water infiltration causes more serious damage.
+                Beyond climate, common causes include house settling (especially in areas with clay soil), improper initial installation, and simple wear and tear from daily use on tile floors. The key is to fix cracking before water infiltration causes more serious damage to the structure beneath your tiles.
               </p>
             </section>
 
@@ -125,9 +125,11 @@ export default function BlogGroutRepair() {
                     <div>
                       <h4 className="font-medium mb-2">Materials:</h4>
                       <ul className="space-y-1 text-base">
-                        <li>• New grout (sanded or unsanded)</li>
-                        <li>• Grout sealer</li>
-                        <li>• Clean water</li>
+                        <li>• New grout (sanded grout for joints over 1/8" or unsanded grout for narrow joints)</li>
+                        <li>• Grout sealer (acrylic latex based for best durability)</li>
+                        <li>• Clean water for mixing and cleaning</li>
+                        <li>• Grout color that matches existing (bring a sample to match grout color)</li>
+                        <li>• Grout cleaner for preparation</li>
                         <li>• Mixing bucket</li>
                         <li>• Drop cloths</li>
                       </ul>
@@ -150,21 +152,21 @@ export default function BlogGroutRepair() {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Step 2: Clean and Prepare</h3>
                   <p className="text-lg leading-relaxed mb-4">
-                    Vacuum out all loose grout particles and debris. Clean the area with a damp cloth and let it dry completely. This is especially important in bathroom settings where soap residue and mildew may be present.
+                    Vacuum out all loose grout particles and debris. Use a grout cleaner to thoroughly clean the area, followed by clean water to remove any residue. Let it dry completely. This is especially important in bathroom settings where soap residue and mildew may be present in the space between the tiles.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Step 3: Mix Your Grout</h3>
                   <p className="text-lg leading-relaxed mb-4">
-                    Follow manufacturer instructions exactly. For tile maintenance in the PNW, consider using grout with antimicrobial additives. Mix only what you can use in 20-30 minutes—Portland's humidity can affect working time.
+                    Follow manufacturer instructions exactly, using clean water at the proper ratio. For tile maintenance in the PNW, consider using acrylic latex-based grout with antimicrobial additives. Choose sanded grout for wider joints or unsanded grout for narrow spaces. Mix only what you can use in 20-30 minutes—Portland's humidity can affect working time.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Step 4: Apply New Grout</h3>
                   <p className="text-lg leading-relaxed mb-4">
-                    Using your grout float, work the grout into joints at a 45-degree angle. Press firmly to ensure complete filling. Remove excess grout immediately with the float edge, working diagonally across tiles.
+                    Using your grout float, work the grout into joints at a 45-degree angle, pressing firmly to pack grout with a grout float completely into the space between the tiles. Remove excess grout immediately with the float edge, working diagonally across tile floors to avoid pulling grout out of joints.
                   </p>
                 </div>
 
