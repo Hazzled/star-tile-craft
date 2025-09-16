@@ -1,41 +1,60 @@
-// prerender.js
-import fs from "fs";
-import path from "path";
-import url from "url";
+import fs from "node:fs";
+import path from "node:path";
+import url from "node:url";
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const toAbsolute = (p) => path.resolve(__dirname, p);
 
 const template = fs.readFileSync(toAbsolute("dist/index.html"), "utf-8");
 
-// Import your SSR renderer
-const { render } = await import("./dist/server/entry-server.js");
+// ✅ Check SSR build exists
+const ssrPath = toAbsolute("dist/server/entry-server.js");
+if (!fs.existsSync(ssrPath)) {
+  console.error("❌ ERROR: SSR build missing!");
+  console.error("Expected file:", ssrPath);
+  console.error(
+    "Did you run `npm run build:ssr` successfully? Or is vite.config.ssr.js misconfigured?"
+  );
+  process.exit(1);
+}
 
-// Define which routes to prerender
+// ✅ Try importing render function
+let render;
+try {
+  ({ render } = await import("./dist/server/entry-server.js"));
+} catch (err) {
+  console.error("❌ ERROR: Could not import SSR build from:", ssrPath);
+  console.error(err);
+  process.exit(1);
+}
+
+// Define routes to prerender (adjust as needed)
 const routesToPrerender = [
   "/",
   "/about",
   "/services",
   "/portfolio",
-  "/contact"
+  "/contact",
+  "/blog",
 ];
 
-for (const route of routesToPrerender) {
-  const { html, head } = await render(route);
+(async () => {
+  for (const url of routesToPrerender) {
+    try {
+      const appHtml = await render(url);
 
-  // Inject SSR-rendered app + head tags into template
-  const page = template
-    .replace(`<!--app-html-->`, html)
-    .replace(
-      `<title>Expert Tile Installation in Portland | Star Tile LLC</title>`,
-      head
-    );
+      const html = template.replace(
+        `<!--app-html-->`,
+        appHtml
+      );
 
-  // Write file into correct dist folder
-  const filePath = `dist${route === "/" ? "" : route}/index.html`;
-  const dir = path.dirname(toAbsolute(filePath));
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(toAbsolute(filePath), page);
+      const filePath = `dist${url === "/" ? "/index" : url}.html`;
+      fs.mkdirSync(path.dirname(filePath), { recursive: true });
+      fs.writeFileSync(filePath, html);
 
-  console.log(`✅ Prerendered: ${filePath}`);
-}
+      console.log(`✅ Pre-rendered: ${url} → ${filePath}`);
+    } catch (err) {
+      console.error(`❌ Failed to prerender ${url}:`, err);
+    }
+  }
+})();
