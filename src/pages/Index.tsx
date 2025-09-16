@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ProjectModal from "@/components/ProjectModal";
-import { portfolioItems } from "@/data/portfolioData";
+import LazyProjectModal from "@/components/LazyProjectModal";
+import { getPortfolioPreview } from "@/data/portfolioDataLoader";
 import HeroSection from "@/components/home/HeroSection";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import PortfolioPreview from "@/components/home/PortfolioPreview";
@@ -15,9 +15,20 @@ import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 const Index = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [recentProjects, setRecentProjects] = useState<any[]>([]);
 
-  // Get the first 6 projects for recent projects section
-  const recentProjects = portfolioItems.slice(0, 6);
+  // Load recent projects on mount
+  useEffect(() => {
+    const loadRecentProjects = async () => {
+      try {
+        const projects = await getPortfolioPreview(6);
+        setRecentProjects(projects);
+      } catch (error) {
+        console.error('Failed to load recent projects:', error);
+      }
+    };
+    loadRecentProjects();
+  }, []);
 
   const handleProjectClick = (project: any) => {
     setSelectedProject(project);
@@ -73,7 +84,7 @@ const Index = () => {
       <FinalCTA />
 
       {/* Project Modal */}
-      <ProjectModal
+      <LazyProjectModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         project={selectedProject}
