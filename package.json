@@ -3,15 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:ssr": "vite build --config vite.config.ssr.ts",
-    "postbuild": "node prerender.js",
-    "build:all": "npm run build && npm run build:ssr && npm run postbuild",
+    "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
   },
