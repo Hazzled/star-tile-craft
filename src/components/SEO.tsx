@@ -25,7 +25,7 @@ export default function SEO({
   const jsonLd = typeof structuredData === "string" ? structuredData : structuredData ? JSON.stringify(structuredData) : null;
 
   return (
-    <Helmet>
+    <Helmet prioritizeSeoTags>
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
       {robots && <meta name="robots" content={robots} />}
