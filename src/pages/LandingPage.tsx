@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Phone, Star, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
-import ProjectModal from "@/components/ProjectModal";
+import LazyProjectModal from "@/components/LazyProjectModal";
 import { portfolioItems } from "@/data/portfolioData";
 import { useToast } from "@/hooks/use-toast";
 
@@ -284,12 +284,12 @@ const LandingPage = () => {
                   </p>
                 </form>
 
-                {/* Project Modal */}
-                <ProjectModal
-                  isOpen={isModalOpen}
-                  onClose={handleCloseModal}
-                  project={selectedProject}
-                />
+      {/* Project Modal */}
+      <LazyProjectModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        project={selectedProject}
+      />
               </CardContent>
             </Card>
           </div>
