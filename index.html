@@ -51,24 +51,34 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Star Tile LLC",
-      "image": "https://lovable.dev/opengraph-image-p98pqg.png",
+      "alternateName": "Star Tile",
+      "image": [
+        "https://lovable.dev/opengraph-image-p98pqg.png"
+      ],
       "description": "Professional tile installation company serving Portland Metro Area. Specializing in kitchen backsplashes, bathroom remodels, and custom tile work.",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Portland",
+        "streetAddress": "649 NW 12th St",
+        "addressLocality": "Gresham",
         "addressRegion": "OR",
+        "postalCode": "97030",
         "addressCountry": "US"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 45.5152,
-        "longitude": -122.6784
+        "latitude": 45.4990,
+        "longitude": -122.4313
       },
-      "url": "https://startilellc.com",
+      "url": "https://www.startilellc.com",
       "@id": "https://www.startilellc.com/#business",
       "telephone": "+15034828395",
       "email": "Contact@Startilellc.com",
       "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "1"
+      },
       "sameAs": [
         "https://www.facebook.com/startilellc",
         "https://www.instagram.com/startilellc",
@@ -88,15 +98,33 @@
           "closes": "16:00"
         }
       ],
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 45.5152,
-          "longitude": -122.6784
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Portland",
+          "addressRegion": "OR"
         },
-        "geoRadius": "80467"
-      },
+        {
+          "@type": "City", 
+          "name": "Gresham",
+          "addressRegion": "OR"
+        },
+        {
+          "@type": "City",
+          "name": "Beaverton", 
+          "addressRegion": "OR"
+        },
+        {
+          "@type": "City",
+          "name": "Lake Oswego",
+          "addressRegion": "OR"
+        },
+        {
+          "@type": "City",
+          "name": "Tigard",
+          "addressRegion": "OR"
+        }
+      ],
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "License",
