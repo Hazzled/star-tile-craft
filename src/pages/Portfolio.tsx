@@ -1,12 +1,12 @@
 
-import { useState, useEffect } from "react";
-import LazyProjectModal from "@/components/LazyProjectModal";
+import { useState } from "react";
+import ProjectModal from "@/components/ProjectModal";
 import FilterTabs from "@/components/FilterTabs";
 import PortfolioHero from "@/components/portfolio/PortfolioHero";
 import PortfolioGrid from "@/components/portfolio/PortfolioGrid";
 import PortfolioStats from "@/components/portfolio/PortfolioStats";
 import PortfolioCTA from "@/components/portfolio/PortfolioCTA";
-import { loadPortfolioData, getFilteredPortfolio } from "@/data/portfolioDataLoader";
+import { portfolioItems, filters } from "@/data/portfolioData";
 import SEO from "@/components/SEO";
 import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 
@@ -14,38 +14,8 @@ const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [portfolioItems, setPortfolioItems] = useState<any[]>([]);
-  const [filters, setFilters] = useState<string[]>([]);
-  const [filteredItems, setFilteredItems] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  // Load portfolio data on mount
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await loadPortfolioData();
-        setPortfolioItems(data.portfolioItems);
-        setFilters(data.filters);
-        setFilteredItems(data.portfolioItems);
-      } catch (error) {
-        console.error('Failed to load portfolio data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadData();
-  }, []);
-
-  // Update filtered items when filter changes
-  useEffect(() => {
-    const updateFilter = async () => {
-      const filtered = await getFilteredPortfolio(activeFilter);
-      setFilteredItems(filtered);
-    };
-    if (portfolioItems.length > 0) {
-      updateFilter();
-    }
-  }, [activeFilter, portfolioItems]);
+  
+  const filteredItems = activeFilter === "All" ? portfolioItems : portfolioItems.filter(item => item.category === activeFilter);
   
   const handleProjectClick = (project: any) => {
     setSelectedProject(project);
@@ -89,25 +59,17 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {loading ? (
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-        </div>
-      ) : (
-        <>
-          <PortfolioGrid 
-            filteredItems={filteredItems}
-            onProjectClick={handleProjectClick}
-          />
+      <PortfolioGrid 
+        filteredItems={filteredItems}
+        onProjectClick={handleProjectClick}
+      />
 
-          <PortfolioStats />
+      <PortfolioStats />
 
-          <PortfolioCTA />
-        </>
-      )}
+      <PortfolioCTA />
 
-      {/* Lazy Project Modal */}
-      <LazyProjectModal
+      {/* Project Modal */}
+      <ProjectModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         project={selectedProject}
