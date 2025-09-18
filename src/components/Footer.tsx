@@ -111,10 +111,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-navy mt-8 pt-8 text-center">
-          <p className="text-mist">
-            © 2024 Star Tile LLC. All rights reserved. | Serving the Portland Metro Area
-          </p>
+        <div className="border-t border-navy mt-8 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-mist mb-4 sm:mb-0">
+              © 2024 Star Tile LLC. All rights reserved. | Serving the Portland Metro Area
+            </p>
+            <div className="flex space-x-6">
+              <Link to="/privacy-policy" className="text-mist hover:text-ivory transition-colors text-sm">
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

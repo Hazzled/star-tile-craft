@@ -23,6 +23,7 @@ import TileContractorTigard from "./pages/TileContractorTigard";
 import TileContractorGresham from "./pages/TileContractorGresham";
 import TileContractorLakeOswego from "./pages/TileContractorLakeOswego";
 import LandingPage from "./pages/LandingPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -57,6 +58,7 @@ const App = () => (
               <Route path="/tile-contractor-gresham" element={<TileContractorGresham />} />
               <Route path="/tile-contractor-lake-oswego" element={<TileContractorLakeOswego />} />
               <Route path="/quote" element={<LandingPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
