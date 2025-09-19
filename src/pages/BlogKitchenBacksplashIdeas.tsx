@@ -147,10 +147,11 @@ const BlogKitchenBacksplashIdeas = () => {
               </div>
 
               <OptimizedImage
-                src={modernBacksplashImage}
-                alt="Modern kitchen backsplash with stainless steel accents"
-                className="w-full h-64 object-cover rounded-lg mb-6"
-              />
+   src="https://cdn.shopify.com/s/files/1/2440/8571/files/Timeless-Patina-Backsplash_1024x1024.jpg?v=1677870246"
+  alt="Timeless patina backsplash design"
+  className="w-full h-64 object-cover rounded-lg mb-6"
+/>
+
 
               <p className="text-lg text-muted-foreground leading-relaxed">
                 The key to successful modern kitchen backsplash ideas is selecting materials and patterns that complement your overall kitchen design while making a contemporary statement. Back splash modern designs often feature unexpected materials like concrete, metal mesh, or even digital printed tiles that can create stunning visual effects.
