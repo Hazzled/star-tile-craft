@@ -4,6 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
 import OptimizedImage from "@/components/OptimizedImage";
 import { homeBreadcrumb, blogBreadcrumb, generateBreadcrumbJsonLd } from "@/lib/breadcrumbs";
+import modernBacksplashImage from "@/assets/kitchen-backsplash-modern.jpg";
+import whiteBacksplashImage from "@/assets/kitchen-backsplash-white.jpg";
+import affordableBacksplashImage from "@/assets/kitchen-backsplash-affordable.jpg";
+import trendsBacksplashImage from "@/assets/kitchen-backsplash-trends.jpg";
+import materialsBacksplashImage from "@/assets/kitchen-backsplash-materials.jpg";
 
 const BlogKitchenBacksplashIdeas = () => {
   const breadcrumbs = [
@@ -112,8 +117,8 @@ const BlogKitchenBacksplashIdeas = () => {
             </section>
 
             {/* Modern Kitchen Backsplash Ideas */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Modern Kitchen Backsplash Ideas</h2>
+            <section className="mb-12 bg-muted/30 p-8 rounded-lg">
+              <h2 className="text-3xl font-bold text-primary mb-6">Modern Kitchen Backsplash Ideas</h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Modern kitchen backsplash designs are all about clean lines, innovative materials, and bold statements. Today's modern backsplash options go far beyond traditional subway tiles, embracing contemporary kitchen backsplash ideas that reflect current design trends and technological advances.
@@ -141,6 +146,12 @@ const BlogKitchenBacksplashIdeas = () => {
                 </div>
               </div>
 
+              <OptimizedImage
+                src={modernBacksplashImage}
+                alt="Modern kitchen backsplash with stainless steel accents"
+                className="w-full h-64 object-cover rounded-lg mb-6"
+              />
+
               <p className="text-lg text-muted-foreground leading-relaxed">
                 The key to successful modern kitchen backsplash ideas is selecting materials and patterns that complement your overall kitchen design while making a contemporary statement. Back splash modern designs often feature unexpected materials like concrete, metal mesh, or even digital printed tiles that can create stunning visual effects.
               </p>
@@ -148,11 +159,17 @@ const BlogKitchenBacksplashIdeas = () => {
 
             {/* White Kitchen Backsplash Ideas */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">White Kitchen Backsplash Ideas</h2>
+              <h2 className="text-3xl font-bold text-primary mb-6">White Kitchen Backsplash Ideas</h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 White kitchen backsplash options remain timeless and versatile, offering endless possibilities for both traditional and contemporary spaces. When considering backsplash for white cabinets, you have the freedom to create either a monochromatic scheme or add contrast through texture, pattern, or subtle color variations.
               </p>
+
+              <OptimizedImage
+                src={whiteBacksplashImage}
+                alt="White kitchen backsplash ideas with subway tiles"
+                className="w-full h-64 object-cover rounded-lg mb-6"
+              />
 
               <div className="bg-muted/30 p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Popular White Backsplash Options</h3>
@@ -188,8 +205,8 @@ const BlogKitchenBacksplashIdeas = () => {
             </section>
 
             {/* Cheap Backsplash Ideas */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Cheap Backsplash Ideas</h2>
+            <section className="mb-12 bg-muted/30 p-8 rounded-lg">
+              <h2 className="text-3xl font-bold text-primary mb-6">Cheap Backsplash Ideas</h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Creating a stunning kitchen doesn't have to break the bank. There are numerous cheap backsplash ideas that deliver impressive results without the premium price tag. These inexpensive backsplash ideas prove that affordable backsplash options can be just as beautiful and functional as their high-end counterparts.
@@ -232,11 +249,17 @@ const BlogKitchenBacksplashIdeas = () => {
 
             {/* Trending Kitchen Backsplash Ideas for 2025 */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Trending Kitchen Backsplash Ideas for 2025</h2>
+              <h2 className="text-3xl font-bold text-primary mb-6">Trending Kitchen Backsplash Ideas for 2025</h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 As we move through 2025, kitchen backsplash ideas 2025 are embracing bold textures, earthy tones, and innovative material combinations. This year's trends reflect a desire for spaces that feel both sophisticated and connected to nature, with unique kitchen backsplash ideas that make distinctive statements.
               </p>
+
+              <OptimizedImage
+                src={trendsBacksplashImage}
+                alt="Green kitchen backsplash tiles for 2025 trends"
+                className="w-full h-64 object-cover rounded-lg mb-6"
+              />
 
               <div className="bg-primary/5 p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold text-foreground mb-4">2025 Color Trends</h3>
@@ -288,9 +311,15 @@ const BlogKitchenBacksplashIdeas = () => {
             </section>
 
             {/* Tile and Pattern Ideas */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Tile and Pattern Ideas</h2>
+            <section className="mb-12 bg-muted/30 p-8 rounded-lg">
+              <h2 className="text-3xl font-bold text-primary mb-6">Tile and Pattern Ideas</h2>
               
+              <OptimizedImage
+                src={affordableBacksplashImage}
+                alt="Cheap backsplash ideas using peel-and-stick tiles"
+                className="w-full h-64 object-cover rounded-lg mb-6"
+              />
+
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 The world of kitchen backsplash tile ideas extends far beyond simple square tiles. Today's tile patterns for kitchen backsplash designs offer countless possibilities for creating visual interest and personal expression through kitchen backsplash tile designs that range from subtle to spectacular.
               </p>
@@ -333,11 +362,17 @@ const BlogKitchenBacksplashIdeas = () => {
 
             {/* Material-Specific Ideas */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Material-Specific Ideas</h2>
+              <h2 className="text-3xl font-bold text-primary mb-6">Material-Specific Ideas</h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Different materials bring unique characteristics to your kitchen backsplash design. From warm metals to sleek glass, each material offers distinct advantages and aesthetic qualities that can transform your cooking space.
               </p>
+
+              <OptimizedImage
+                src={materialsBacksplashImage}
+                alt="Copper backsplash kitchen ideas"
+                className="w-full h-64 object-cover rounded-lg mb-8"
+              />
 
               <div className="space-y-8 mb-8">
                 <div className="border-l-4 border-primary pl-6">
@@ -386,8 +421,8 @@ const BlogKitchenBacksplashIdeas = () => {
             </section>
 
             {/* Specialized Spaces and Tips */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Specialized Spaces and Tips</h2>
+            <section className="mb-12 bg-muted/30 p-8 rounded-lg">
+              <h2 className="text-3xl font-bold text-primary mb-6">Specialized Spaces and Tips</h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Different kitchen layouts and sizes require thoughtful backsplash planning. Small kitchen backsplash ideas focus on maximizing light and space, while stove backsplash ideas need to balance aesthetics with practical heat and grease resistance.
@@ -436,7 +471,7 @@ const BlogKitchenBacksplashIdeas = () => {
 
             {/* Conclusion */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Conclusion</h2>
+              <h2 className="text-3xl font-bold text-primary mb-6">Conclusion</h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Choosing the perfect kitchen backsplash ideas for your space involves balancing style, function, and budget. Whether you're drawn to modern minimalism, classic elegance, or bold statement pieces, the best kitchen back splash is one that reflects your personal style while meeting your practical needs.
@@ -446,16 +481,16 @@ const BlogKitchenBacksplashIdeas = () => {
                 From affordable peel-and-stick options to luxurious natural stone, today's unique kitchen backsplash ideas offer something for every taste and budget. The key is to consider your kitchen's existing elements, your lifestyle needs, and your long-term design goals when making your selection.
               </p>
 
-              <div className="bg-primary/10 p-8 rounded-lg text-center">
+              <div className="bg-primary/10 p-8 rounded-lg text-center border-l-4 border-primary">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Transform Your Kitchen?</h3>
                 <p className="text-lg text-muted-foreground mb-6">
                   Let our experienced team help you bring your backsplash vision to life with professional installation and expert design guidance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact" className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                  <Link to="/contact" className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors shadow-md">
                     Get Free Quote
                   </Link>
-                  <Link to="/portfolio" className="inline-block border border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors">
+                  <Link to="/portfolio" className="inline-block border-2 border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors">
                     View Our Work
                   </Link>
                 </div>
