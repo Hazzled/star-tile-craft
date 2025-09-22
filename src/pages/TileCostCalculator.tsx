@@ -287,9 +287,11 @@ export default function TileCostCalculator() {
                           </a>
                         </Button>
                         <Button variant="outline" asChild className="flex-1 border-primary/30 text-primary hover:bg-primary/10">
-                          <a href="/contact" className="flex items-center gap-2">
-                            <Mail className="h-4 w-4" />
-                            Get Quote
+                          <a href="/contact">
+                            <div className="flex items-center gap-2">
+                              <Mail className="h-4 w-4" />
+                              Get Quote
+                            </div>
                           </a>
                         </Button>
                       </div>
