@@ -12,7 +12,17 @@ import blogChoosingContractor from "@/assets/blog-choosing-contractor.jpg";
 import blogGroutRepair from "@/assets/blog-grout-repair.jpg";
 
 const Blog = () => {
-  const blogPosts = [
+const blogPosts = [
+    {
+      title: "Kitchen Backsplash Ideas for 2025: Transform Your Space with Style and Functionality",
+      excerpt: "Explore top kitchen backsplash ideas, from modern designs to affordable options. Discover white kitchen backsplash ideas, cheap backsplash ideas, and 2025 trends like green kitchen backsplash tiles.",
+      slug: "kitchen-backsplash-ideas-2025",
+      date: "January 19, 2025",
+      category: "Design & Trends",
+      readTime: "12 min read",
+      featured: true,
+      image: blogBudgetingTile
+    },
     {
       title: "Your 2025 Guide to Budgeting a Tile Project in Portland, OR",
       excerpt: "Understanding tile installation costs in Portland: materials, labor, complexity, and pro tips to plan your 2025 tile project successfully.",
