@@ -14,13 +14,23 @@ import blogGroutRepair from "@/assets/blog-grout-repair.jpg";
 const Blog = () => {
 const blogPosts = [
     {
+      title: "Common Tile Installation Mistakes and How to Avoid Them in Portland Homes",
+      excerpt: "Learn about the most common tile installation mistakes Portland homeowners make and how professional installers prevent costly failures in Oregon's unique climate.",
+      slug: "tile-installation-mistakes-portland",
+      date: "January 20, 2025",
+      category: "Expert Tips",
+      readTime: "10 min read",
+      featured: true,
+      image: blogBudgetingTile
+    },
+    {
       title: "Kitchen Backsplash Ideas for 2025: Transform Your Space with Style and Functionality",
       excerpt: "Explore top kitchen backsplash ideas, from modern designs to affordable options. Discover white kitchen backsplash ideas, cheap backsplash ideas, and 2025 trends like green kitchen backsplash tiles.",
       slug: "kitchen-backsplash-ideas-2025",
       date: "January 19, 2025",
       category: "Design & Trends",
       readTime: "12 min read",
-      featured: true,
+      featured: false,
       image: blogBudgetingTile
     },
     {
