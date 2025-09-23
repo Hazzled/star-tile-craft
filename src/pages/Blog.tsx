@@ -10,6 +10,9 @@ import blogTileTrends from "@/assets/blog-tile-trends.jpg";
 import blogTileStores from "@/assets/blog-tile-stores.jpg";
 import blogChoosingContractor from "@/assets/blog-choosing-contractor.jpg";
 import blogGroutRepair from "@/assets/blog-grout-repair.jpg";
+import tileInstallationMistakes from "@/assets/tile-installation-mistakes.jpg";
+import kitchenBacksplashIdeas from "@/assets/kitchen-backsplash-ideas.jpg";
+import tileProjectBudgeting from "@/assets/tile-project-budgeting.jpg";
 
 const Blog = () => {
 const blogPosts = [
@@ -21,7 +24,7 @@ const blogPosts = [
       category: "Expert Tips",
       readTime: "10 min read",
       featured: true,
-      image: blogBudgetingTile
+      image: tileInstallationMistakes
     },
     {
       title: "Kitchen Backsplash Ideas for 2025: Transform Your Space with Style and Functionality",
@@ -31,7 +34,7 @@ const blogPosts = [
       category: "Design & Trends",
       readTime: "12 min read",
       featured: false,
-      image: blogBudgetingTile
+      image: kitchenBacksplashIdeas
     },
     {
       title: "Your 2025 Guide to Budgeting a Tile Project in Portland, OR",
@@ -41,7 +44,7 @@ const blogPosts = [
       category: "Planning & Budgeting",
       readTime: "8 min read",
       featured: true,
-      image: blogBudgetingTile
+      image: tileProjectBudgeting
     },
     {
       title: "Waterproofing Before Tile: The Critical Step Portland Homeowners Can't Skip",
