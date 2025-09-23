@@ -314,7 +314,7 @@ const BlogTileInstallationMistakes = () => {
                 <Button asChild size="lg" variant="secondary" className="bg-background text-primary hover:bg-background/90">
                   <Link to="/contact">Get Free Consultation</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button asChild size="lg" variant="outline" className="border-primary-foreground text-black hover:text-black transition-none">
                   <Link to="/services">View Our Services</Link>
                 </Button>
               </div>
