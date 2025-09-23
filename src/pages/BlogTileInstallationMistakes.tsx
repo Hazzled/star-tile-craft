@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, CheckCircle2, Wrench } from "lucide-react";
 import SEO from "@/components/SEO";
 import { generateBreadcrumbJsonLd, homeBreadcrumb, blogBreadcrumb } from "@/lib/breadcrumbs";
+import crackedTilesImage from "@/assets/cracked-tiles-mistake.jpg";
+import unevenTilesImage from "@/assets/uneven-tiles-mistake.jpg";
+import groutingImage from "@/assets/grouting-tiles-example.jpg";
 
 const BlogTileInstallationMistakes = () => {
   const breadcrumbs = [
@@ -154,6 +157,16 @@ const BlogTileInstallationMistakes = () => {
                       <p><strong>Pro Tip:</strong> Tap tiles after installation to check for hollow sounds, which indicate poor adhesion. 
                       In older Portland homes, consider hiring a structural inspector if you suspect foundation issues affecting floor level.</p>
                     </div>
+                    <div className="mt-4">
+                      <img 
+                        src={crackedTilesImage} 
+                        alt="Example of cracked tiles due to inadequate surface preparation" 
+                        className="w-full max-w-md mx-auto rounded-lg shadow-md"
+                      />
+                      <p className="text-sm text-muted-foreground text-center mt-2 italic">
+                        Cracked tiles often result from poor surface preparation and inadequate substrate support
+                      </p>
+                    </div>
                   </CardContent>
                 </Card>
 
@@ -192,6 +205,16 @@ const BlogTileInstallationMistakes = () => {
                       <p><strong>Pro Tip:</strong> Portland homes often have settling and irregular floors. Plan your layout carefully 
                       and consider starting with a center line rather than walls, which may not be square.</p>
                     </div>
+                    <div className="mt-4">
+                      <img 
+                        src={unevenTilesImage} 
+                        alt="Example of uneven tile surfaces and poor spacing" 
+                        className="w-full max-w-md mx-auto rounded-lg shadow-md"
+                      />
+                      <p className="text-sm text-muted-foreground text-center mt-2 italic">
+                        Uneven tiles and inconsistent spacing create an unprofessional appearance and structural issues
+                      </p>
+                    </div>
                   </CardContent>
                 </Card>
 
@@ -210,6 +233,16 @@ const BlogTileInstallationMistakes = () => {
                     <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border-l-4 border-green-500">
                       <p><strong>Pro Tip:</strong> In Portland's moist environment, choose mold and mildew-resistant grout formulas. 
                       Always seal grout lines within 48 hours of installation, especially in showers and kitchen backsplashes.</p>
+                    </div>
+                    <div className="mt-4">
+                      <img 
+                        src={groutingImage} 
+                        alt="Proper grouting technique for tile installation" 
+                        className="w-full max-w-md mx-auto rounded-lg shadow-md"
+                      />
+                      <p className="text-sm text-muted-foreground text-center mt-2 italic">
+                        Proper grouting technique requires patience and the right tools for professional results
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
