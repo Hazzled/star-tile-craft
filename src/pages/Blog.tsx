@@ -13,9 +13,20 @@ import blogGroutRepair from "@/assets/blog-grout-repair.jpg";
 import tileInstallationMistakes from "@/assets/tile-installation-mistakes.jpg";
 import kitchenBacksplashIdeas from "@/assets/kitchen-backsplash-ideas.jpg";
 import tileProjectBudgeting from "@/assets/tile-project-budgeting.jpg";
+import blogTileMaterials from "@/assets/blog-tile-materials.jpg";
 
 const Blog = () => {
 const blogPosts = [
+    {
+      title: "Best Tile Materials for Portland's Climate: A Complete Guide",
+      excerpt: "Discover the best tile materials for Portland homes. Expert guide to choosing porcelain, ceramic, and natural stone tiles for our Pacific Northwest climate.",
+      date: "January 20, 2025",
+      slug: "/blog/best-tile-materials-portland-climate",
+      category: "Materials Guide",
+      readTime: "11 min read",
+      featured: true,
+      image: blogTileMaterials
+    },
     {
       title: "Common Tile Installation Mistakes and How to Avoid Them in Portland Homes",
       excerpt: "Learn about the most common tile installation mistakes Portland homeowners make and how professional installers prevent costly failures in Oregon's unique climate.",
