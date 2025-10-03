@@ -21,7 +21,7 @@ const blogPosts = [
       title: "Best Tile Materials for Portland's Climate: A Complete Guide",
       excerpt: "Discover the best tile materials for Portland homes. Expert guide to choosing porcelain, ceramic, and natural stone tiles for our Pacific Northwest climate.",
       date: "January 20, 2025",
-      slug: "/blog/best-tile-materials-portland-climate",
+      slug: "best-tile-materials-portland-climate",
       category: "Materials Guide",
       readTime: "11 min read",
       featured: true,
