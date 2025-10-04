@@ -22,7 +22,7 @@ import BlogTileInstallationMistakes from "./pages/BlogTileInstallationMistakes";
 import BlogBestTileMaterialsPortland from "./pages/BlogBestTileMaterialsPortland";
 import TileInstallationPortland from "./pages/TileInstallationPortland";
 import TileCostCalculator from "./pages/TileCostCalculator";
-import GroutColorVisualizer from "./pages/GroutColorVisualizer";
+import TilePatternComparison from "./pages/TilePatternComparison";
 import TileContractorBeaverton from "./pages/TileContractorBeaverton";
 import TileContractorTigard from "./pages/TileContractorTigard";
 import TileContractorGresham from "./pages/TileContractorGresham";
@@ -64,7 +64,7 @@ const App = () => {
             <Route path="/blog/best-tile-materials-portland-climate" element={<BlogBestTileMaterialsPortland />} />
               <Route path="/tile-installation-portland" element={<TileInstallationPortland />} />
               <Route path="/tile-cost-calculator" element={<TileCostCalculator />} />
-              <Route path="/grout-color-visualizer" element={<GroutColorVisualizer />} />
+              <Route path="/tile-pattern-comparison" element={<TilePatternComparison />} />
               <Route path="/tile-contractor-beaverton" element={<TileContractorBeaverton />} />
               <Route path="/tile-contractor-tigard" element={<TileContractorTigard />} />
               <Route path="/tile-contractor-gresham" element={<TileContractorGresham />} />

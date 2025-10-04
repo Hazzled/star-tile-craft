@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Palette } from "lucide-react";
+import { Grid3x3 } from "lucide-react";
 import SEO from "@/components/SEO";
 import { generateBreadcrumbJsonLd, homeBreadcrumb } from "@/lib/breadcrumbs";
 import blogHeroImage from "@/assets/blog-hero-image.jpg";
@@ -179,16 +179,16 @@ const blogPosts = [
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border-2 border-white/20">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-white text-primary p-3 rounded-lg">
-                    <Palette className="h-6 w-6" />
+                    <Grid3x3 className="h-6 w-6" />
                   </div>
                   <div className="text-left">
-                    <h3 className="font-bold text-lg font-montserrat">Try Our Free Grout Color Visualizer</h3>
-                    <p className="text-sm text-primary-foreground/80">See how different grout colors transform your tile choice</p>
+                    <h3 className="font-bold text-lg font-montserrat">Try Our Free Tile Pattern Comparison Tool</h3>
+                    <p className="text-sm text-primary-foreground/80">Compare herringbone, brick, chevron and more patterns side-by-side</p>
                   </div>
                 </div>
-                <Link to="/grout-color-visualizer">
+                <Link to="/tile-pattern-comparison">
                   <button className="w-full bg-white text-primary hover:bg-white/90 rounded-md py-3 font-medium transition-colors">
-                    Launch Visualizer →
+                    Compare Patterns →
                   </button>
                 </Link>
               </div>
