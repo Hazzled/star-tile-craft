@@ -15,9 +15,20 @@ import tileInstallationMistakes from "@/assets/tile-installation-mistakes.jpg";
 import kitchenBacksplashIdeas from "@/assets/kitchen-backsplash-ideas.jpg";
 import tileProjectBudgeting from "@/assets/tile-project-budgeting.jpg";
 import blogTileMaterials from "@/assets/blog-tile-materials.jpg";
+import blogTileSizeGuide from "@/assets/blog-tile-size-guide.jpg";
 
 const Blog = () => {
 const blogPosts = [
+    {
+      title: "Tile Size Guide: Choosing the Right Tile Dimensions for Portland Rooms",
+      excerpt: "Complete guide to choosing tile sizes for Portland homes. Learn which small, medium, or large format tiles work best for bathrooms, kitchens, and living spaces in Pacific Northwest homes.",
+      date: "January 21, 2025",
+      slug: "tile-size-guide-portland",
+      category: "Design & Planning",
+      readTime: "10 min read",
+      featured: true,
+      image: blogTileSizeGuide
+    },
     {
       title: "Best Tile Materials for Portland's Climate: A Complete Guide",
       excerpt: "Discover the best tile materials for Portland homes. Expert guide to choosing porcelain, ceramic, and natural stone tiles for our Pacific Northwest climate.",
