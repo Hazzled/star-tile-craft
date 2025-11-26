@@ -206,6 +206,28 @@
     <link rel="preload" href="/src/index.css" as="style" />
     
     <style>
+      /* Critical CSS for initial render - prevents render blocking */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.5;
+      }
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      /* Prevent layout shift for navigation */
+      nav {
+        height: 64px;
+      }
       /* Fix touch target size for Lovable badge close button */
       #lovable-badge-close {
         min-width: 24px !important;
