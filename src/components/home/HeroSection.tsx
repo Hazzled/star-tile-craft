@@ -8,12 +8,7 @@ const HeroSection = () => {
     navigate('/quote');
   };
   return <section className="relative h-[700px] bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center overflow-hidden">
-      <img 
-        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-        alt="Tile installation background"
-        className="absolute inset-0 w-full h-full object-cover opacity-20"
-        fetchPriority="high"
-      />
+      <img alt="Tile installation background" className="absolute inset-0 w-full h-full object-cover opacity-20" fetchPriority="high" src="https://cdn.keope.com/website/thumbnail/e75/e757ad180cfc36461dda965491c97e12.webp" />
       <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
         <header>
           <h1 className="text-6xl md:text-7xl font-montserrat font-bold mb-6 leading-tight tracking-tight">
