@@ -38,10 +38,10 @@ const FinalCTA = () => {
         
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6">
-          <a href="https://www.instagram.com/startilellc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+          <a href="https://www.instagram.com/startilellc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors" aria-label="Visit Star Tile LLC on Instagram">
             <Instagram className="h-6 w-6" />
           </a>
-          <a href="https://www.facebook.com/startilellc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+          <a href="https://www.facebook.com/startilellc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors" aria-label="Visit Star Tile LLC on Facebook">
             <Facebook className="h-6 w-6" />
           </a>
         </div>
