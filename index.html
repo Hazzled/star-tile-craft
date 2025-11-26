@@ -204,6 +204,21 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
     
     <link rel="preload" href="/src/index.css" as="style" />
+    
+    <style>
+      /* Fix touch target size for Lovable badge close button */
+      #lovable-badge-close {
+        min-width: 24px !important;
+        min-height: 24px !important;
+        padding: 4px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: absolute !important;
+        top: -2px !important;
+        right: 2px !important;
+      }
+    </style>
   </head>
 
   <body>
