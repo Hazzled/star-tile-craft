@@ -3,12 +3,13 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import kitchenBacksplashImage from "@/assets/kitchen-blue-tile-backsplash.webp";
 
 const ServicesOverview = () => {
   const services = [{
     title: "Kitchen Backsplashes",
     description: "Transform your kitchen with stunning custom backsplash designs that perfectly complement your style.",
-    image: "/lovable-uploads/97c59cfe-fc8a-442b-9ae2-627838c21695.png"
+    image: kitchenBacksplashImage
   }, {
     title: "Bathroom & Shower Tile",
     description: "Create beautiful, waterproof bathroom spaces with expert tile installation.",
