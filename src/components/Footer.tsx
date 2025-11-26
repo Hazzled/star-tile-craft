@@ -25,7 +25,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-montserrat font-semibold mb-4">Our Services</h3>
+            <h2 className="text-lg font-montserrat font-semibold mb-4">Our Services</h2>
             <ul className="space-y-2">
               <li>
                 <Link to="/services" className="text-mist hover:text-ivory transition-colors">
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Service Areas */}
           <div>
-            <h3 className="text-lg font-montserrat font-semibold mb-4">Service Areas</h3>
+            <h2 className="text-lg font-montserrat font-semibold mb-4">Service Areas</h2>
             <ul className="space-y-2">
               <li>
                 <Link to="/tile-contractor-beaverton" className="text-mist hover:text-ivory transition-colors">
@@ -89,7 +89,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-montserrat font-semibold mb-4">Contact Info</h3>
+            <h2 className="text-lg font-montserrat font-semibold mb-4">Contact Info</h2>
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-mist" />
