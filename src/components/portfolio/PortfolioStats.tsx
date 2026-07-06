@@ -11,7 +11,7 @@ const PortfolioStats = () => {
             Project Highlights
           </h2>
           <div className="w-24 h-1 bg-navy mx-auto mb-6"></div>
-          <p className="text-lg text-mist max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Every project showcases our commitment to quality, attention to detail, and customer satisfaction.
           </p>
         </div>
@@ -28,7 +28,7 @@ const PortfolioStats = () => {
               <h3 className="text-xl font-montserrat font-bold text-noir mb-4">
                 Projects Completed
               </h3>
-              <p className="text-mist leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Successfully completed tile installations across Portland Metro Area
               </p>
             </div>
@@ -45,7 +45,7 @@ const PortfolioStats = () => {
               <h3 className="text-xl font-montserrat font-bold text-noir mb-4">
                 Customer Satisfaction
               </h3>
-              <p className="text-mist leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Every project completed to exceed customer expectations
               </p>
             </div>
@@ -62,7 +62,7 @@ const PortfolioStats = () => {
               <h3 className="text-xl font-montserrat font-bold text-noir mb-4">
                 Years Experience
               </h3>
-              <p className="text-mist leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Over a decade of professional tile installation expertise
               </p>
             </div>

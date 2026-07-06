@@ -73,7 +73,7 @@ const TileContractorLakeOswego = () => {
                 </Button>
               </Link>
               <a href="tel:5034828395">
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   <Phone className="mr-2 h-5 w-5" />
                   (503) 482-8395
                 </Button>
@@ -162,7 +162,7 @@ const TileContractorLakeOswego = () => {
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 View Luxury Portfolio
               </Button>
             </Link>

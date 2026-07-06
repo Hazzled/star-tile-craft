@@ -27,7 +27,7 @@
     --muted: 33 16% 93%;
     --muted-foreground: 210 10% 38%;
 
-    --accent: 19 50% 44%; /* Clay / terracotta */
+    --accent: 19 50% 40%; /* Clay / terracotta — L40% keeps 4.5:1 on almond tints */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -35,7 +35,7 @@
 
     --border: 33 14% 87%;
     --input: 33 14% 84%;
-    --ring: 19 50% 44%;
+    --ring: 19 50% 40%;
 
     --radius: 0.75rem;
 
@@ -93,8 +93,9 @@
     @apply bg-background text-foreground font-lato antialiased;
   }
 
+  /* No color here: headings must inherit so dark sections can set white text. */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-montserrat font-bold tracking-tight text-primary;
+    @apply font-montserrat font-bold tracking-tight;
     text-wrap: balance;
   }
 

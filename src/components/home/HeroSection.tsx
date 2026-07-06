@@ -20,7 +20,7 @@ const HeroSection = () => {
           {/* Copy */}
           <header className="max-w-xl">
             <p className="eyebrow animate-fade-up">Portland Metro Tile Contractor</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-montserrat font-bold leading-[1.05] mb-6 animate-fade-up">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-montserrat font-bold text-primary leading-[1.05] mb-6 animate-fade-up">
               Tile Installation Done Right, Down to the Last Grout Line
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 animate-fade-up-delay-1">

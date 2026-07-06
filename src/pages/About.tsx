@@ -234,7 +234,7 @@ const About = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="relative py-24 text-white overflow-hidden">
+      <section className="relative py-24 text-white overflow-hidden bg-navy">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
       }} />

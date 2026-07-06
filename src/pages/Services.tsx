@@ -133,15 +133,15 @@ const Services = () => {
               <Link to="/tile-installation-portland" className="text-navy hover:underline font-medium">
                 Portland Tile Installation Services
               </Link>
-              <span className="text-gray-400">•</span>
+              <span className="text-muted-foreground">•</span>
               <Link to="/tile-cost-calculator" className="text-navy hover:underline font-medium">
                 Free Cost Calculator
               </Link>
-              <span className="text-gray-400">•</span>
+              <span className="text-muted-foreground">•</span>
               <Link to="/tile-contractor-beaverton" className="text-navy hover:underline font-medium">
                 Beaverton Contractors
               </Link>
-              <span className="text-gray-400">•</span>
+              <span className="text-muted-foreground">•</span>
               <Link to="/tile-contractor-lake-oswego" className="text-navy hover:underline font-medium">
                 Lake Oswego Services
               </Link>
