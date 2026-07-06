@@ -14,7 +14,7 @@ const BlogTileInstallationMistakes = () => {
     blogBreadcrumb,
     {
       name: "Common Tile Installation Mistakes and How to Avoid Them in Portland Homes",
-      url: "https://www.startilellc.com/blog/tile-installation-mistakes-portland"
+      url: "https://startilellc.com/blog/tile-installation-mistakes-portland"
     }
   ];
 
@@ -32,14 +32,14 @@ const BlogTileInstallationMistakes = () => {
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.startilellc.com/images/brand/star-tile-logo.png"
+        "url": "https://startilellc.com/images/brand/star-tile-logo.png"
       }
     },
     "datePublished": "2025-01-20",
     "dateModified": "2025-01-20",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.startilellc.com/blog/tile-installation-mistakes-portland"
+      "@id": "https://startilellc.com/blog/tile-installation-mistakes-portland"
     }
   };
 
@@ -53,7 +53,7 @@ const BlogTileInstallationMistakes = () => {
       <SEO
         title="Common Tile Installation Mistakes and How to Avoid Them in Portland Homes | Star Tile LLC"
         description="Learn about the most common tile installation mistakes in Portland homes and how to avoid them. Expert tips from Star Tile LLC for professional results that withstand Oregon's weather."
-        canonical="https://www.startilellc.com/blog/tile-installation-mistakes-portland"
+        canonical="https://startilellc.com/blog/tile-installation-mistakes-portland"
         structuredData={combinedStructuredData}
       />
       

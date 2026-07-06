@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 interface SEOProps {
   title: string;
@@ -7,10 +8,12 @@ interface SEOProps {
   ogImage?: string;
   type?: string; // Open Graph type
   robots?: string; // e.g., "index,follow" or "noindex,nofollow"
-  structuredData?: Record<string, any> | string; // JSON-LD object or string
+  structuredData?: Record<string, unknown> | string; // JSON-LD object or string
 }
 
-const DEFAULT_OG_IMAGE = "https://lovable.dev/opengraph-image-p98pqg.png";
+export const SITE_URL = "https://startilellc.com";
+export const SITE_NAME = "Star Tile LLC";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og-image.jpg`;
 const DEFAULT_TWITTER_CARD = "summary_large_image";
 
 export default function SEO({
@@ -22,42 +25,47 @@ export default function SEO({
   robots = "index, follow",
   structuredData,
 }: SEOProps) {
-  const jsonLd = typeof structuredData === "string" ? structuredData : structuredData ? JSON.stringify(structuredData) : null;
+  const { pathname } = useLocation();
+  // Every route should declare a canonical; fall back to the current path so
+  // new pages never ship without one.
+  const canonicalUrl = canonical ?? `${SITE_URL}${pathname === "/" ? "/" : pathname}`;
+  // Social crawlers require absolute image URLs; bundled assets resolve to
+  // root-relative paths, so qualify them here.
+  const ogImageUrl = ogImage.startsWith("/") ? `${SITE_URL}${ogImage}` : ogImage;
+  const jsonLd =
+    typeof structuredData === "string"
+      ? structuredData
+      : structuredData
+        ? JSON.stringify(structuredData)
+        : null;
 
   return (
     <Helmet prioritizeSeoTags>
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
       {robots && <meta name="robots" content={robots} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-
-      {/* IndexNow for faster search engine indexing */}
-<meta name="msvalidate.01" content="1146586dfbb546c5840d75ae3040e784" />
-      
-      {/* Local SEO Geographic Tags */}
-      <meta name="geo.region" content="US-OR" />
-      <meta name="geo.placename" content="Portland" />
-      <meta name="geo.position" content="45.5152;-122.6784" />
-      <meta name="ICBM" content="45.5152, -122.6784" />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph */}
+      <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={title} />
       {description && <meta property="og:description" content={description} />}
-      {canonical && <meta property="og:url" content={canonical} />} 
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={type} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={ogImageUrl} />
+      {ogImageUrl === DEFAULT_OG_IMAGE && <meta property="og:image:width" content="1200" />}
+      {ogImageUrl === DEFAULT_OG_IMAGE && <meta property="og:image:height" content="630" />}
+      <meta property="og:image:alt" content="Tile installation by Star Tile LLC" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
       <meta name="twitter:card" content={DEFAULT_TWITTER_CARD} />
       <meta name="twitter:title" content={title} />
       {description && <meta name="twitter:description" content={description} />}
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={ogImageUrl} />
 
       {/* Structured Data */}
-      {jsonLd && (
-        <script type="application/ld+json">{jsonLd}</script>
-      )}
+      {jsonLd && <script type="application/ld+json">{jsonLd}</script>}
     </Helmet>
   );
 }

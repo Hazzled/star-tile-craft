@@ -29,7 +29,7 @@ export default function TileCostCalculator() {
 
   const breadcrumbs = [
     homeBreadcrumb,
-    { name: 'Tile Cost Calculator', url: 'https://www.startilellc.com/tile-cost-calculator' }
+    { name: 'Tile Cost Calculator', url: 'https://startilellc.com/tile-cost-calculator' }
   ];
 
   const structuredData = [
@@ -39,13 +39,13 @@ export default function TileCostCalculator() {
       "@type": "SoftwareApplication",
       "name": "Tile Cost Calculator",
       "description": "Free tile cost calculator for Portland homeowners. Calculate tiles needed, costs, and waste buffer for your tile installation project.",
-      "url": "https://www.startilellc.com/tile-cost-calculator",
+      "url": "https://startilellc.com/tile-cost-calculator",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "Any",
       "provider": {
         "@type": "Organization",
         "name": "Star Tile LLC",
-        "url": "https://www.startilellc.com",
+        "url": "https://startilellc.com",
         "telephone": "+1-503-765-3742",
         "address": {
           "@type": "PostalAddress",
@@ -138,7 +138,7 @@ export default function TileCostCalculator() {
       <SEO
         title="Tile Cost Calculator Portland | Free Tile Estimator - Star Tile LLC"
         description="Free tile cost calculator for Portland projects. Calculate tiles needed, material costs, and waste buffer. Get accurate estimates for your tile installation project."
-        canonical="https://www.startilellc.com/tile-cost-calculator"
+        canonical="https://startilellc.com/tile-cost-calculator"
         structuredData={structuredData}
         robots="index, follow"
       />

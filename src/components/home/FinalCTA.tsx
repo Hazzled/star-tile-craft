@@ -1,48 +1,44 @@
-import React from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Instagram, Facebook } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 
 const FinalCTA = () => {
-  const navigate = useNavigate();
-
-  const handleGetQuoteClick = () => {
-    navigate('/quote');
-  };
-
   return (
-    <section className="py-20 bg-gradient-to-r from-navy to-noir text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy/90 to-noir/90" />
-      <div className="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-6">
+    <section className="section bg-primary text-primary-foreground relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-[radial-gradient(60%_80%_at_20%_100%,hsl(var(--accent)/0.25)_0%,transparent_60%)]"
+        aria-hidden="true"
+      />
+      <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-5xl font-montserrat font-bold mb-5 text-primary-foreground">
           Ready to Transform Your Space?
         </h2>
-        <p className="text-xl mb-10 text-gray-200 leading-relaxed">
-          Contact us today for a free consultation and quote. Let's bring your tile vision to life!
+        <p className="text-lg md:text-xl mb-10 text-primary-foreground/80 leading-relaxed">
+          Get a free consultation and a detailed quote — usually within 24
+          hours. Let's bring your tile vision to life.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="bg-card text-primary hover:bg-muted border-card px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
-            onClick={handleGetQuoteClick}
-          >
-            Get Free Quote
-          </Button>
-          <a href="tel:5034828395">
-            <Button size="lg" variant="outline" className="border-white hover:bg-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-slate-800">
-              Call (503) 482-8395
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link to="/quote">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 text-base shadow-lg group"
+            >
+              Get a Free Quote
+              <ArrowRight
+                className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
+                aria-hidden="true"
+              />
             </Button>
-          </a>
-        </div>
-        
-        {/* Social Media Icons */}
-        <div className="flex justify-center space-x-6">
-          <a href="https://www.instagram.com/startilellc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors" aria-label="Visit Star Tile LLC on Instagram">
-            <Instagram className="h-6 w-6" />
-          </a>
-          <a href="https://www.facebook.com/startilellc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors" aria-label="Visit Star Tile LLC on Facebook">
-            <Facebook className="h-6 w-6" />
+          </Link>
+          <a href="tel:5034828395">
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 text-base"
+            >
+              <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
+              (503) 482-8395
+            </Button>
           </a>
         </div>
       </div>

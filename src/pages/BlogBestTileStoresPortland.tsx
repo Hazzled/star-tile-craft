@@ -21,14 +21,14 @@ const BlogBestTileStoresPortland = () => {
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.startilellc.com/logo.png"
+        "url": "https://startilellc.com/logo.png"
       }
     },
     "datePublished": "2025-01-15",
     "dateModified": "2025-01-15",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.startilellc.com/blog/best-tile-stores-portland"
+      "@id": "https://startilellc.com/blog/best-tile-stores-portland"
     }
   };
 
@@ -70,7 +70,7 @@ const BlogBestTileStoresPortland = () => {
       <SEO
         title="Best Tile Stores Portland Oregon 2025 | Bedrosians, Oregon Tile & Marble Reviews"
         description="2025 guide to Portland's top tile suppliers: Bedrosians pricing, Oregon Tile & Marble selection, Pratt & Larson artisan ceramics. Compare showrooms."
-        canonical="https://www.startilellc.com/blog/best-tile-stores-portland"
+        canonical="https://startilellc.com/blog/best-tile-stores-portland"
         structuredData={structuredData}
       />
 

@@ -38,25 +38,25 @@ const Index = () => {
       <SEO 
         title="Star Tile LLC | Expert Tile Installation & Remodeling in Portland Oregon"
         description="Portland Metro's trusted tile installation company since 2014. Kitchen backsplashes, bathroom remodels & custom flooring. Licensed CCB #200970. Serving Gresham to Beaverton. Free estimates!"
-        canonical="https://www.startilellc.com/"
+        canonical="https://startilellc.com/"
         structuredData={breadcrumbs}
       />
       <HeroSection />
       {/* Enhanced intro section with internal links */}
-      <section className="py-12 bg-white text-center">
+      <section className="py-12 md:py-16 bg-card border-y border-border text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8">
-            Welcome to Star Tile LLC, your premier tile installation company serving the Portland Metro Area. 
-            We specialize in kitchen backsplashes, bathroom renovations, and custom tile work that transforms your space. 
-            Ready to get started? <Link to="/services" className="text-navy hover:underline font-semibold">Explore our services</Link>, 
-            <Link to="/tile-installation-portland" className="text-navy hover:underline font-semibold ml-1">learn about Portland tile installation</Link>, 
-            or <Link to="/portfolio" className="text-navy hover:underline font-semibold">view our portfolio</Link> to see our craftsmanship in action.
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            Welcome to Star Tile LLC, your premier tile installation company serving the Portland Metro Area.
+            We specialize in kitchen backsplashes, bathroom renovations, and custom tile work that transforms your space.
+            Ready to get started? <Link to="/services" className="text-primary font-semibold underline underline-offset-4 decoration-accent/40 hover:decoration-accent">Explore our services</Link>,{" "}
+            <Link to="/tile-installation-portland" className="text-primary font-semibold underline underline-offset-4 decoration-accent/40 hover:decoration-accent">learn about Portland tile installation</Link>,
+            or <Link to="/portfolio" className="text-primary font-semibold underline underline-offset-4 decoration-accent/40 hover:decoration-accent">view our portfolio</Link> to see our craftsmanship in action.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
-            <Link to="/tile-cost-calculator" className="bg-navy text-white px-4 py-2 rounded-lg hover:bg-navy/90 transition-colors">
+          <div className="flex flex-wrap justify-center gap-3 text-sm">
+            <Link to="/tile-cost-calculator" className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-colors font-medium">
               Get Cost Estimate
             </Link>
-            <Link to="/contact" className="border border-navy text-navy px-4 py-2 rounded-lg hover:bg-navy hover:text-white transition-colors">
+            <Link to="/contact" className="border border-primary/30 text-primary px-5 py-2.5 rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors font-medium">
               Free Consultation
             </Link>
           </div>

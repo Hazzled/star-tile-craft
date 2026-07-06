@@ -6,11 +6,11 @@ const PrivacyPolicy = () => {
     "@type": "WebPage",
     "name": "Privacy Policy - Star Tile LLC",
     "description": "Privacy policy for Star Tile LLC tile installation services in Portland, Oregon",
-    "url": "https://www.startilellc.com/privacy-policy",
+    "url": "https://startilellc.com/privacy-policy",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Star Tile LLC",
-      "url": "https://www.startilellc.com"
+      "url": "https://startilellc.com"
     }
   };
 
@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
       <SEO
         title="Privacy Policy | Star Tile LLC - Portland Tile Installation"
         description="Privacy policy for Star Tile LLC. Learn how we protect your personal information when you use our tile installation services in Portland, Oregon."
-        canonical="https://www.startilellc.com/privacy-policy"
+        canonical="https://startilellc.com/privacy-policy"
         structuredData={structuredData}
       />
       

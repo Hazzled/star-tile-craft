@@ -17,7 +17,7 @@ const BlogTileSizeGuide = () => {
     blogBreadcrumb,
     { 
       name: "Tile Size Guide Portland", 
-      url: "https://www.startilellc.com/blog/tile-size-guide-portland" 
+      url: "https://startilellc.com/blog/tile-size-guide-portland" 
     }
   ];
 
@@ -26,7 +26,7 @@ const BlogTileSizeGuide = () => {
     "@type": "Article",
     "headline": "Tile Size Guide Portland: Choosing the Right Tile Dimensions for Oregon Homes",
     "description": "Complete guide to choosing tile sizes for Portland homes. Learn which small, medium, or large format tiles work best for bathrooms, kitchens, and living spaces in Pacific Northwest homes.",
-    "image": "https://www.startilellc.com" + heroImage,
+    "image": "https://startilellc.com" + heroImage,
     "datePublished": "2025-01-21",
     "dateModified": "2025-01-21",
     "author": {
@@ -38,7 +38,7 @@ const BlogTileSizeGuide = () => {
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.startilellc.com/images/brand/star-tile-logo.png"
+        "url": "https://startilellc.com/images/brand/star-tile-logo.png"
       }
     }
   };
@@ -88,8 +88,8 @@ const BlogTileSizeGuide = () => {
       <SEO
         title="Tile Size Guide Portland: Small vs Large Format Tiles for Oregon Homes | Star Tile LLC"
         description="Complete guide to choosing tile sizes for Portland homes. Learn which small, medium, or large format tiles work best for bathrooms, kitchens, and living spaces in Pacific Northwest homes."
-        canonical="https://www.startilellc.com/blog/tile-size-guide-portland"
-        ogImage={"https://www.startilellc.com" + heroImage}
+        canonical="https://startilellc.com/blog/tile-size-guide-portland"
+        ogImage={"https://startilellc.com" + heroImage}
         type="article"
         structuredData={combinedSchema}
       />

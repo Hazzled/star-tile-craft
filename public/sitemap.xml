@@ -1,123 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.startilellc.com/</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/about</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/services</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/services</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/tile-installation-portland</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/portfolio</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/portfolio</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/contact</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/contact</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/quote</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/quote</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/blog</loc>
-    <lastmod>2025-09-08</lastmod>
+    <loc>https://startilellc.com/tile-contractor-beaverton</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/tile-contractor-tigard</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/tile-contractor-gresham</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/tile-contractor-lake-oswego</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/about</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/blog</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/blog/budgeting-tile-project-portland</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/blog/fix-cracked-grout</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/blog/waterproofing-before-tile</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/tile-installation-portland</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/tile-cost-calculator</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/blog/tile-trends-portland-2025</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/blog/best-tile-stores-portland</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/blog/choosing-tile-contractor-portland</loc>
-    <lastmod>2025-09-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.startilellc.com/blog/tile-installation-mistakes-portland</loc>
-    <lastmod>2025-01-20</lastmod>
+    <loc>https://startilellc.com/tile-cost-calculator</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/blog/kitchen-backsplash-ideas-2025</loc>
-    <lastmod>2025-09-22</lastmod>
+    <loc>https://startilellc.com/tile-pattern-comparison</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/blog/best-tile-materials-portland-climate</loc>
-    <lastmod>2025-01-20</lastmod>
+    <loc>https://startilellc.com/blog/budgeting-tile-project-portland</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/blog/tile-size-guide-portland</loc>
-    <lastmod>2025-01-21</lastmod>
+    <loc>https://startilellc.com/blog/fix-cracked-grout</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.startilellc.com/tile-pattern-comparison</loc>
-    <lastmod>2025-01-21</lastmod>
+    <loc>https://startilellc.com/blog/waterproofing-before-tile</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/blog/choosing-tile-contractor-portland</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/blog/tile-trends-portland-2025</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/blog/best-tile-stores-portland</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/blog/kitchen-backsplash-ideas-2025</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/blog/tile-installation-mistakes-portland</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/blog/best-tile-materials-portland-climate</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/blog/tile-size-guide-portland</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://startilellc.com/privacy-policy</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

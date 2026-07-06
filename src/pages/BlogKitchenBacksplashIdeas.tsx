@@ -16,7 +16,7 @@ const BlogKitchenBacksplashIdeas = () => {
     blogBreadcrumb,
     {
       name: "Kitchen Backsplash Ideas for 2025",
-      url: "https://www.startilellc.com/blog/kitchen-backsplash-ideas-2025"
+      url: "https://startilellc.com/blog/kitchen-backsplash-ideas-2025"
     }
   ];
 
@@ -25,7 +25,7 @@ const BlogKitchenBacksplashIdeas = () => {
     "@type": "BlogPosting",
     "headline": "Kitchen Backsplash Ideas for 2025: Transform Your Space with Style and Functionality",
     "description": "Explore top kitchen backsplash ideas, from modern designs to affordable options. Discover white kitchen backsplash ideas, cheap backsplash ideas, and 2025 trends like green kitchen backsplash tiles.",
-    "image": "https://www.startilellc.com/images/blog/kitchen-backsplash-ideas.jpg",
+    "image": "https://startilellc.com/images/blog/kitchen-backsplash-ideas.jpg",
     "author": {
       "@type": "Organization",
       "name": "Star Tile LLC"
@@ -35,14 +35,14 @@ const BlogKitchenBacksplashIdeas = () => {
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.startilellc.com/images/brand/star-tile-logo.png"
+        "url": "https://startilellc.com/images/brand/star-tile-logo.png"
       }
     },
     "datePublished": "2025-01-19",
     "dateModified": "2025-01-19",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.startilellc.com/blog/kitchen-backsplash-ideas-2025"
+      "@id": "https://startilellc.com/blog/kitchen-backsplash-ideas-2025"
     }
   };
 
@@ -51,7 +51,7 @@ const BlogKitchenBacksplashIdeas = () => {
       <SEO
         title="Kitchen Backsplash Ideas for 2025: Transform Your Space with Style and Functionality"
         description="Explore top kitchen backsplash ideas, from modern designs to affordable options. Discover white kitchen backsplash ideas, cheap backsplash ideas, and 2025 trends like green kitchen backsplash tiles."
-        canonical="https://www.startilellc.com/blog/kitchen-backsplash-ideas-2025"
+        canonical="https://startilellc.com/blog/kitchen-backsplash-ideas-2025"
         structuredData={[structuredData, generateBreadcrumbJsonLd(breadcrumbs)]}
       />
       

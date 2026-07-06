@@ -131,18 +131,18 @@ const blogPosts = [
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.startilellc.com/logo.png"
+        "url": "https://startilellc.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.startilellc.com/blog"
+      "@id": "https://startilellc.com/blog"
     },
     "blogPost": blogPosts.map(post => ({
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.excerpt,
-      "url": `https://www.startilellc.com/blog/${post.slug}`,
+      "url": `https://startilellc.com/blog/${post.slug}`,
       "datePublished": "2025-01-19",
       "author": {
         "@type": "Organization",
@@ -153,7 +153,7 @@ const blogPosts = [
 
   const breadcrumbs = generateBreadcrumbJsonLd([
     homeBreadcrumb,
-    { name: "Blog", url: "https://www.startilellc.com/blog" }
+    { name: "Blog", url: "https://startilellc.com/blog" }
   ]);
 
   return (
@@ -161,7 +161,7 @@ const blogPosts = [
       <SEO 
         title="Tile Installation Blog Portland OR | DIY Tips & Professional Contractor Guides"
         description="Portland tile blog: PNW climate tips, cost guides, choosing contractors, DIY repairs. 10+ years of local expertise."
-        canonical="https://www.startilellc.com/blog"
+        canonical="https://startilellc.com/blog"
         type="website"
         structuredData={[structuredData, breadcrumbs]}
       />

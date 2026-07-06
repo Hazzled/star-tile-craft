@@ -1,27 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
 
-# Block access to development and build files
-Disallow: /src/
-Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /build/
-Disallow: /dist/
-
-# Block access to configuration files
-Disallow: /*.config.js$
-Disallow: /*.config.ts$
-Disallow: /package.json
-Disallow: /package-lock.json
-
-# Allow sitemap (This is not strictly necessary if you don't have a broad disallow)
-Allow: /sitemap.xml
-
-# Crawl delay for politeness (1 second)
-Crawl-delay: 1
-
-Sitemap: https://www.startilellc.com/sitemap.xml
+Sitemap: https://startilellc.com/sitemap.xml

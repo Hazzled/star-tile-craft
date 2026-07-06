@@ -3,78 +3,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Star Tile LLC Design System */
+/* Star Tile LLC Design System
+   Palette: warm ivory surfaces, deep navy for headings and structure,
+   clay/terracotta accent for calls-to-action, noir for footer/dark blocks. */
 
 @layer base {
   :root {
-    --background: 28 22% 97%; /* Ivory #F9F8F7 */
+    --background: 40 30% 98%; /* Warm ivory */
     --foreground: 210 13% 17%; /* Noir #232A2F */
 
-    --card: 28 22% 97%; /* Ivory #F9F8F7 */
-    --card-foreground: 210 13% 17%; /* Noir #232A2F */
+    --card: 0 0% 100%; /* White cards on ivory pages */
+    --card-foreground: 210 13% 17%;
 
-    --popover: 28 22% 97%; /* Ivory #F9F8F7 */
-    --popover-foreground: 210 13% 17%; /* Noir #232A2F */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 13% 17%;
 
-    --primary: 205 48% 19%; /* Navy #153147 */
-    --primary-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
+    --primary: 205 52% 18%; /* Navy #16304A */
+    --primary-foreground: 40 30% 98%;
 
-    --secondary: 30 14% 91%; /* Almond #EDEAE4 */
-    --secondary-foreground: 210 13% 17%; /* Noir #232A2F */
+    --secondary: 33 18% 92%; /* Almond */
+    --secondary-foreground: 210 13% 17%;
 
-    --muted: 30 14% 91%; /* Almond #EDEAE4 */
-    --muted-foreground: 210 13% 45%; /* Darker gray for better contrast */
+    --muted: 33 16% 93%;
+    --muted-foreground: 210 10% 38%;
 
-    --accent: 205 48% 19%; /* Navy #153147 */
-    --accent-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
+    --accent: 19 50% 44%; /* Clay / terracotta */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
+    --destructive-foreground: 40 30% 98%;
 
-    --border: 30 14% 91%; /* Almond #EDEAE4 */
-    --input: 30 14% 91%; /* Almond #EDEAE4 */
-    --ring: 205 48% 19%; /* Navy #153147 */
+    --border: 33 14% 87%;
+    --input: 33 14% 84%;
+    --ring: 19 50% 44%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 28 22% 97%; /* Ivory #F9F8F7 */
-    --sidebar-foreground: 210 13% 17%; /* Noir #232A2F */
-    --sidebar-primary: 205 48% 19%; /* Navy #153147 */
-    --sidebar-primary-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --sidebar-accent: 30 14% 91%; /* Almond #EDEAE4 */
-    --sidebar-accent-foreground: 210 13% 17%; /* Noir #232A2F */
-    --sidebar-border: 30 14% 91%; /* Almond #EDEAE4 */
-    --sidebar-ring: 205 48% 19%; /* Navy #153147 */
+    --sidebar-background: 40 30% 98%;
+    --sidebar-foreground: 210 13% 17%;
+    --sidebar-primary: 205 52% 18%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 33 18% 92%;
+    --sidebar-accent-foreground: 210 13% 17%;
+    --sidebar-border: 33 14% 87%;
+    --sidebar-ring: 19 50% 44%;
   }
 
   .dark {
-    --background: 210 13% 17%; /* Noir #232A2F */
-    --foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --card: 210 13% 17%; /* Noir #232A2F */
-    --card-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --popover: 210 13% 17%; /* Noir #232A2F */
-    --popover-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --primary: 28 22% 97%; /* Ivory #F9F8F7 */
-    --primary-foreground: 210 13% 17%; /* Noir #232A2F */
-    --secondary: 205 48% 19%; /* Navy #153147 */
-    --secondary-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --muted: 205 48% 19%; /* Navy #153147 */
-    --muted-foreground: 28 22% 80%; /* Light gray for dark mode */
-    --accent: 205 48% 19%; /* Navy #153147 */
-    --accent-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --border: 205 48% 19%; /* Navy #153147 */
-    --input: 205 48% 19%; /* Navy #153147 */
-    --ring: 28 22% 97%; /* Ivory #F9F8F7 */
-    --sidebar-background: 210 13% 17%; /* Noir #232A2F */
-    --sidebar-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --sidebar-primary: 205 48% 19%; /* Navy #153147 */
-    --sidebar-primary-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --sidebar-accent: 205 48% 19%; /* Navy #153147 */
-    --sidebar-accent-foreground: 28 22% 97%; /* Ivory #F9F8F7 */
-    --sidebar-border: 205 48% 19%; /* Navy #153147 */
-    --sidebar-ring: 205 48% 19%; /* Navy #153147 */
+    --background: 210 13% 12%;
+    --foreground: 40 30% 98%;
+    --card: 210 13% 16%;
+    --card-foreground: 40 30% 98%;
+    --popover: 210 13% 16%;
+    --popover-foreground: 40 30% 98%;
+    --primary: 40 30% 98%;
+    --primary-foreground: 210 13% 17%;
+    --secondary: 205 40% 22%;
+    --secondary-foreground: 40 30% 98%;
+    --muted: 205 30% 22%;
+    --muted-foreground: 33 18% 78%;
+    --accent: 19 55% 52%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 40 30% 98%;
+    --border: 205 30% 24%;
+    --input: 205 30% 26%;
+    --ring: 19 55% 52%;
+    --sidebar-background: 210 13% 12%;
+    --sidebar-foreground: 40 30% 98%;
+    --sidebar-primary: 40 30% 98%;
+    --sidebar-primary-foreground: 210 13% 17%;
+    --sidebar-accent: 205 40% 22%;
+    --sidebar-accent-foreground: 40 30% 98%;
+    --sidebar-border: 205 30% 24%;
+    --sidebar-ring: 19 55% 52%;
   }
 }
 
@@ -83,28 +85,114 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground font-lato;
+    @apply bg-background text-foreground font-lato antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-montserrat font-semibold;
+    @apply font-montserrat font-bold tracking-tight text-primary;
+    text-wrap: balance;
   }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  ::selection {
+    @apply bg-accent/20;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Shared section rhythm */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container-site {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Small uppercase label above section headings */
+  .eyebrow {
+    @apply inline-block text-accent font-montserrat font-semibold text-sm uppercase tracking-[0.2em] mb-3;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-montserrat font-bold tracking-tight text-primary;
+  }
+
+  .section-lead {
+    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
+  }
+
+  /* Photography cards */
+  .img-card {
+    @apply overflow-hidden rounded-xl bg-card shadow-sm ring-1 ring-border transition-all duration-300;
+  }
+  .img-card:hover {
+    @apply shadow-xl -translate-y-1;
+  }
+}
+
+/* Gentle entrance for hero content */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.7s ease-out 0.15s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.7s ease-out 0.3s both;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-almond;
+  @apply bg-secondary;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-navy rounded-full;
+  @apply bg-primary/60 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-opacity-80;
+  @apply bg-primary;
 }

@@ -12,7 +12,7 @@ export default function BlogChoosingTileContractorPortland() {
     blogBreadcrumb,
     {
       name: "How to Choose the Right Tile Contractor in Portland",
-      url: "https://www.startilellc.com/blog/choosing-tile-contractor-portland"
+      url: "https://startilellc.com/blog/choosing-tile-contractor-portland"
     }
   ];
 
@@ -30,14 +30,14 @@ export default function BlogChoosingTileContractorPortland() {
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.startilellc.com/logo.png"
+        "url": "https://startilellc.com/logo.png"
       }
     },
     "datePublished": "2025-01-06",
     "dateModified": "2025-01-06",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.startilellc.com/blog/choosing-tile-contractor-portland"
+      "@id": "https://startilellc.com/blog/choosing-tile-contractor-portland"
     }
   };
 
@@ -46,7 +46,7 @@ export default function BlogChoosingTileContractorPortland() {
       <SEO
         title="How to Choose Licensed Tile Contractor Portland Oregon | CCB Requirements Guide"
         description="Choose a licensed Portland tile contractor: CCB requirements, insurance checks, red flags to avoid. Expert guide for hiring with confidence."
-        canonical="https://www.startilellc.com/blog/choosing-tile-contractor-portland"
+        canonical="https://startilellc.com/blog/choosing-tile-contractor-portland"
         structuredData={[structuredData, generateBreadcrumbJsonLd(breadcrumbs)]}
       />
       

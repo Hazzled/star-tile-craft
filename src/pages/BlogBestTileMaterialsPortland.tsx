@@ -15,7 +15,7 @@ export default function BlogBestTileMaterialsPortland() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Best Tile Materials for Portland's Climate: A Complete Guide",
-    "image": "https://www.startilellc.com/assets/blog-tile-materials.jpg",
+    "image": "https://startilellc.com/assets/blog-tile-materials.jpg",
     "author": {
       "@type": "Organization",
       "name": "Star Tile LLC"
@@ -25,7 +25,7 @@ export default function BlogBestTileMaterialsPortland() {
       "name": "Star Tile LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.startilellc.com/images/brand/star-tile-logo.png"
+        "url": "https://startilellc.com/images/brand/star-tile-logo.png"
       }
     },
     "datePublished": "2025-01-20",
@@ -39,7 +39,7 @@ export default function BlogBestTileMaterialsPortland() {
       <SEO
         title="Best Tile Materials for Portland's Climate | Star Tile LLC"
         description="Expert guide to choosing the right tile materials for Portland homes. Learn about porcelain, ceramic, and natural stone options for our Pacific Northwest climate."
-        canonical="https://www.startilellc.com/blog/best-tile-materials-portland-climate"
+        canonical="https://startilellc.com/blog/best-tile-materials-portland-climate"
         structuredData={structuredData}
       />
 

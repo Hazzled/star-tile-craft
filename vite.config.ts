@@ -19,4 +19,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    // Bundle all deps into the prerender build so CJS/ESM interop
+    // never depends on how Node resolves individual packages.
+    noExternal: /^(?!node:)/,
+  },
 }));
